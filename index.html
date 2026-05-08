@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ======================================================
+       SEO & métadonnées
+       ====================================================== -->
+  <title>AfriAutomate — Automatisation pour entreprises africaines</title>
+  <meta name="description" content="AfriAutomate est la première agence d'automatisation intelligente spécialisée PME africaines basée à Cotonou. Agents IA, WhatsApp 24/7, automatisation marketing et RH. Moins d'effort. Plus de revenus." />
+  <meta name="theme-color" content="#0D1117" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AfriAutomate — Automatisation pour entreprises africaines" />
+  <meta property="og:description" content="Agents IA, WhatsApp 24/7, automatisation marketing et RH pour PME africaines. Moins d'effort. Plus de revenus." />
+  <meta property="og:image" content="assets/images-hero/hero-ai-automation.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AfriAutomate — Automatisation pour entreprises africaines" />
+  <meta name="twitter:description" content="Agents IA, WhatsApp 24/7, automatisation marketing et RH pour PME africaines." />
+  <meta name="twitter:image" content="assets/images-hero/hero-ai-automation.jpg" />
+
+  <!-- Favicon (réutilise le logo PNG) -->
+  <link rel="icon" type="image/png" href="branding/lg_AfriAutomate.png" />
+
+  <!-- ======================================================
+       Polices Google Fonts (Montserrat + Poppins)
+       Source : branding/typographie.md
+       ====================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Feuille de style -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       HEADER STICKY
+       ====================================================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="header__logo" aria-label="AfriAutomate — Accueil">
+        <img src="branding/lg_AfriAutomate.png" alt="Logo AfriAutomate" width="180" />
+      </a>
+
+      <nav class="header__nav" id="nav" aria-label="Navigation principale">
+        <ul class="header__list">
+          <li><a href="#services" class="header__link">Services</a></li>
+          <li><a href="#process" class="header__link">Méthode</a></li>
+          <li><a href="#packs" class="header__link">Packs</a></li>
+          <li><a href="#pourquoi" class="header__link">Pourquoi nous</a></li>
+          <li><a href="#faq" class="header__link">FAQ</a></li>
+        </ul>
+        <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary header__cta">
+          Prendre rendez-vous
+        </a>
+      </nav>
+
+      <button class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======================================================
+         SECTION 1 — HERO (vidéo 3D IA en background + texte centré)
+         ====================================================== -->
+    <section id="hero" class="hero hero--video section">
+
+      <!-- Vidéo 3D d'animation IA en arrière-plan (autoplay muet en boucle) -->
+      <video class="hero__video"
+             autoplay loop muted playsinline preload="auto"
+             poster="assets/images-hero/hero-illustration.png"
+             aria-hidden="true">
+        <source src="https://ik.imagekit.io/lrigu76hy/tailark/dna-video.mp4?updatedAt=1745736251477" type="video/mp4" />
+      </video>
+
+      <!-- Voile beige semi-transparent pour la lisibilité du texte -->
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <span class="hero__divider" aria-hidden="true"></span>
+          <h1 class="hero__title">
+            L'IA et l'automatisation<br />
+            au service des <span class="hero__accent">PME africaines</span>
+          </h1>
+          <p class="hero__subtitle">
+            Gagnez du temps, réduisez vos coûts<br />
+            et concentrez-vous sur ce qui compte vraiment.
+          </p>
+          <span class="hero__divider hero__divider--small" aria-hidden="true"></span>
+
+          <div class="hero__ctas">
+            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary btn--xl">
+              Réserver mon appel gratuit
+            </a>
+            <a href="#packs" class="btn btn--outline btn--xl">Voir nos packs</a>
+          </div>
+
+          <ul class="hero__bullets">
+            <li>✓ Déploiement en 5 à 14 jours</li>
+            <li>✓ Garantie remboursement intégral</li>
+            <li>📍 Cotonou · Afrique francophone</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         SECTION 2 — PROBLÈME / DOULEURS
+         ====================================================== -->
+    <section id="problemes" class="problems section section--light">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__kicker">Vous reconnaissez-vous ?</span>
+          <h2 class="section__title">6 douleurs typiques de PME africaines</h2>
+          <p class="section__lead">Si vous cochez 3 de ces cases, l'automatisation va changer votre quotidien.</p>
+        </header>
+
+        <ul class="problems__grid">
+          <li class="problems__item reveal">
+            <span class="problems__icon" aria-hidden="true">📱</span>
+            <p>Vous perdez des leads WhatsApp la nuit et le week-end.</p>
+          </li>
+          <li class="problems__item reveal">
+            <span class="problems__icon" aria-hidden="true">⏰</span>
+            <p>Vos relances clients se font à la main, ou pas du tout.</p>
+          </li>
+          <li class="problems__item reveal">
+            <span class="problems__icon" aria-hidden="true">✍️</span>
+            <p>Créer du contenu chaque semaine vous épuise.</p>
+          </li>
+          <li class="problems__item reveal">
+            <span class="problems__icon" aria-hidden="true">📄</span>
+            <p>Trier 200 CV pour 1 poste vous prend des jours.</p>
+          </li>
+          <li class="problems__item reveal">
+            <span class="problems__icon" aria-hidden="true">🧩</span>
+            <p>Vous payez plusieurs outils qui ne se parlent pas.</p>
+          </li>
+          <li class="problems__item problems__item--highlight reveal">
+            <span class="problems__icon" aria-hidden="true">🤖</span>
+            <p>L'IA vous attire mais vous ne savez pas par où commencer.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         SECTION 3 — SERVICES (3 piliers)
+         Source : content/services.md
+         ====================================================== -->
+    <section id="services" class="services section section--dark">
+      <div class="services__bg" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__kicker">Nos services</span>
+          <h2 class="section__title">3 piliers pour libérer votre valeur humaine</h2>
+          <p class="section__lead">Nous automatisons les tâches répétitives sur les fonctions où l'impact business est le plus rapide.</p>
+        </header>
+
+        <div class="services__grid">
+
+          <!-- Service 1 : Ventes -->
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Automatisation des ventes</h3>
+            <p class="service-card__lead">Vos clients contactent votre entreprise à toute heure. Nos agents intelligents répondent à leur place, qualifient les prospects et prennent des rendez-vous — même la nuit et le week-end.</p>
+            <ul class="service-card__list">
+              <li>Agent WhatsApp 24/7</li>
+              <li>Capture &amp; scoring de prospects</li>
+              <li>Relances automatiques (3 à 5 messages)</li>
+              <li>Intégration CRM légère</li>
+            </ul>
+            <p class="service-card__result"><strong>Résultat :</strong> zéro vente perdue hors heures ouvrées.</p>
+          </article>
+
+          <!-- Service 2 : Marketing -->
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11l18-8-8 18-2-8-8-2z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Automatisation marketing</h3>
+            <p class="service-card__lead">Produire du contenu de qualité régulièrement est épuisant. Nous automatisons la génération de vos messages commerciaux pour une présence digitale constante.</p>
+            <ul class="service-card__list">
+              <li>Contenu multi-canaux (LinkedIn, WhatsApp, Instagram, email)</li>
+              <li>Scripts de vente optimisés</li>
+              <li>Campagnes email automatisées</li>
+              <li>Analyse &amp; amélioration continue</li>
+            </ul>
+            <p class="service-card__result"><strong>Résultat :</strong> présence digitale constante. Engagement amélioré.</p>
+          </article>
+
+          <!-- Service 3 : RH -->
+          <article class="service-card reveal">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Automatisation RH</h3>
+            <p class="service-card__lead">Trier des centaines de CV manuellement, c'est du temps consultant gaspillé. Nous automatisons la préqualification pour vous concentrer sur les meilleurs profils.</p>
+            <ul class="service-card__list">
+              <li>Tri intelligent des CV</li>
+              <li>Préqualification des candidats</li>
+              <li>Réponses automatiques personnalisées</li>
+              <li>Planification automatique des entretiens</li>
+            </ul>
+            <p class="service-card__result"><strong>Résultat :</strong> 3× plus de missions traitées, sans embaucher.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         SECTION 4 — COMMENT ÇA MARCHE (Process 4 étapes)
+         ====================================================== -->
+    <section id="process" class="process section section--light">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__kicker">Notre méthode</span>
+          <h2 class="section__title">4 étapes, du diagnostic à l'autonomie</h2>
+          <p class="section__lead">Pragmatique, transparente, adaptée aux contraintes africaines (connexion, budget, langue, culture).</p>
+        </header>
+
+        <ol class="process__steps">
+          <li class="process__step reveal">
+            <span class="process__num">1</span>
+            <h3 class="process__title">Audit</h3>
+            <p class="process__desc">Nous analysons vos flux, vos outils, vos goulots d'étranglement. Pas de PowerPoint creux — un diagnostic chiffré en 1 à 3 jours.</p>
+          </li>
+          <li class="process__step reveal">
+            <span class="process__num">2</span>
+            <h3 class="process__title">Stratégie</h3>
+            <p class="process__desc">Nous priorisons les automatisations à plus fort ROI pour votre PME. Vous validez. Pas de surprise sur le périmètre.</p>
+          </li>
+          <li class="process__step process__step--highlight reveal">
+            <span class="process__num">3</span>
+            <h3 class="process__title">Déploiement</h3>
+            <p class="process__desc">Nous installons les agents, intégrons vos outils, formons votre équipe. Tout est opérationnel en 5 à 14 jours selon le pack.</p>
+          </li>
+          <li class="process__step reveal">
+            <span class="process__num">4</span>
+            <h3 class="process__title">Suivi</h3>
+            <p class="process__desc">Tableau de bord, support réactif, optimisations continues. Vous restez autonome, nous restons disponibles.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         SECTION 5 — PACKS / TARIFS
+         Source : content/packs-offres.md (TARIFS LANCEMENT — 10 premiers clients)
+         ====================================================== -->
+    <section id="packs" class="packs section section--dark">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__kicker">Nos packs</span>
+          <h2 class="section__title">Trois formules. Des prix transparents.</h2>
+          <p class="section__lead">Engagement 6 mois minimum. Garantie remboursement intégral si non opérationnel sous 7 à 14 jours selon le pack.</p>
+        </header>
+
+        <!-- Bandeau d'urgence : Offre lancement -->
+        <div class="packs__launch-banner reveal" role="note">
+          <span class="packs__launch-banner-icon" aria-hidden="true">🔥</span>
+          <span><strong>OFFRE DE LANCEMENT</strong> — 10 premiers clients · Tarifs réduits jusqu'à -50&nbsp;%, garantis à vie</span>
+        </div>
+
+        <div class="packs__grid">
+
+          <!-- Pack ESSENTIEL -->
+          <article class="pack reveal">
+            <div class="pack__head">
+              <span class="pack__launch-badge" aria-label="Offre fondateurs, 10 places disponibles">🔥 Offre fondateurs · 10 places</span>
+              <span class="pack__badge">Porte d'entrée</span>
+              <h3 class="pack__name">Essentiel</h3>
+              <p class="pack__target">Petites boutiques, commerçants indépendants, solopreneurs</p>
+            </div>
+            <div class="pack__price">
+              <div class="pack__setup">
+                <strong>150 000 FCFA</strong> / 230 €
+                <s class="pack__price-was" aria-label="Tarif normal, hors lancement">350 000 FCFA</s>
+                <span>setup</span>
+              </div>
+              <div class="pack__monthly">
+                <strong>50 000 FCFA</strong> / 75 €
+                <s class="pack__price-was" aria-label="Tarif normal, hors lancement">75 000 FCFA</s>
+                <span>/ mois</span>
+              </div>
+              <div class="pack__delay">Déploiement 5 à 7 jours · Engagement 6 mois</div>
+            </div>
+            <p class="pack__guarantee">
+              ✓ Tarif garanti à vie sur votre contrat
+              <small>Valable pour les 10 premiers clients</small>
+            </p>
+            <ul class="pack__features">
+              <li>1 agent WhatsApp basique</li>
+              <li>Capture basique de leads (5 scénarios)</li>
+              <li>Formation 1 h</li>
+              <li>Support sous 24 h</li>
+            </ul>
+            <p class="pack__pitch">« Tu as lancé cette boutique pour être cheffe d'entreprise, pas pour passer tes soirées sur WhatsApp. »</p>
+            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--ghost btn--block">
+              Démarrer avec l'Essentiel
+            </a>
+          </article>
+
+          <!-- Pack GROWTH (FEATURED ⭐) -->
+          <article class="pack pack--featured reveal">
+            <div class="pack__ribbon">⭐ Le plus populaire</div>
+            <div class="pack__head">
+              <span class="pack__launch-badge" aria-label="Offre fondateurs, 10 places disponibles">🔥 Offre fondateurs · 10 places</span>
+              <span class="pack__badge pack__badge--featured">Notre offre phare</span>
+              <h3 class="pack__name">Growth IA PME</h3>
+              <p class="pack__target">PME structurées, e-commerces actifs, cabinets RH, restaurants &amp; hôtels</p>
+            </div>
+            <div class="pack__price">
+              <div class="pack__setup">
+                <strong>400 000 FCFA</strong> / 610 €
+                <s class="pack__price-was" aria-label="Tarif normal, hors lancement">750 000 FCFA</s>
+                <span>setup</span>
+              </div>
+              <div class="pack__monthly">
+                <strong>100 000 FCFA</strong> / 155 €
+                <s class="pack__price-was" aria-label="Tarif normal, hors lancement">150 000 FCFA</s>
+                <span>/ mois</span>
+              </div>
+              <div class="pack__delay">Déploiement 7 jours · Engagement 6 mois</div>
+            </div>
+            <p class="pack__guarantee">
+              ✓ Tarif garanti à vie sur votre contrat
+              <small>Valable pour les 10 premiers clients</small>
+            </p>
+            <ul class="pack__features">
+              <li><strong>Ventes :</strong> agent WhatsApp avancé, relances auto, scoring leads, intégration CRM</li>
+              <li><strong>Marketing :</strong> 8 contenus / mois, 1 script de vente, optimisation continue</li>
+              <li><strong>RH :</strong> tri CV auto, réponses candidats, préqualification</li>
+              <li>Formation 3 h + suivi mensuel (45 min)</li>
+              <li>Tableau de bord &amp; support sous 6 h</li>
+            </ul>
+            <p class="pack__pitch">« Un freelance solo peut traiter autant de missions que votre cabinet entier. La différence, c'est l'automatisation. »</p>
+            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary btn--block">
+              Choisir le Growth IA PME
+            </a>
+          </article>
+
+          <!-- Pack PREMIUM -->
+          <article class="pack reveal">
+            <div class="pack__head">
+              <span class="pack__launch-badge" aria-label="Offre fondateurs, 10 places disponibles">🔥 Offre fondateurs · 10 places</span>
+              <span class="pack__badge">Entreprises établies</span>
+              <h3 class="pack__name">Premium</h3>
+              <p class="pack__target">Cabinets RH fort volume, chaînes multi-sites, groupes</p>
+            </div>
+            <div class="pack__price">
+              <div class="pack__setup">
+                <strong>900 000 FCFA</strong> / 1 375 €
+                <s class="pack__price-was" aria-label="Tarif normal, hors lancement">1 500 000 FCFA</s>
+                <span>setup</span>
+              </div>
+              <div class="pack__monthly">
+                <strong>200 000 FCFA</strong> / 305 €
+                <s class="pack__price-was" aria-label="Tarif normal, hors lancement">300 000 FCFA</s>
+                <span>/ mois</span>
+              </div>
+              <div class="pack__delay">Déploiement 10 à 14 jours · Engagement 6 mois</div>
+            </div>
+            <p class="pack__guarantee">
+              ✓ Tarif garanti à vie sur votre contrat
+              <small>Valable pour les 10 premiers clients</small>
+            </p>
+            <ul class="pack__features">
+              <li>Tout le Growth, multi-sites &amp; multi-départements</li>
+              <li>CRM avancé + 2 outils métiers intégrés</li>
+              <li>Automatisations sur mesure</li>
+              <li>20 contenus / mois + 2 campagnes email</li>
+              <li>Système RH complet, dashboard 24/7</li>
+              <li>Formation 6 h + suivi bimensuel</li>
+              <li>Support prioritaire 2 h + audit trimestriel</li>
+            </ul>
+            <p class="pack__pitch">« Quand votre groupe atteint une taille critique, la qualité de l'exécution devient votre différenciateur. »</p>
+            <a href="mailto:afriautomate@gmail.com?subject=Demande%20Pack%20Premium" class="btn btn--ghost btn--block">
+              Accéder au Premium
+            </a>
+          </article>
+
+        </div>
+
+        <p class="packs__note reveal">
+          Options &amp; add-ons disponibles : contenu marketing supplémentaire (5 000 FCFA / 8 €), intégration outil supplémentaire (100 000 FCFA / 150 €), formation additionnelle (50 000 FCFA / 75 €/h), audit hors pack (200 000 FCFA / 300 €), urgence 3 jours (+30 % setup).
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         SECTION 6 — POURQUOI AFRIAUTOMATE (reproduction maquette)
+         ====================================================== -->
+    <section id="pourquoi" class="why why--light section">
+      <div class="container why__inner">
+
+        <div class="why__content reveal">
+          <span class="why__divider" aria-hidden="true"></span>
+          <h2 class="why__title">
+            Pourquoi<br />
+            <span class="why__accent">AfriAutomate ?</span>
+          </h2>
+          <p class="why__lead">
+            Nous aidons les PME africaines à gagner en efficacité, à réduire leurs coûts et à se concentrer sur leur croissance grâce à l'IA et à l'automatisation.
+          </p>
+
+          <ul class="why__features">
+            <li class="why-feature">
+              <span class="why-feature__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                  <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                </svg>
+              </span>
+              <div>
+                <h3 class="why-feature__title">Spécialistes des PME africaines</h3>
+                <p class="why-feature__desc">Nous comprenons vos réalités, vos défis et vos ambitions.</p>
+              </div>
+            </li>
+
+            <li class="why-feature">
+              <span class="why-feature__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                </svg>
+              </span>
+              <div>
+                <h3 class="why-feature__title">Solutions sur mesure</h3>
+                <p class="why-feature__desc">Des automatisations adaptées à vos processus et à vos objectifs.</p>
+              </div>
+            </li>
+
+            <li class="why-feature">
+              <span class="why-feature__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+              </span>
+              <div>
+                <h3 class="why-feature__title">Technologie fiable et évolutive</h3>
+                <p class="why-feature__desc">Nous utilisons l'IA et des outils robustes pour des résultats durables.</p>
+              </div>
+            </li>
+
+            <li class="why-feature">
+              <span class="why-feature__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/>
+                </svg>
+              </span>
+              <div>
+                <h3 class="why-feature__title">Résultats concrets et mesurables</h3>
+                <p class="why-feature__desc">Gain de temps, réduction des coûts, meilleure productivité.</p>
+              </div>
+            </li>
+
+            <li class="why-feature">
+              <span class="why-feature__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </span>
+              <div>
+                <h3 class="why-feature__title">Partenaire de croissance</h3>
+                <p class="why-feature__desc">Nous vous accompagnons à chaque étape de votre transformation.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="why__cta">
+            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+              Discuter de votre projet
+            </a>
+          </div>
+        </div>
+
+        <!-- Illustration : maquette Pourquoi (illustration sans le texte) -->
+        <div class="why__illustration reveal">
+          <img src="assets/images-hero/pourquoi-illustration.png"
+               alt="Illustration : carte de l'Afrique avec hub IA central entouré de 6 tuiles — gain de temps, processus automatisés, réduction des coûts, cœur de métier, productivité accrue."
+               loading="lazy" />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         SECTION 7 — PREMIERS CLIENTS (option honnête)
+         ====================================================== -->
+    <section id="clients" class="clients section section--dark">
+      <div class="container clients__inner">
+        <div class="clients__photo reveal">
+          <img src="assets/photos-equipe/fondateur.png"
+               alt="Cosme A. DENON — Fondateur et Directeur d'AfriAutomate"
+               loading="lazy" />
+          <div class="clients__photo-caption">
+            <strong>Cosme A. DENON</strong>
+            <span>Fondateur &amp; Directeur · Cotonou</span>
+          </div>
+        </div>
+        <div class="clients__content reveal">
+          <span class="section__kicker">Premiers clients</span>
+          <h2 class="section__title">On préfère l'honnêteté aux faux témoignages.</h2>
+          <p class="clients__lead">
+            AfriAutomate démarre. Nous n'affichons pas de fausses citations clients — par respect pour vous.
+          </p>
+          <p class="clients__pitch">
+            <strong>Soyez l'une des 10 premières PME accompagnées</strong> et bénéficiez d'un suivi rapproché du fondateur, d'un tarif de lancement <em>garanti à vie</em>, et d'une étude de cas co-rédigée que vous pourrez réutiliser.
+          </p>
+          <ul class="clients__perks">
+            <li>✓ Tarif de lancement garanti à vie</li>
+            <li>✓ Suivi direct du fondateur</li>
+            <li>✓ Étude de cas co-rédigée</li>
+            <li>✓ Priorité sur les nouvelles fonctionnalités</li>
+          </ul>
+          <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--accent btn--lg">
+            Devenir client pilote →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         SECTION 8 — FAQ (onglets + accordéon, ARIA accessible)
+         Inspiré du composant React faq-tabs (adapté en vanilla JS)
+         ====================================================== -->
+    <section id="faq" class="faq faq--tabs section section--light">
+      <div class="container faq__inner">
+
+        <header class="faq__header reveal">
+          <span class="faq__subtitle">Vos questions, nos réponses</span>
+          <h2 class="faq__title">Foire Aux Questions</h2>
+          <span class="faq__glow" aria-hidden="true"></span>
+        </header>
+
+        <!-- Onglets de catégories -->
+        <div class="faq__tabs reveal" role="tablist" aria-label="Catégories FAQ">
+          <button class="faq__tab is-active" role="tab" data-tab="general" aria-selected="true" aria-controls="faq-panel-general">
+            <span class="faq__tab-bg" aria-hidden="true"></span>
+            <span class="faq__tab-label">Questions générales</span>
+          </button>
+          <button class="faq__tab" role="tab" data-tab="essentiel" aria-selected="false" aria-controls="faq-panel-essentiel">
+            <span class="faq__tab-bg" aria-hidden="true"></span>
+            <span class="faq__tab-label">Pack Essentiel</span>
+          </button>
+          <button class="faq__tab" role="tab" data-tab="growth" aria-selected="false" aria-controls="faq-panel-growth">
+            <span class="faq__tab-bg" aria-hidden="true"></span>
+            <span class="faq__tab-label">Pack Growth&nbsp;⭐</span>
+          </button>
+          <button class="faq__tab" role="tab" data-tab="premium" aria-selected="false" aria-controls="faq-panel-premium">
+            <span class="faq__tab-bg" aria-hidden="true"></span>
+            <span class="faq__tab-label">Pack Premium</span>
+          </button>
+        </div>
+
+        <!-- Panneaux de contenu -->
+        <div class="faq__panels">
+
+          <!-- ========== Panel : Questions générales ========== -->
+          <div class="faq__panel is-active" id="faq-panel-general" role="tabpanel" data-panel="general" aria-labelledby="faq-tab-general">
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-g-1">
+                <span>Concrètement, qu'est-ce que vous faites ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-g-1" role="region" hidden>
+                <p>On automatise les tâches répétitives de votre PME via l'IA. Concrètement : agent WhatsApp 24/7, relances automatiques, tri de CV, génération de contenu. Objectif : vous faire gagner du temps et générer du revenu.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-g-2">
+                <span>Quelle différence avec un chatbot classique ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-g-2" role="region" hidden>
+                <p>Un chatbot classique suit un script rigide et plante dès qu'il sort du cadre. Nos agents IA comprennent le langage naturel, gèrent des conversations complexes et s'améliorent dans le temps. Ils peuvent qualifier des leads, prendre des réservations, trier des candidatures.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-g-3">
+                <span>Combien de temps avant que ce soit opérationnel ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-g-3" role="region" hidden>
+                <p>Entre 5 et 14 jours selon le pack. Le Growth IA PME : <strong>7 jours ouvrés maximum</strong>. C'est un engagement contractuel — au-delà, remboursement intégral.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-g-4">
+                <span>Est-ce que ça marche vraiment en Afrique ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-g-4" role="region" hidden>
+                <p>Oui, c'est notre spécialité. Solutions adaptées aux réalités locales : WhatsApp comme canal principal, systèmes qui fonctionnent en connexion instable, français et adaptations culturelles inclus. Les outils américains génériques ne sont pas pensés pour votre marché.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-g-5">
+                <span>Je ne suis pas à l'aise avec la technologie. Est-ce un problème ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-g-5" role="region" hidden>
+                <p>Non. C'est précisément notre travail. On configure tout, on forme votre équipe (inclus dans le pack), le système tourne tout seul. Vous pilotez via un tableau de bord simple, et nous restons disponibles.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-g-6">
+                <span>L'IA ne va-t-elle pas dire n'importe quoi à mes clients ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-g-6" role="region" hidden>
+                <p>Non. Les agents sont cadrés par des règles précises définies avec vous : ils savent ce qu'ils peuvent dire, ce qu'ils doivent transférer à un humain, ce qu'ils ne doivent jamais aborder. Chaque scénario est testé avant production. Plus constants qu'un commercial junior.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-g-7">
+                <span>Mes données vont où ? Est-ce sécurisé ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-g-7" role="region" hidden>
+                <p>Vos données restent votre propriété. Elles sont stockées sur des services professionnels conformes aux standards de sécurité (chiffrement, sauvegardes). Nous signons un NDA sur demande et nous n'utilisons jamais vos données pour un autre client.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-g-8">
+                <span>Je peux arrêter quand je veux ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-g-8" role="region" hidden>
+                <p>Engagement initial de 6 mois (pour amortir le travail de setup). Au-delà : résiliation simple avec 30 jours de préavis. Pas de piège, pas de reconduction forcée 2 ans. Si la livraison n'est pas opérationnelle dans les délais garantis : remboursement intégral du setup.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== Panel : Pack Essentiel ========== -->
+          <div class="faq__panel" id="faq-panel-essentiel" role="tabpanel" data-panel="essentiel" aria-labelledby="faq-tab-essentiel" hidden>
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-e-1">
+                <span>À qui s'adresse précisément le pack Essentiel ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-e-1" role="region" hidden>
+                <p>Aux petites boutiques, commerçants indépendants et solopreneurs qui veulent leur premier agent WhatsApp 24/7 sans casser leur trésorerie. Idéal pour valider l'impact de l'automatisation avant de scaler.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-e-2">
+                <span>Que contient exactement les <strong>150 000 FCFA</strong> de setup ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-e-2" role="region" hidden>
+                <p>Le déploiement complet d'un agent WhatsApp basique, la configuration de 5 scénarios de capture de leads, 1 heure de formation pour vous et votre équipe, et le branchement à votre numéro WhatsApp Business. Tout est prêt en <strong>5 à 7 jours</strong>.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-e-3">
+                <span>Le pack Essentiel est-il évolutif ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-e-3" role="region" hidden>
+                <p>Oui. Vous pouvez basculer vers le Growth IA PME à tout moment — le travail de setup déjà réalisé est crédité, vous ne payez que la différence. Aucun verrou.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-e-4">
+                <span>Pourquoi 50 000 FCFA / mois plutôt qu'un simple ChatGPT à 30 € ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-e-4" role="region" hidden>
+                <p>Notre abonnement inclut l'hébergement professionnel, l'orchestration WhatsApp, les mises à jour, le suivi de votre agent et un support sous 24 h. Avec ChatGPT seul, vous restez avec un outil brut sans intégration ni accompagnement.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== Panel : Pack Growth IA PME ========== -->
+          <div class="faq__panel" id="faq-panel-growth" role="tabpanel" data-panel="growth" aria-labelledby="faq-tab-growth" hidden>
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-w-1">
+                <span>Pourquoi le Growth est-il "le plus populaire" ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-w-1" role="region" hidden>
+                <p>Parce qu'il couvre les 3 fonctions à plus fort ROI pour une PME africaine : ventes (WhatsApp + scoring + relances), marketing (8 contenus/mois) et RH (tri CV automatique). C'est le meilleur rapport résultat/investissement de la gamme.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-w-2">
+                <span>Quel volume de leads ou de CV peut traiter le Growth ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-w-2" role="region" hidden>
+                <p>L'agent WhatsApp gère plusieurs centaines de conversations simultanées. Le tri RH absorbe sans problème <strong>200 à 500 CV par mois</strong>. Au-delà, on bascule vers Premium avec automatisations sur mesure.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-w-3">
+                <span>Le CRM est-il fourni ou faut-il avoir le sien ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-w-3" role="region" hidden>
+                <p>Une intégration CRM (1 outil au choix) est incluse : HubSpot gratuit, Notion, Airtable ou Google Sheets — selon votre stack. Si vous utilisez déjà Salesforce ou Zoho, on l'intègre sur devis (add-on à 100 000 FCFA).</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-w-4">
+                <span>Que couvre le suivi mensuel de 45 minutes ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-w-4" role="region" hidden>
+                <p>Un appel mensuel pour analyser les performances de votre tableau de bord, identifier ce qui marche et ce qui peut être optimisé, et planifier les prochaines évolutions. Vous repartez avec des actions concrètes — pas un rapport bavard.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-w-5">
+                <span>La formation 3 h est-elle suffisante pour mon équipe ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-w-5" role="region" hidden>
+                <p>Oui pour 90 % des équipes. On forme 2 à 3 personnes en visio sur 2 sessions (1h30 + 1h30). La documentation reste accessible en permanence. Si besoin d'ajouter des heures, c'est 50 000 FCFA/h.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== Panel : Pack Premium ========== -->
+          <div class="faq__panel" id="faq-panel-premium" role="tabpanel" data-panel="premium" aria-labelledby="faq-tab-premium" hidden>
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-p-1">
+                <span>À partir de quelle taille d'entreprise le Premium devient-il pertinent ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-p-1" role="region" hidden>
+                <p>À partir d'environ 30 collaborateurs, ou dès que vous gérez plusieurs sites/marques. Le Premium est aussi conçu pour les cabinets RH qui traitent <strong>+500 CV / mois</strong> et les groupes hôteliers multi-établissements.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-p-2">
+                <span>Que signifie concrètement "support prioritaire 2 h" ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-p-2" role="region" hidden>
+                <p>Toute demande de support reçoit une réponse en moins de 2 heures sur les jours ouvrés (8h-18h GMT). Une ligne directe WhatsApp dédiée et un canal Slack partagé sont mis en place dès la signature.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-p-3">
+                <span>Qu'est-ce que l'audit trimestriel ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-p-3" role="region" hidden>
+                <p>Tous les 3 mois, nous analysons en profondeur vos automatisations : KPIs, points de friction, opportunités d'optimisation. Vous recevez un rapport actionnable + 1 atelier de 2 h pour aligner la stratégie.</p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false" aria-controls="faq-p-4">
+                <span>Combien d'outils métiers peuvent être intégrés ?</span>
+                <span class="faq__chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+              </button>
+              <div class="faq__answer" id="faq-p-4" role="region" hidden>
+                <p>2 outils métiers de base (votre CRM avancé + 1 ERP, comptabilité ou réservation, par exemple). Au-delà, c'est 100 000 FCFA par intégration supplémentaire. La plupart des outils SaaS courants sont compatibles via API.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="faq__contact reveal">
+          Une question non listée ?
+          <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener">Demandez-nous directement</a> — réponse sous 24 h.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         SECTION 9 — CTA FINAL
+         ====================================================== -->
+    <section id="contact" class="cta-final section section--dark">
+      <div class="container cta-final__inner reveal">
+        <h2 class="cta-final__title">Prêt à libérer votre temps ?</h2>
+        <p class="cta-final__lead">30 minutes d'appel offert. Diagnostic gratuit, recommandation honnête, zéro pression commerciale.</p>
+        <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary btn--xl">
+          Réserver mon appel gratuit →
+        </a>
+        <p class="cta-final__sub">
+          Ou écrivez-nous sur WhatsApp :
+          <!-- TODO: vérifier le format du numéro WhatsApp (11 chiffres après 229) -->
+          <a href="https://wa.me/2290143102911" target="_blank" rel="noopener">+229 01 43 10 29 11</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <img src="branding/lg_AfriAutomate.png" alt="Logo AfriAutomate" class="footer__logo" width="160" loading="lazy" />
+        <p class="footer__slogan">Moins d'effort. Plus de revenus.<br />Grâce à l'automatisation.</p>
+        <p class="footer__location">📍 Cotonou, Bénin · Afrique francophone</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Navigation footer">
+        <h4 class="footer__title">Navigation</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Méthode</a></li>
+          <li><a href="#packs">Packs</a></li>
+          <li><a href="#pourquoi">Pourquoi nous</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Contact</h4>
+        <ul>
+          <!-- TODO: vérifier le format du numéro WhatsApp -->
+          <li><a href="https://wa.me/2290143102911" target="_blank" rel="noopener">WhatsApp : +229 01 43 10 29 11</a></li>
+          <li><a href="mailto:afriautomate@gmail.com">afriautomate@gmail.com</a></li>
+          <li><a href="https://calendly.com/afriautomate" target="_blank" rel="noopener">Prendre rendez-vous</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Suivez-nous</h4>
+        <ul class="footer__social">
+          <li>
+            <a href="https://www.linkedin.com/company/afriautomate/" target="_blank" rel="noopener" aria-label="LinkedIn AfriAutomate">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.14 1.45-2.14 2.96v5.7h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v6.46z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <!-- TODO: URL Facebook réelle -->
+            <a href="#" aria-label="Facebook AfriAutomate (lien à compléter)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.469h3.047v-2.642c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.234 2.686.234v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385c5.737-.9 10.125-5.864 10.125-11.854z"/></svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <!-- TODO: URL Instagram réelle -->
+            <a href="#" aria-label="Instagram AfriAutomate (lien à compléter)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2025 AfriAutomate — Tous droits réservés.</p>
+        <ul class="footer__legal">
+          <!-- TODO: pages légales à créer -->
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGV</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

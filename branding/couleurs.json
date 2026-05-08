@@ -1,0 +1,49 @@
+{
+  "source": "01_Branding/Couleurs-typos.md + 00_Strategie/Description-projet.md",
+  "note": "Palette officielle AfriAutomate — extraite de la charte graphique interne",
+
+  "primaire": "#0D1117",
+  "primaire_nom": "Noir profond",
+  "primaire_rgb": "13, 17, 23",
+  "primaire_usage": "Fonds principaux, arrière-plans premium, header sombre (dominante 60%)",
+
+  "secondaire": "#2563EB",
+  "secondaire_nom": "Bleu tech",
+  "secondaire_rgb": "37, 99, 235",
+  "secondaire_usage": "CTA, liens, éléments d'action, accents digital/automatisation",
+
+  "accent": "#FF8A00",
+  "accent_nom": "Orange chaud",
+  "accent_rgb": "255, 138, 0",
+  "accent_usage": "Highlights, badges nouveau, accent énergie/Afrique — 1 élément fort par visuel max",
+
+  "accent_lumineux": "#FFC107",
+  "accent_lumineux_nom": "Ambre",
+  "accent_lumineux_rgb": "255, 193, 7",
+  "accent_lumineux_usage": "Mises en valeur ponctuelles, étoiles, récompenses — usage parcimonieux",
+
+  "fond_clair": "#F5F7FA",
+  "fond_clair_nom": "Gris clair",
+  "fond_clair_rgb": "245, 247, 250",
+  "fond_clair_usage": "Fonds de sections claires, cartes, séparateurs doux (neutre 30%)",
+
+  "fond_sombre": "#0D1117",
+  "texte_principal": "#F5F7FA",
+  "texte_secondaire": "#A0AEC0",
+
+  "police_titres": "Montserrat",
+  "police_titres_graisse": "Bold (700)",
+  "police_titres_fallback": "'Montserrat', 'Helvetica Neue', Arial, sans-serif",
+
+  "police_corps": "Poppins",
+  "police_corps_graisse": "Regular (400)",
+  "police_corps_fallback": "'Poppins', 'Segoe UI', Roboto, sans-serif",
+
+  "regles": {
+    "dominante": "Noir profond + Blanc/Gris clair = 60% / 30%",
+    "accent_principal": "Bleu tech pour tout élément interactif",
+    "accent_chaud": "Orange chaud pour 1 element fort par visuel (pas plus)",
+    "ambre": "Usage parcimonieux, éviter en grande aplat",
+    "contraste": "Viser WCAG AA minimum sur tous les textes"
+  }
+}
