@@ -1048,6 +1048,143 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
+   11 bis. WHY — Animations modernes (style 21st.dev / Linear)
+   ===================================================================== */
+
+/* (a) Title shimmer doré sur "AfriAutomate ?" */
+.why__accent {
+  background: linear-gradient(
+    90deg,
+    var(--c-gold-dark)    0%,
+    var(--c-gold)        25%,
+    #E5CB94              50%,
+    var(--c-gold)        75%,
+    var(--c-gold-dark)  100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: shimmerGold 5s ease-in-out infinite;
+}
+@keyframes shimmerGold {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+/* (b) Trait doré qui se trace au reveal du titre */
+.why--light .why__divider {
+  width: 0;
+  opacity: 0;
+  transition:
+    width 0.7s cubic-bezier(0.4, 1.4, 0.5, 1) 0.1s,
+    opacity 0.5s ease 0.1s;
+}
+.why--light.is-animated .why__divider {
+  width: 60px;
+  opacity: 1;
+}
+
+/* (c) Stagger reveal — les 5 features arrivent une par une */
+.why__features .why-feature {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition:
+    opacity 0.6s cubic-bezier(0.4, 1.4, 0.5, 1),
+    transform 0.6s cubic-bezier(0.4, 1.4, 0.5, 1);
+}
+.why--light.is-animated .why__features .why-feature {
+  opacity: 1;
+  transform: translateX(0);
+}
+.why--light.is-animated .why__features .why-feature:nth-child(1) { transition-delay: 0.30s; }
+.why--light.is-animated .why__features .why-feature:nth-child(2) { transition-delay: 0.45s; }
+.why--light.is-animated .why__features .why-feature:nth-child(3) { transition-delay: 0.60s; }
+.why--light.is-animated .why__features .why-feature:nth-child(4) { transition-delay: 0.75s; }
+.why--light.is-animated .why__features .why-feature:nth-child(5) { transition-delay: 0.90s; }
+
+/* (d) Magnetic hover sur les icônes — scale + rotation + halo doré */
+.why-feature__icon {
+  transition:
+    transform 0.45s cubic-bezier(0.4, 1.4, 0.5, 1),
+    box-shadow 0.4s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+  will-change: transform;
+}
+.why-feature:hover .why-feature__icon {
+  transform: scale(1.18) rotate(-8deg);
+  border-color: var(--c-gold);
+  color: var(--c-gold);
+  box-shadow:
+    0 10px 28px rgba(201, 169, 104, 0.32),
+    inset 0 0 0 4px rgba(255, 255, 255, 0.55),
+    0 0 0 7px rgba(201, 169, 104, 0.12);
+}
+.why-feature__icon svg {
+  transition: transform 0.45s cubic-bezier(0.4, 1.4, 0.5, 1);
+}
+.why-feature:hover .why-feature__icon svg {
+  transform: scale(1.08);
+}
+
+/* (e) Le titre du feature passe en or doré subtil au hover */
+.why-feature__title {
+  transition: color 0.3s ease;
+}
+.why-feature:hover .why-feature__title {
+  color: var(--c-gold-dark);
+}
+
+/* (f) Illustration qui flotte doucement — feeling 3D premium */
+.why__illustration img {
+  animation: floatGently 7s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes floatGently {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-14px) rotate(0.4deg); }
+}
+
+/* (g) Lead text + CTA — fade-in retardé après les features */
+.why__lead,
+.why__cta {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.4, 1.4, 0.5, 1);
+}
+.why--light.is-animated .why__lead {
+  transition-delay: 0.18s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.why--light.is-animated .why__cta {
+  transition-delay: 1.15s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* (h) Respect des préférences "reduced motion" */
+@media (prefers-reduced-motion: reduce) {
+  .why__accent,
+  .why__illustration img { animation: none; }
+
+  .why--light .why__divider,
+  .why__features .why-feature,
+  .why__lead,
+  .why__cta {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .why--light .why__divider { width: 60px; }
+}
+
+
+/* =====================================================================
    12. CLIENTS — "Premiers clients" honnête
    ===================================================================== */
 .clients__inner {

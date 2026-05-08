@@ -208,7 +208,38 @@
 
 
   /* -------------------------------------------------------------------
-     6. Lien de navigation actif (mise en évidence section visible)
+     6 bis. Animations dédiées section "Pourquoi AfriAutomate"
+     Déclenche `.is-animated` quand la section entre dans le viewport,
+     ce qui active la cascade : trait doré → titre → lead → 5 features
+     stagger → CTA. Cf. style.css bloc "11 bis".
+     ------------------------------------------------------------------- */
+  function initWhyAnimations() {
+    const why = document.querySelector('.why--light');
+    if (!why) return;
+
+    if (!('IntersectionObserver' in window)) {
+      // Fallback navigateur ancien : on affiche tout direct
+      why.classList.add('is-animated');
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            why.classList.add('is-animated');
+            obs.unobserve(why);
+          }
+        });
+      },
+      { threshold: 0.18, rootMargin: '0px 0px -80px 0px' }
+    );
+    observer.observe(why);
+  }
+
+
+  /* -------------------------------------------------------------------
+     7. Lien de navigation actif (mise en évidence section visible)
      ------------------------------------------------------------------- */
   function initActiveNavLink() {
     const links = document.querySelectorAll('.header__link');
@@ -250,6 +281,7 @@
     initRevealOnScroll();
     initHeaderShrink();
     initActiveNavLink();
+    initWhyAnimations();
     console.info('%cAfriAutomate — site chargé ✓', 'color:#FF8A00;font-weight:bold');
   }
 
