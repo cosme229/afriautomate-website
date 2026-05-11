@@ -156,200 +156,480 @@
     </section>
 
     <!-- ======================================================
-         SECTION 3 — SERVICES (3 piliers)
-         Source : content/services.md
+         SECTION 3 — SERVICES (Diagnostic + 4 secteurs ciblés)
+         Inspiration : NAIOM, Smala AI, agences IA francophones
          ====================================================== -->
     <section id="services" class="services section section--dark">
       <div class="services__bg" aria-hidden="true"></div>
       <div class="container">
+
+        <!-- Bloc d'ouverture : Tout commence par un diagnostic -->
         <header class="section__header reveal">
-          <span class="section__kicker">Nos services</span>
-          <h2 class="section__title">3 piliers pour libérer votre valeur humaine</h2>
-          <p class="section__lead">Nous automatisons les tâches répétitives sur les fonctions où l'impact business est le plus rapide.</p>
+          <span class="section__kicker">Notre approche</span>
+          <h2 class="section__title">Tout commence par un diagnostic.</h2>
+          <p class="section__lead">
+            Avant de vous parler d'IA, nous écoutons votre entreprise. Chaque mission débute par un
+            <strong>audit IA</strong> qui identifie où l'automatisation peut concrètement créer de la valeur.
+            Pas de solution générique : une feuille de route taillée pour votre métier.
+          </p>
         </header>
 
-        <div class="services__grid">
-
-          <!-- Service 1 : Ventes -->
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        <!-- Bloc visuel : le diagnostic comme point d'entrée -->
+        <div class="diagnostic reveal">
+          <div class="diagnostic__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <path d="M8 11h6"/>
+              <path d="M11 8v6"/>
+            </svg>
+          </div>
+          <div class="diagnostic__content">
+            <span class="diagnostic__step">Étape 0 — Le point de départ</span>
+            <h3 class="diagnostic__title">Diagnostic IA &amp; structuration</h3>
+            <p class="diagnostic__desc">
+              Interviews ciblées, cartographie des processus, identification des tâches répétitives où l'IA crée le plus de valeur.
+              C'est la base de tout. <strong>Durée : 1 à 2 semaines</strong> selon la taille de votre structure.
+            </p>
+            <a href="#process" class="diagnostic__link">
+              Découvrir notre méthode détaillée
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
               </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Transition vers les secteurs -->
+        <header class="section__header section__header--sub reveal">
+          <span class="section__kicker section__kicker--accent">Nos terrains d'expertise</span>
+          <h2 class="section__title">4 secteurs où nous excellons</h2>
+          <p class="section__lead">
+            Une fois le diagnostic posé, nous déployons des automatisations éprouvées sur ces quatre verticales.
+            ROI rapide, gains mesurables, accompagnement adapté aux réalités africaines.
+          </p>
+        </header>
+
+        <!-- Grille des 4 secteurs -->
+        <div class="sectors__grid">
+
+          <!-- Secteur 1 : Recrutement & RH (terrain signature) -->
+          <article class="sector sector--signature reveal">
+            <span class="sector__signature-tag" aria-label="Notre terrain naturel">★ Notre terrain naturel</span>
+            <div class="sector__head">
+              <div class="sector__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h3 class="sector__title">Recrutement &amp; RH</h3>
+              <p class="sector__target">Cabinets de recrutement · Services RH internes · DRH</p>
             </div>
-            <h3 class="service-card__title">Automatisation des ventes</h3>
-            <p class="service-card__lead">Vos clients contactent votre entreprise à toute heure. Nos agents intelligents répondent à leur place, qualifient les prospects et prennent des rendez-vous — même la nuit et le week-end.</p>
-            <ul class="service-card__list">
-              <li>Agent WhatsApp 24/7</li>
-              <li>Capture &amp; scoring de prospects</li>
-              <li>Relances automatiques (3 à 5 messages)</li>
-              <li>Intégration CRM légère</li>
-            </ul>
-            <p class="service-card__result"><strong>Résultat :</strong> zéro vente perdue hors heures ouvrées.</p>
+
+            <div class="sector__block">
+              <h4 class="sector__subtitle sector__subtitle--pain">Douleurs réelles</h4>
+              <ul class="sector__list sector__list--pain">
+                <li>Trier 200 CV à la main pour un seul poste</li>
+                <li>Relancer les candidats un par un par WhatsApp</li>
+                <li>Onboarding des nouveaux non structuré</li>
+                <li>Aucun suivi documenté des performances</li>
+              </ul>
+            </div>
+
+            <div class="sector__block">
+              <h4 class="sector__subtitle sector__subtitle--auto">Ce que nous automatisons</h4>
+              <ul class="sector__list sector__list--auto">
+                <li>Tri et scoring des CV par IA</li>
+                <li>Chatbot WhatsApp de pré-qualification</li>
+                <li>Onboarding automatisé (documents, formations, check-ins)</li>
+                <li>Tableau de bord de suivi des recrutements</li>
+              </ul>
+            </div>
           </article>
 
-          <!-- Service 2 : Marketing -->
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 11l18-8-8 18-2-8-8-2z"/>
-              </svg>
+          <!-- Secteur 2 : Commerce & Distribution -->
+          <article class="sector reveal">
+            <div class="sector__head">
+              <div class="sector__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+              </div>
+              <h3 class="sector__title">Commerce &amp; Distribution</h3>
+              <p class="sector__target">Importateurs · Grossistes · Boutiques multi-sites · E-commerce</p>
             </div>
-            <h3 class="service-card__title">Automatisation marketing</h3>
-            <p class="service-card__lead">Produire du contenu de qualité régulièrement est épuisant. Nous automatisons la génération de vos messages commerciaux pour une présence digitale constante.</p>
-            <ul class="service-card__list">
-              <li>Contenu multi-canaux (LinkedIn, WhatsApp, Instagram, email)</li>
-              <li>Scripts de vente optimisés</li>
-              <li>Campagnes email automatisées</li>
-              <li>Analyse &amp; amélioration continue</li>
-            </ul>
-            <p class="service-card__result"><strong>Résultat :</strong> présence digitale constante. Engagement amélioré.</p>
+
+            <div class="sector__block">
+              <h4 class="sector__subtitle sector__subtitle--pain">Douleurs réelles</h4>
+              <ul class="sector__list sector__list--pain">
+                <li>Relances impayés faites à la main (ou pas du tout)</li>
+                <li>Aucune visibilité sur les stocks en temps réel</li>
+                <li>Commandes fournisseurs passées « à l'œil »</li>
+                <li>Zéro distinction entre clients fidèles et occasionnels</li>
+              </ul>
+            </div>
+
+            <div class="sector__block">
+              <h4 class="sector__subtitle sector__subtitle--auto">Ce que nous automatisons</h4>
+              <ul class="sector__list sector__list--auto">
+                <li>Relances automatiques WhatsApp/SMS pour les impayés</li>
+                <li>Alertes stock bas + suggestion de commande</li>
+                <li>Rapport hebdomadaire des ventes par produit</li>
+                <li>Programme de fidélité déclenché automatiquement</li>
+              </ul>
+            </div>
           </article>
 
-          <!-- Service 3 : RH -->
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
+          <!-- Secteur 3 : Cabinets professionnels -->
+          <article class="sector reveal">
+            <div class="sector__head">
+              <div class="sector__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="9" y1="13" x2="15" y2="13"/>
+                  <line x1="9" y1="17" x2="15" y2="17"/>
+                  <line x1="9" y1="9" x2="11" y2="9"/>
+                </svg>
+              </div>
+              <h3 class="sector__title">Cabinets professionnels</h3>
+              <p class="sector__target">Comptables · Avocats · Consultants · Notaires</p>
             </div>
-            <h3 class="service-card__title">Automatisation RH</h3>
-            <p class="service-card__lead">Trier des centaines de CV manuellement, c'est du temps consultant gaspillé. Nous automatisons la préqualification pour vous concentrer sur les meilleurs profils.</p>
-            <ul class="service-card__list">
-              <li>Tri intelligent des CV</li>
-              <li>Préqualification des candidats</li>
-              <li>Réponses automatiques personnalisées</li>
-              <li>Planification automatique des entretiens</li>
-            </ul>
-            <p class="service-card__result"><strong>Résultat :</strong> 3× plus de missions traitées, sans embaucher.</p>
+
+            <div class="sector__block">
+              <h4 class="sector__subtitle sector__subtitle--pain">Douleurs réelles</h4>
+              <ul class="sector__list sector__list--pain">
+                <li>Relances de factures oubliées</li>
+                <li>Collecte de documents chaotique (WhatsApp, email, main propre)</li>
+                <li>Aucun rappel automatique des échéances fiscales</li>
+                <li>Reporting client fait manuellement chaque mois</li>
+              </ul>
+            </div>
+
+            <div class="sector__block">
+              <h4 class="sector__subtitle sector__subtitle--auto">Ce que nous automatisons</h4>
+              <ul class="sector__list sector__list--auto">
+                <li>Workflow de collecte de documents avec relances</li>
+                <li>Calendrier fiscal automatisé avec alertes clients</li>
+                <li>Génération de rapports mensuels en un clic</li>
+                <li>Facturation et relance intégrées</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Secteur 4 : Santé -->
+          <article class="sector reveal">
+            <div class="sector__head">
+              <div class="sector__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+              </div>
+              <h3 class="sector__title">Santé</h3>
+              <p class="sector__target">Cliniques · Cabinets médicaux · Pharmacies · Laboratoires</p>
+            </div>
+
+            <div class="sector__block">
+              <h4 class="sector__subtitle sector__subtitle--pain">Douleurs réelles</h4>
+              <ul class="sector__list sector__list--pain">
+                <li>Rendez-vous gérés sur cahier ou WhatsApp désorganisé</li>
+                <li>Jusqu'à 20 % de no-shows par manque de rappels</li>
+                <li>Pharmacies : ruptures de stock fréquentes, aucune alerte</li>
+                <li>Suivi des patients chroniques non structuré</li>
+              </ul>
+            </div>
+
+            <div class="sector__block">
+              <h4 class="sector__subtitle sector__subtitle--auto">Ce que nous automatisons</h4>
+              <ul class="sector__list sector__list--auto">
+                <li>Prise de RDV WhatsApp 24/7 avec calendrier synchronisé</li>
+                <li>Rappels auto de RDV (J-1, H-2) — chute des no-shows</li>
+                <li>Alertes stock pharmacie + suggestion de réassort</li>
+                <li>Suivi patients chroniques &amp; rappel renouvellement d'ordonnance</li>
+              </ul>
+            </div>
           </article>
 
         </div>
+
+        <!-- CTA central Services -->
+        <div class="services__cta reveal">
+          <p class="services__cta-text">Votre secteur n'est pas listé ? Nous accompagnons aussi d'autres métiers — parlons-en.</p>
+          <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary btn--xl">
+            Réserver mon audit IA gratuit
+          </a>
+          <p class="services__cta-note">30 minutes · Sans engagement · Recommandation honnête</p>
+        </div>
+
       </div>
     </section>
 
     <!-- ======================================================
-         SECTION 4 — COMMENT ÇA MARCHE (Process 4 étapes)
+         SECTION 4 — MÉTHODE (3 phases, timeline premium)
+         Pièce maîtresse du site — c'est ici que se joue la valeur perçue
          ====================================================== -->
-    <section id="process" class="process section section--light">
-      <div class="container">
-        <header class="section__header reveal">
-          <span class="section__kicker">Notre méthode</span>
-          <h2 class="section__title">4 étapes, du diagnostic à l'autonomie</h2>
-          <p class="section__lead">Pragmatique, transparente, adaptée aux contraintes africaines (connexion, budget, langue, culture).</p>
+    <section id="process" class="method section section--dark">
+      <div class="method__bg" aria-hidden="true"></div>
+      <div class="container method__container">
+
+        <header class="section__header method__header reveal">
+          <span class="section__kicker section__kicker--accent">Notre méthode</span>
+          <h2 class="section__title method__title">
+            3 phases pour transformer<br/>
+            <span class="method__title-accent">votre entreprise</span>
+          </h2>
+          <p class="section__lead">
+            Une méthode rodée, transparente, adaptée au rythme des PME africaines.
+            Chaque phase a un objectif clair, un livrable concret et un délai garanti.
+          </p>
         </header>
 
-        <ol class="process__steps">
-          <li class="process__step reveal">
-            <span class="process__num">1</span>
-            <h3 class="process__title">Audit</h3>
-            <p class="process__desc">Nous analysons vos flux, vos outils, vos goulots d'étranglement. Pas de PowerPoint creux — un diagnostic chiffré en 1 à 3 jours.</p>
-          </li>
-          <li class="process__step reveal">
-            <span class="process__num">2</span>
-            <h3 class="process__title">Stratégie</h3>
-            <p class="process__desc">Nous priorisons les automatisations à plus fort ROI pour votre PME. Vous validez. Pas de surprise sur le périmètre.</p>
-          </li>
-          <li class="process__step process__step--highlight reveal">
-            <span class="process__num">3</span>
-            <h3 class="process__title">Déploiement</h3>
-            <p class="process__desc">Nous installons les agents, intégrons vos outils, formons votre équipe. Tout est opérationnel en 5 à 14 jours selon le pack.</p>
-          </li>
-          <li class="process__step reveal">
-            <span class="process__num">4</span>
-            <h3 class="process__title">Suivi</h3>
-            <p class="process__desc">Tableau de bord, support réactif, optimisations continues. Vous restez autonome, nous restons disponibles.</p>
-          </li>
-        </ol>
+        <div class="method__timeline">
+
+          <!-- ============ PHASE 1 — AUDIT IA (mise en valeur) ============ -->
+          <article class="phase phase--featured reveal">
+            <div class="phase__marker">
+              <span class="phase__num" aria-hidden="true">01</span>
+              <span class="phase__connector" aria-hidden="true"></span>
+            </div>
+
+            <div class="phase__body">
+              <div class="phase__meta">
+                <span class="phase__badge phase__badge--featured">Phase fondatrice</span>
+                <span class="phase__duration">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  1 à 2 semaines
+                </span>
+              </div>
+
+              <h3 class="phase__title">Audit IA &amp; Diagnostic</h3>
+              <p class="phase__lead">
+                La phase la plus importante. Nous prenons le temps d'écouter votre entreprise avant de proposer la moindre solution.
+                <strong>C'est ici que nous identifions où l'IA peut réellement faire la différence pour vous.</strong>
+              </p>
+
+              <!-- 3 sous-étapes en mini-timeline -->
+              <ol class="substeps">
+
+                <li class="substep">
+                  <div class="substep__head">
+                    <span class="substep__index">1.1</span>
+                    <div class="substep__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 class="substep__title">Interviews</h4>
+                  <p class="substep__desc">
+                    Nous rencontrons individuellement les personnes stratégiques de votre entreprise — chefs de département,
+                    responsables opérationnels. L'objectif : identifier les difficultés réelles vécues sur le terrain,
+                    département par département.
+                  </p>
+                </li>
+
+                <li class="substep">
+                  <div class="substep__head">
+                    <span class="substep__index">1.2</span>
+                    <div class="substep__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                        <line x1="10" y1="6.5" x2="14" y2="6.5"/>
+                        <line x1="6.5" y1="10" x2="6.5" y2="14"/>
+                        <line x1="17.5" y1="10" x2="17.5" y2="14"/>
+                        <line x1="10" y1="17.5" x2="14" y2="17.5"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 class="substep__title">Cartographie</h4>
+                  <p class="substep__desc">
+                    Nous mettons à plat toutes les informations recueillies : cartographie complète des processus,
+                    flux de travail entre départements, points de friction. Vous obtenez une vision claire
+                    de votre entreprise, parfois pour la première fois.
+                  </p>
+                </li>
+
+                <li class="substep">
+                  <div class="substep__head">
+                    <span class="substep__index">1.3</span>
+                    <div class="substep__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18h6"/>
+                        <path d="M10 22h4"/>
+                        <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 class="substep__title">Opportunités IA</h4>
+                  <p class="substep__desc">
+                    Identification précise des tâches répétitives. Proposition d'automatisation priorisée par ROI.
+                    Devis détaillé de mise en œuvre — vous savez exactement où l'IA peut faire la différence,
+                    combien ça coûte et combien ça rapporte.
+                  </p>
+                </li>
+
+              </ol>
+
+              <div class="phase__deliverable">
+                <span class="phase__deliverable-label">Livrable</span>
+                <p>Rapport d'audit complet + feuille de route d'automatisation priorisée + devis chiffré sur mesure.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- ============ PHASE 2 — CONSTRUCTION & DÉPLOIEMENT ============ -->
+          <article class="phase reveal">
+            <div class="phase__marker">
+              <span class="phase__num" aria-hidden="true">02</span>
+              <span class="phase__connector" aria-hidden="true"></span>
+            </div>
+
+            <div class="phase__body">
+              <div class="phase__meta">
+                <span class="phase__badge">Mise en œuvre</span>
+                <span class="phase__duration">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  5 à 7 jours
+                </span>
+              </div>
+
+              <h3 class="phase__title">Construction &amp; Déploiement</h3>
+              <p class="phase__lead">
+                Une fois la feuille de route validée, nous passons à l'action. Notre équipe construit
+                les automatisations identifiées et les déploie dans votre environnement réel.
+              </p>
+
+              <ul class="phase__features">
+                <li>Construction des workflows et agents IA selon le périmètre validé</li>
+                <li>Intégration avec vos outils existants (WhatsApp, CRM, ERP, comptabilité)</li>
+                <li>Tests rigoureux sur scénarios réels avant mise en production</li>
+                <li>Formation de vos équipes pour qu'elles soient autonomes</li>
+                <li>Mise en service progressive pour limiter les risques</li>
+              </ul>
+
+              <div class="phase__deliverable">
+                <span class="phase__deliverable-label">Livrable</span>
+                <p>Automatisations opérationnelles en production + équipe formée + documentation complète.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- ============ PHASE 3 — MAINTENANCE & ÉVOLUTION ============ -->
+          <article class="phase phase--last reveal">
+            <div class="phase__marker">
+              <span class="phase__num" aria-hidden="true">03</span>
+            </div>
+
+            <div class="phase__body">
+              <div class="phase__meta">
+                <span class="phase__badge">Long terme</span>
+                <span class="phase__duration">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  Mensuel ou trimestriel
+                </span>
+              </div>
+
+              <h3 class="phase__title">Maintenance &amp; Évolution</h3>
+              <p class="phase__lead">
+                Une automatisation n'est jamais figée. Nous surveillons que tout tourne correctement,
+                ajustons en continu, et faisons évoluer votre système au fil de votre croissance.
+              </p>
+
+              <ul class="phase__features">
+                <li>Surveillance proactive des automatisations en production</li>
+                <li>Ajustements fins selon les retours terrain</li>
+                <li>Ajout de nouveaux workflows au fil de vos besoins</li>
+                <li>Reporting régulier sur les gains réalisés</li>
+                <li>Évolution vers de nouveaux cas d'usage IA</li>
+              </ul>
+
+              <div class="phase__deliverable">
+                <span class="phase__deliverable-label">Livrable</span>
+                <p>Un système qui s'améliore en continu + un partenaire fiable sur la durée.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- CTA méthode -->
+        <div class="method__cta reveal">
+          <p class="method__cta-text">Prêt à découvrir où l'IA peut faire la différence chez vous ?</p>
+          <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary btn--xl">
+            Réserver mon audit IA gratuit
+          </a>
+          <p class="method__cta-note">30 minutes · Sans engagement · Recommandation honnête</p>
+        </div>
+
       </div>
     </section>
 
     <!-- ======================================================
-         SECTION 5 — PACKS / TARIFS
-         Source : content/packs-offres.md (TARIFS LANCEMENT — 10 premiers clients)
+         SECTION 5 — FORMULES D'ACCOMPAGNEMENT (sans prix)
+         Le tarif est défini après l'audit IA, en fonction du périmètre réel
          ====================================================== -->
     <section id="packs" class="packs section section--dark">
       <div class="container">
         <header class="section__header reveal">
-          <span class="section__kicker">Nos packs</span>
-          <h2 class="section__title">Trois formules. Des prix transparents.</h2>
-          <p class="section__lead">Engagement 6 mois minimum. Garantie remboursement intégral si non opérationnel sous 7 à 14 jours selon le pack.</p>
+          <span class="section__kicker">Nos formules</span>
+          <h2 class="section__title">Trois formules adaptées à votre taille</h2>
+          <p class="section__lead">
+            Après le diagnostic, nous vous proposons l'une de ces trois trajectoires d'accompagnement.
+            Engagement 6 mois minimum · Garantie remboursement intégral si non opérationnel dans les délais.
+          </p>
         </header>
-
-        <!-- Bandeau d'urgence : Offre lancement -->
-        <div class="packs__launch-banner reveal" role="note">
-          <span class="packs__launch-banner-icon" aria-hidden="true">🔥</span>
-          <span><strong>OFFRE DE LANCEMENT</strong> — 10 premiers clients · Tarifs réduits jusqu'à -50&nbsp;%, garantis à vie</span>
-        </div>
 
         <div class="packs__grid">
 
-          <!-- Pack ESSENTIEL -->
+          <!-- Formule ESSENTIEL -->
           <article class="pack reveal">
             <div class="pack__head">
-              <span class="pack__launch-badge" aria-label="Offre fondateurs, 10 places disponibles">🔥 Offre fondateurs · 10 places</span>
               <span class="pack__badge">Porte d'entrée</span>
               <h3 class="pack__name">Essentiel</h3>
               <p class="pack__target">Petites boutiques, commerçants indépendants, solopreneurs</p>
             </div>
-            <div class="pack__price">
-              <div class="pack__setup">
-                <strong>150 000 FCFA</strong> / 230 €
-                <s class="pack__price-was" aria-label="Tarif normal, hors lancement">350 000 FCFA</s>
-                <span>setup</span>
-              </div>
-              <div class="pack__monthly">
-                <strong>50 000 FCFA</strong> / 75 €
-                <s class="pack__price-was" aria-label="Tarif normal, hors lancement">75 000 FCFA</s>
-                <span>/ mois</span>
-              </div>
-              <div class="pack__delay">Déploiement 5 à 7 jours · Engagement 6 mois</div>
-            </div>
-            <p class="pack__guarantee">
-              ✓ Tarif garanti à vie sur votre contrat
-              <small>Valable pour les 10 premiers clients</small>
-            </p>
+            <div class="pack__delay">Déploiement 5 à 7 jours · Engagement 6 mois</div>
+
             <ul class="pack__features">
               <li>1 agent WhatsApp basique</li>
               <li>Capture basique de leads (5 scénarios)</li>
               <li>Formation 1 h</li>
               <li>Support sous 24 h</li>
             </ul>
-            <p class="pack__pitch">« Tu as lancé cette boutique pour être cheffe d'entreprise, pas pour passer tes soirées sur WhatsApp. »</p>
+            <p class="pack__pitch">« Vous avez lancé cette boutique pour être cheffe d'entreprise, pas pour passer vos soirées sur WhatsApp. »</p>
             <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--ghost btn--block">
-              Démarrer avec l'Essentiel
+              Réserver mon audit IA gratuit
             </a>
           </article>
 
-          <!-- Pack GROWTH (FEATURED ⭐) -->
+          <!-- Formule GROWTH (FEATURED ⭐) -->
           <article class="pack pack--featured reveal">
-            <div class="pack__ribbon">⭐ Le plus populaire</div>
+            <div class="pack__ribbon">⭐ La plus populaire</div>
             <div class="pack__head">
-              <span class="pack__launch-badge" aria-label="Offre fondateurs, 10 places disponibles">🔥 Offre fondateurs · 10 places</span>
-              <span class="pack__badge pack__badge--featured">Notre offre phare</span>
+              <span class="pack__badge pack__badge--featured">Notre formule phare</span>
               <h3 class="pack__name">Growth IA PME</h3>
-              <p class="pack__target">PME structurées, e-commerces actifs, cabinets RH, restaurants &amp; hôtels</p>
+              <p class="pack__target">PME structurées, e-commerces actifs, cabinets RH, cliniques, restaurants &amp; hôtels</p>
             </div>
-            <div class="pack__price">
-              <div class="pack__setup">
-                <strong>400 000 FCFA</strong> / 610 €
-                <s class="pack__price-was" aria-label="Tarif normal, hors lancement">750 000 FCFA</s>
-                <span>setup</span>
-              </div>
-              <div class="pack__monthly">
-                <strong>100 000 FCFA</strong> / 155 €
-                <s class="pack__price-was" aria-label="Tarif normal, hors lancement">150 000 FCFA</s>
-                <span>/ mois</span>
-              </div>
-              <div class="pack__delay">Déploiement 7 jours · Engagement 6 mois</div>
-            </div>
-            <p class="pack__guarantee">
-              ✓ Tarif garanti à vie sur votre contrat
-              <small>Valable pour les 10 premiers clients</small>
-            </p>
+            <div class="pack__delay">Déploiement 7 jours · Engagement 6 mois</div>
+
             <ul class="pack__features">
               <li><strong>Ventes :</strong> agent WhatsApp avancé, relances auto, scoring leads, intégration CRM</li>
               <li><strong>Marketing :</strong> 8 contenus / mois, 1 script de vente, optimisation continue</li>
@@ -357,37 +637,21 @@
               <li>Formation 3 h + suivi mensuel (45 min)</li>
               <li>Tableau de bord &amp; support sous 6 h</li>
             </ul>
-            <p class="pack__pitch">« Un freelance solo peut traiter autant de missions que votre cabinet entier. La différence, c'est l'automatisation. »</p>
+            <p class="pack__pitch">« Un freelance solo peut traiter autant de missions qu'un cabinet entier. La différence, c'est l'automatisation. »</p>
             <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary btn--block">
-              Choisir le Growth IA PME
+              Réserver mon audit IA gratuit
             </a>
           </article>
 
-          <!-- Pack PREMIUM -->
+          <!-- Formule PREMIUM -->
           <article class="pack reveal">
             <div class="pack__head">
-              <span class="pack__launch-badge" aria-label="Offre fondateurs, 10 places disponibles">🔥 Offre fondateurs · 10 places</span>
               <span class="pack__badge">Entreprises établies</span>
               <h3 class="pack__name">Premium</h3>
               <p class="pack__target">Cabinets RH fort volume, chaînes multi-sites, groupes</p>
             </div>
-            <div class="pack__price">
-              <div class="pack__setup">
-                <strong>900 000 FCFA</strong> / 1 375 €
-                <s class="pack__price-was" aria-label="Tarif normal, hors lancement">1 500 000 FCFA</s>
-                <span>setup</span>
-              </div>
-              <div class="pack__monthly">
-                <strong>200 000 FCFA</strong> / 305 €
-                <s class="pack__price-was" aria-label="Tarif normal, hors lancement">300 000 FCFA</s>
-                <span>/ mois</span>
-              </div>
-              <div class="pack__delay">Déploiement 10 à 14 jours · Engagement 6 mois</div>
-            </div>
-            <p class="pack__guarantee">
-              ✓ Tarif garanti à vie sur votre contrat
-              <small>Valable pour les 10 premiers clients</small>
-            </p>
+            <div class="pack__delay">Déploiement 10 à 14 jours · Engagement 6 mois</div>
+
             <ul class="pack__features">
               <li>Tout le Growth, multi-sites &amp; multi-départements</li>
               <li>CRM avancé + 2 outils métiers intégrés</li>
@@ -399,14 +663,16 @@
             </ul>
             <p class="pack__pitch">« Quand votre groupe atteint une taille critique, la qualité de l'exécution devient votre différenciateur. »</p>
             <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--ghost btn--block">
-              Accéder au Premium
+              Réserver mon audit IA gratuit
             </a>
           </article>
 
         </div>
 
         <p class="packs__note reveal">
-          Options &amp; add-ons disponibles : contenu marketing supplémentaire (5 000 FCFA / 8 €), intégration outil supplémentaire (100 000 FCFA / 150 €), formation additionnelle (50 000 FCFA / 75 €/h), audit hors pack (200 000 FCFA / 300 €), urgence 3 jours (+30 % setup).
+          <strong>Pourquoi pas de prix affichés ?</strong> Chaque entreprise est unique. Le périmètre exact —
+          et donc le devis — est défini à l'issue de l'audit IA, en fonction de vos vrais besoins.
+          Pas de surprise, pas de pack qui ne correspond pas à votre réalité.
         </p>
       </div>
     </section>
