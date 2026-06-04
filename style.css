@@ -694,57 +694,37 @@ p { margin: 0 0 var(--sp-3); }
   box-shadow: 0 20px 50px rgba(13, 17, 23, 0.12);
 }
 
-/* Visuel d'en-tête : zone colorée avec icône centrale + bulles décoratives */
+/* Visuel d'en-tête : zone claire avec mockup SVG centré + badge catégorie */
 .svc-card__visual {
   position: relative;
-  height: 160px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
-.svc-card__visual--rh        { background: linear-gradient(135deg, #FFE8D6 0%, #FFD4B8 100%); }
-.svc-card__visual--commerce  { background: linear-gradient(135deg, #DCEBFF 0%, #BFDBFE 100%); }
-.svc-card__visual--cabinet   { background: linear-gradient(135deg, #FFF1D6 0%, #FFE0A3 100%); }
-.svc-card__visual--sante     { background: linear-gradient(135deg, #FFE0E0 0%, #FFC9C9 100%); }
-
-.svc-card__bubble {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(8px);
-  opacity: 0.6;
-}
-.svc-card__bubble--a {
-  width: 100px;
-  height: 100px;
-  top: -30px;
-  right: -20px;
-  background: rgba(255, 255, 255, 0.7);
-}
-.svc-card__bubble--b {
-  width: 80px;
-  height: 80px;
-  bottom: -25px;
-  left: -15px;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--c-bg-light);
 }
 
-.svc-card__icon {
+/* Variantes par offre — fonds doux et clairs, accents subtils par teinte */
+.svc-card__visual--audit       { background: linear-gradient(135deg, #F5F7FA 0%, #E8EEF8 100%); }
+.svc-card__visual--agent       { background: linear-gradient(135deg, #F5F7FA 0%, #ECEAFB 100%); }
+.svc-card__visual--auto        { background: linear-gradient(135deg, #F5F7FA 0%, #FCEFE3 100%); }
+.svc-card__visual--formation   { background: linear-gradient(135deg, #F5F7FA 0%, #FBF4E0 100%); }
+
+/* SVG illustratif centré dans la zone visuelle (mockups épurés) */
+.svc-illu {
   position: relative;
   z-index: 1;
-  width: 72px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 18px;
-  color: var(--c-text-dark);
-  box-shadow: 0 8px 24px rgba(13, 17, 23, 0.12);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  width: 88%;
+  max-width: 280px;
+  height: auto;
+  max-height: 150px;
+  filter: drop-shadow(0 8px 20px rgba(13, 17, 23, 0.08));
+  transition: transform var(--t-base);
 }
-.svc-card__icon svg { width: 32px; height: 32px; }
+.svc-card:hover .svc-illu {
+  transform: translateY(-3px) scale(1.02);
+}
 
 .svc-card__tag {
   position: absolute;
@@ -844,6 +824,525 @@ p { margin: 0 0 var(--sp-3); }
 .section--dark .svc-card__body { color: var(--c-text); }
 .section--dark .svc-card__cta { background: var(--c-primary); }
 .section--dark .svc-card__cta:hover { background: var(--c-primary-hover); }
+
+/* Lien sur le titre d'une card service (vers la page détail du service) */
+.svc-card__title-link {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0 1.5px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size var(--t-base), color var(--t-fast);
+}
+.svc-card__title-link:hover {
+  color: var(--c-primary);
+  background-size: 100% 1.5px;
+}
+
+
+/* =====================================================================
+   8C. AGENTS IA — Grille 3 colonnes des collaborateurs IA (#agents)
+   Cards portrait : avatar coloré + prénom + rôle + features + CTA.
+   Inspiré du pattern "agents personifiés" — donne un visage à l'IA.
+   ===================================================================== */
+.agents {
+  position: relative;
+  background:
+    radial-gradient(ellipse 60% 50% at 10% 0%, rgba(37, 99, 235, 0.10), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 90% 100%, rgba(255, 138, 0, 0.07), transparent 60%),
+    var(--c-bg-dark);
+}
+.agents .container { position: relative; }
+
+.agents__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-3);
+  margin-top: var(--sp-5);
+}
+
+/* Carte agent — portrait, fond clair, accent coloré sur l'avatar */
+.agent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--c-bg-light-2);
+  border: 1px solid var(--c-border-light);
+  border-radius: 18px;
+  padding: var(--sp-4);
+  box-shadow: 0 4px 20px rgba(13, 17, 23, 0.06);
+  transition: transform var(--t-base), box-shadow var(--t-base);
+}
+.agent:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(13, 17, 23, 0.18);
+}
+
+/* Bloc supérieur : avatar + prénom dessous */
+.agent__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: var(--sp-3);
+}
+
+.agent__avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(13, 17, 23, 0.10);
+}
+
+/* Couleurs de fond spécifiques à chaque agent (couleurs douces du brief) */
+.agent__avatar--fatou     { background: #EFF6FF; }
+.agent__avatar--koffi     { background: #F0FDF4; }
+.agent__avatar--serge     { background: #FFF7ED; }
+.agent__avatar--aissatou  { background: #F5F3FF; }
+.agent__avatar--lea       { background: #FDF2F8; }
+
+/* Image / silhouette dans l'avatar — classe partagée pour remplacement futur */
+.agent-avatar-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.agent__name {
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--c-text-dark);
+  letter-spacing: 0.01em;
+}
+
+.agent__role {
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--c-text-dark);
+  margin: 0 0 var(--sp-2);
+  text-align: center;
+}
+
+.agent__desc {
+  font-size: 0.93rem;
+  color: var(--c-text-dark-muted);
+  line-height: 1.55;
+  margin: 0 0 var(--sp-3);
+  text-align: center;
+}
+
+.agent__features {
+  flex: 1;
+  margin: 0 0 var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.agent__features li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--c-text-dark);
+  line-height: 1.5;
+}
+.agent__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 8px;
+  height: 8px;
+  background: var(--c-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.agent__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  align-self: stretch;
+  padding: 0.75rem 1.1rem;
+  background: var(--c-text-dark);
+  color: #fff;
+  font-family: var(--ff-title);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: gap var(--t-fast), background var(--t-fast), transform var(--t-fast);
+  margin-top: auto;
+}
+.agent__cta:hover {
+  background: var(--c-primary);
+  color: #fff;
+  gap: 0.75rem;
+  transform: translateY(-2px);
+}
+.agent__cta svg { width: 16px; height: 16px; }
+
+
+/* =====================================================================
+   8B. CABINETS COMPTABLES — Page de service détaillée (#cabinets-comptables)
+   Réutilise au max les patterns du site : .section--dark, .section__kicker,
+   .section__title, .section__lead, .btn--primary. Ajoute uniquement les
+   composants spécifiques à cette page de détail.
+   ===================================================================== */
+.cabinets {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 20%, rgba(37, 99, 235, 0.10), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 80% 80%, rgba(201, 169, 104, 0.07), transparent 60%),
+    var(--c-bg-dark);
+}
+.cabinets .container { position: relative; }
+
+/* ----- Citation d'introduction (bordure gauche bleue) ----- */
+.cab-quote {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto var(--sp-6);
+  padding: var(--sp-4) var(--sp-4) var(--sp-4) calc(var(--sp-4) + 8px);
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.10), rgba(245, 247, 250, 0.02));
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+}
+.cab-quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--c-primary), var(--c-gold));
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+.cab-quote__text {
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--c-text);
+  margin: 0 0 var(--sp-2);
+}
+.cab-quote__source {
+  display: block;
+  font-style: normal;
+  color: var(--c-text-muted);
+  font-size: 0.9rem;
+}
+
+/* ----- Sous-headers de bloc (titres intermédiaires de la page service) ----- */
+.cab-subhead {
+  text-align: center;
+  max-width: 780px;
+  margin: var(--sp-6) auto var(--sp-4);
+}
+.cab-subhead__title {
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--c-text);
+  margin: 0;
+}
+
+/* Badge contextuel sous un sous-header */
+.cab-badge {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 0.85rem;
+  color: var(--c-gold);
+  background: rgba(201, 169, 104, 0.10);
+  border: 1px solid rgba(201, 169, 104, 0.30);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-pill);
+  margin-top: var(--sp-3);
+  line-height: 1.4;
+}
+
+/* ----- Grille à 4 cards (problème / modules) — 1col mobile, 2col tablette ----- */
+.cab-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-3);
+}
+
+/* Card "problème" — icône + titre + description, version compacte */
+.cab-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-4);
+  background: var(--c-bg-dark-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
+}
+.cab-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--c-primary);
+  box-shadow: 0 14px 40px rgba(37, 99, 235, 0.15);
+}
+.cab-card__icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.30);
+  border-radius: 14px;
+  color: var(--c-primary);
+}
+.cab-card__icon svg { width: 26px; height: 26px; }
+.cab-card__title {
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--c-text);
+  margin: var(--sp-1) 0 0;
+}
+.cab-card__desc {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--c-text-muted);
+  line-height: 1.6;
+}
+
+/* Card "module" — icône + titre + liste de features */
+.cab-module {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+  background: var(--c-bg-dark-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
+}
+.cab-module:hover {
+  transform: translateY(-4px);
+  border-color: var(--c-primary);
+  box-shadow: 0 14px 40px rgba(37, 99, 235, 0.15);
+}
+.cab-module__head {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.cab-module__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(255, 138, 0, 0.10));
+  border: 1px solid rgba(37, 99, 235, 0.30);
+  border-radius: 14px;
+  color: var(--c-text);
+}
+.cab-module__icon svg { width: 24px; height: 24px; }
+.cab-module__title {
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--c-text);
+  margin: 0;
+  line-height: 1.3;
+}
+.cab-module__features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin: 0;
+}
+.cab-module__features li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.93rem;
+  color: var(--c-text-muted);
+  line-height: 1.55;
+}
+.cab-module__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 8px;
+  height: 8px;
+  background: var(--c-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+.cab-module__features code {
+  font-family: 'Menlo', 'Courier New', monospace;
+  font-size: 0.82em;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  padding: 0.05em 0.4em;
+  border-radius: 4px;
+  color: var(--c-text);
+}
+
+/* ----- Timeline verticale des 5 étapes ----- */
+.cab-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  max-width: 920px;
+  margin: 0 auto var(--sp-5);
+  padding: 0;
+  list-style: none;
+}
+.cab-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--sp-3);
+  align-items: flex-start;
+  background: var(--c-bg-dark-2);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: var(--sp-3) var(--sp-4);
+  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
+}
+.cab-step:hover {
+  transform: translateY(-3px);
+  border-color: var(--c-primary);
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.12);
+}
+.cab-step__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--c-bg-dark);
+  border: 1.5px solid var(--c-border);
+  border-radius: 50%;
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--c-primary);
+  flex-shrink: 0;
+}
+.cab-step:hover .cab-step__num {
+  border-color: var(--c-primary);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
+}
+.cab-step__content { min-width: 0; }
+.cab-step__when {
+  display: inline-block;
+  font-family: var(--ff-title);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-accent);
+  background: rgba(255, 138, 0, 0.10);
+  border: 1px solid rgba(255, 138, 0, 0.30);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--sp-2);
+}
+.cab-step__title {
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--c-text);
+  margin: 0 0 var(--sp-1);
+}
+.cab-step__desc {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--c-text-muted);
+  line-height: 1.6;
+}
+
+/* ----- Stat cards (4 métriques) ----- */
+.cab-stats {
+  display: grid;
+  /* minmax(0, 1fr) empêche les contenus en nowrap d'élargir leur colonne */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--sp-3);
+  max-width: 1080px;
+  margin: 0 auto var(--sp-3);
+}
+.cab-stat {
+  text-align: center;
+  padding: var(--sp-4) var(--sp-3);
+  background:
+    linear-gradient(180deg, rgba(37, 99, 235, 0.08), var(--c-bg-dark-2));
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  border-radius: var(--radius);
+  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
+}
+.cab-stat:hover {
+  transform: translateY(-3px);
+  border-color: var(--c-accent);
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.15);
+}
+.cab-stat__value {
+  display: block;
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 1.85rem;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--c-primary), var(--c-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: var(--sp-1);
+}
+.cab-stat__label {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--c-text-muted);
+  line-height: 1.4;
+}
+
+.cab-stats__note {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto var(--sp-5);
+  font-size: 0.85rem;
+  color: var(--c-text-muted);
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* ----- CTA final du service (encadré avec citation + bouton) ----- */
+.cab-cta {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: var(--sp-5) var(--sp-4);
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(201, 169, 104, 0.08));
+  border: 1px solid rgba(201, 169, 104, 0.25);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+.cab-cta__quote {
+  font-family: var(--ff-title);
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.55;
+  color: var(--c-text);
+  margin: 0 0 var(--sp-4);
+}
 
 
 /* ----- (Legacy) Grille des 4 secteurs — conservée pour compat ----- */
@@ -2505,14 +3004,31 @@ p { margin: 0 0 var(--sp-3); }
   }
   .diagnostic__title { font-size: 1.75rem; }
 
-  /* Services 2 colonnes (4 cards 2×2 style capture 2) */
+  /* Services 2 colonnes (4 cards 2×2 — 4 offres produit) */
   .svc-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-4);
   }
-  .svc-card__visual { height: 180px; }
-  .svc-card__icon { width: 80px; height: 80px; }
-  .svc-card__icon svg { width: 36px; height: 36px; }
+  .svc-card__visual { height: 200px; }
+  .svc-illu { max-height: 170px; }
+
+  /* Agents IA — 2 colonnes tablette */
+  .agents__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-4);
+  }
+
+  /* Cabinets comptables — typographie agrandie + cards 2×2 + stats 4 colonnes */
+  .cab-subhead__title    { font-size: 1.85rem; }
+  .cab-quote             { padding: var(--sp-5); padding-left: calc(var(--sp-5) + 8px); }
+  .cab-quote__text       { font-size: 1.3rem; }
+  .cab-grid              { grid-template-columns: repeat(2, 1fr); gap: var(--sp-4); }
+  .cab-stats             { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-3); }
+  .cab-stat__value       { font-size: 2.5rem; }
+  .cab-step              { padding: var(--sp-4); gap: var(--sp-4); }
+  .cab-step__num         { width: 56px; height: 56px; font-size: 1.1rem; }
+  .cab-step__title       { font-size: 1.25rem; }
+  .cab-cta__quote        { font-size: 1.25rem; }
 
   /* Méthode SIMPLIFIÉE — 3 cards en ligne */
   .method__cards {
@@ -2574,6 +3090,16 @@ p { margin: 0 0 var(--sp-3); }
   /* Méthode — titre encore plus imposant en desktop */
   .method__title { font-size: 2.75rem; }
   .phase--featured .phase__title { font-size: 2.25rem; }
+
+  /* Cabinets comptables — métriques plus généreuses en desktop */
+  .cab-stat__value     { font-size: 2.75rem; }
+  .cab-subhead__title  { font-size: 2rem; }
+
+  /* Agents IA — 3 colonnes desktop (5 cards : 3 + 2 alignées à gauche) */
+  .agents__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-4);
+  }
 }
 
 

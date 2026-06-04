@@ -52,7 +52,7 @@
       <nav class="header__nav" id="nav" aria-label="Navigation principale">
         <ul class="header__list">
           <li><a href="#services" class="header__link">Services</a></li>
-          <li><a href="#packs" class="header__link">Packs</a></li>
+          <li><a href="#agents" class="header__link">Agents IA</a></li>
           <li><a href="#process" class="header__link">Méthode</a></li>
           <li><a href="#about" class="header__link">À propos</a></li>
           <li><a href="#faq" class="header__link">FAQ</a></li>
@@ -103,7 +103,7 @@
             <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary btn--xl">
               Réserver mon appel gratuit
             </a>
-            <a href="#packs" class="btn btn--outline btn--xl">Voir nos packs</a>
+            <a href="#services" class="btn btn--outline btn--xl">Voir nos services</a>
           </div>
 
           <ul class="hero__bullets">
@@ -159,48 +159,56 @@
           </div>
         </div>
 
-        <!-- Transition vers les services -->
+        <!-- Transition vers les services (refonte 2026 — 4 offres produit) -->
         <header class="section__header section__header--sub reveal">
-          <span class="section__kicker section__kicker--accent">Nos services</span>
-          <h2 class="section__title">Des solutions IA adaptées à votre métier</h2>
+          <span class="section__kicker section__kicker--accent">Services</span>
+          <h2 class="section__title">Quatre façons concrètes de vous faire gagner du temps</h2>
           <p class="section__lead">
-            Une fois le diagnostic posé, nous déployons des automatisations éprouvées,
-            taillées pour les réalités africaines. Quatre expertises, un même engagement : du ROI mesurable.
+            Chaque offre part d'un audit — pas d'une brochure. On déploie ce qui crée de la valeur
+            chez vous, pas ce qu'on vend à tout le monde.
           </p>
         </header>
 
-        <!-- Grille des 4 services (style capture 2 — cards 2x2 avec visuel) -->
+        <!-- Grille des 4 offres produit (2×2 desktop / 1 colonne mobile) -->
         <div class="svc-grid">
 
-          <!-- Service 1 : RH & Recrutement -->
+          <!-- Service 1 : Audit IA & Conseil -->
           <article class="svc-card reveal">
-            <div class="svc-card__visual svc-card__visual--rh" aria-hidden="true">
-              <div class="svc-card__bubble svc-card__bubble--a"></div>
-              <div class="svc-card__bubble svc-card__bubble--b"></div>
-              <div class="svc-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-              </div>
-              <span class="svc-card__tag">RH</span>
+            <div class="svc-card__visual svc-card__visual--audit" aria-hidden="true">
+              <span class="svc-card__tag">Stratégie</span>
+              <!-- Mockup illustratif : rapport / dashboard avec graphique -->
+              <svg class="svc-illu" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                <rect x="40" y="20" width="200" height="130" rx="10" fill="#FFFFFF" stroke="#E1E7EF" stroke-width="1.5"/>
+                <rect x="55" y="35" width="80" height="8" rx="4" fill="#2563EB"/>
+                <rect x="55" y="50" width="120" height="4" rx="2" fill="#CBD5E1"/>
+                <rect x="55" y="100" width="18" height="30" rx="2" fill="#2563EB" fill-opacity="0.30"/>
+                <rect x="78" y="85"  width="18" height="45" rx="2" fill="#2563EB" fill-opacity="0.50"/>
+                <rect x="101" y="70" width="18" height="60" rx="2" fill="#2563EB" fill-opacity="0.70"/>
+                <rect x="124" y="55" width="18" height="75" rx="2" fill="#2563EB"/>
+                <polyline points="64,95 87,80 110,65 133,55" fill="none" stroke="#FF8A00" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="133" cy="55" r="3" fill="#FF8A00"/>
+                <rect x="160" y="70" width="55" height="6" rx="3" fill="#CBD5E1"/>
+                <rect x="160" y="84" width="40" height="6" rx="3" fill="#CBD5E1"/>
+                <rect x="160" y="98" width="50" height="6" rx="3" fill="#2563EB" fill-opacity="0.40"/>
+                <rect x="160" y="112" width="35" height="6" rx="3" fill="#CBD5E1"/>
+              </svg>
             </div>
             <div class="svc-card__body">
-              <h3 class="svc-card__title">RH &amp; Recrutement</h3>
+              <h3 class="svc-card__title">Audit IA &amp; Conseil</h3>
               <p class="svc-card__desc">
-                Trier 200 CV à la main n'est plus une fatalité. Nous automatisons le sourcing,
-                la pré-qualification et l'onboarding pour que vos équipes se concentrent sur l'humain.
+                Avant de déployer quoi que ce soit, on comprend votre entreprise. Interviews terrain,
+                cartographie des processus, identification des tâches qui coûtent du temps et de l'argent.
+                Vous repartez avec une feuille de route claire — pas un rapport qu'on range dans un tiroir.
               </p>
               <ul class="svc-card__features">
-                <li>Tri et scoring des CV par IA</li>
-                <li>Chatbot WhatsApp de pré-qualification</li>
-                <li>Onboarding automatisé (documents, formations, check-ins)</li>
-                <li>Tableau de bord de suivi des recrutements</li>
+                <li>Analyse de vos workflows actuels</li>
+                <li>Identification des goulets d'étranglement opérationnels</li>
+                <li>Diagnostic de vos outils et intégrations existantes</li>
+                <li>Rapport d'audit détaillé avec priorités chiffrées</li>
+                <li>Roadmap IA adaptée à votre secteur et votre taille</li>
               </ul>
-              <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="svc-card__cta">
-                Obtenir un audit
+              <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="svc-card__cta" aria-label="Demander mon audit IA">
+                Demander mon audit
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"/>
                   <polyline points="12 5 19 12 12 19"/>
@@ -209,34 +217,43 @@
             </div>
           </article>
 
-          <!-- Service 2 : Commerce & Distribution -->
+          <!-- Service 2 : Agent IA - Plug & Play -->
           <article class="svc-card reveal">
-            <div class="svc-card__visual svc-card__visual--commerce" aria-hidden="true">
-              <div class="svc-card__bubble svc-card__bubble--a"></div>
-              <div class="svc-card__bubble svc-card__bubble--b"></div>
-              <div class="svc-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-                  <line x1="3" y1="6" x2="21" y2="6"/>
-                  <path d="M16 10a4 4 0 0 1-8 0"/>
-                </svg>
-              </div>
-              <span class="svc-card__tag">Commerce</span>
+            <div class="svc-card__visual svc-card__visual--agent" aria-hidden="true">
+              <span class="svc-card__tag">Agent IA</span>
+              <!-- Mockup illustratif : interface de chat -->
+              <svg class="svc-illu" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                <rect x="65" y="15" width="150" height="135" rx="12" fill="#FFFFFF" stroke="#E1E7EF" stroke-width="1.5"/>
+                <path d="M65 27 Q65 15 77 15 L203 15 Q215 15 215 27 L215 38 L65 38 Z" fill="#0D1117"/>
+                <circle cx="80" cy="27" r="4" fill="#FF8A00"/>
+                <rect x="92" y="24" width="60" height="6" rx="3" fill="#FFFFFF" fill-opacity="0.85"/>
+                <rect x="75"  y="50" width="85" height="18" rx="9" fill="#F5F7FA"/>
+                <rect x="85"  y="57" width="60" height="4" rx="2" fill="#94A3B8"/>
+                <rect x="120" y="75" width="85" height="18" rx="9" fill="#2563EB"/>
+                <rect x="130" y="82" width="60" height="4" rx="2" fill="#FFFFFF" fill-opacity="0.85"/>
+                <rect x="75"  y="100" width="100" height="18" rx="9" fill="#F5F7FA"/>
+                <rect x="85"  y="107" width="75" height="4" rx="2" fill="#94A3B8"/>
+                <rect x="75" y="128" width="120" height="14" rx="7" fill="#F5F7FA" stroke="#E1E7EF" stroke-width="1"/>
+                <circle cx="202" cy="135" r="7" fill="#2563EB"/>
+                <path d="M199 135 L201 137 L205 132" stroke="#FFFFFF" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
             <div class="svc-card__body">
-              <h3 class="svc-card__title">Commerce &amp; Distribution</h3>
+              <h3 class="svc-card__title">Agent IA — Plug &amp; Play</h3>
               <p class="svc-card__desc">
-                Impayés qui dorment, stocks à l'aveugle, clients fidèles oubliés. Nous remettons
-                de l'ordre et de la régularité dans votre cycle de vente, sans alourdir vos équipes.
+                Un collaborateur IA entraîné pour votre métier — pas un outil générique qu'on vous laisse
+                configurer seul. Il comprend votre contexte, parle à vos clients, gère vos tâches courantes
+                et s'améliore avec chaque interaction.
               </p>
               <ul class="svc-card__features">
-                <li>Relances automatiques WhatsApp/SMS pour les impayés</li>
-                <li>Alertes stock bas + suggestion de commande fournisseur</li>
-                <li>Rapport hebdomadaire des ventes par produit</li>
-                <li>Programme de fidélité déclenché automatiquement</li>
+                <li>Pré-entraîné sur les réalités de votre secteur</li>
+                <li>Opérationnel sur WhatsApp, email ou votre interface métier</li>
+                <li>Intégré à vos outils sans développement complexe</li>
+                <li>Autonome sur les tâches répétitives, transmis à l'humain sur les cas sensibles</li>
+                <li>Suivi et ajustements inclus chaque mois</li>
               </ul>
-              <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="svc-card__cta">
-                Obtenir un audit
+              <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="svc-card__cta" aria-label="Obtenir mon agent IA">
+                Obtenir mon agent IA
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"/>
                   <polyline points="12 5 19 12 12 19"/>
@@ -245,36 +262,47 @@
             </div>
           </article>
 
-          <!-- Service 3 : Cabinets professionnels -->
+          <!-- Service 3 : Automatisations -->
           <article class="svc-card reveal">
-            <div class="svc-card__visual svc-card__visual--cabinet" aria-hidden="true">
-              <div class="svc-card__bubble svc-card__bubble--a"></div>
-              <div class="svc-card__bubble svc-card__bubble--b"></div>
-              <div class="svc-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                  <polyline points="14 2 14 8 20 8"/>
-                  <line x1="9" y1="13" x2="15" y2="13"/>
-                  <line x1="9" y1="17" x2="15" y2="17"/>
-                  <line x1="9" y1="9" x2="11" y2="9"/>
-                </svg>
-              </div>
-              <span class="svc-card__tag">Cabinets pro</span>
+            <div class="svc-card__visual svc-card__visual--auto" aria-hidden="true">
+              <span class="svc-card__tag">Workflows</span>
+              <!-- Mockup illustratif : schéma de flux (sources → moteur → sortie) -->
+              <svg class="svc-illu" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                <rect x="20" y="20" width="240" height="120" rx="10" fill="#FFFFFF" stroke="#E1E7EF" stroke-width="1.5"/>
+                <path d="M 80 55 L 130 60" stroke="#94A3B8" stroke-width="1.6" stroke-dasharray="4,3"/>
+                <path d="M 80 105 L 130 100" stroke="#94A3B8" stroke-width="1.6" stroke-dasharray="4,3"/>
+                <path d="M 178 60 L 215 80" stroke="#94A3B8" stroke-width="1.6" stroke-dasharray="4,3"/>
+                <path d="M 178 100 L 215 80" stroke="#94A3B8" stroke-width="1.6" stroke-dasharray="4,3"/>
+                <rect x="35" y="42" width="46" height="28" rx="6" fill="#F5F7FA" stroke="#2563EB" stroke-width="1.5"/>
+                <rect x="44" y="51" width="22" height="3" rx="1.5" fill="#2563EB"/>
+                <rect x="44" y="58" width="14" height="3" rx="1.5" fill="#CBD5E1"/>
+                <rect x="35" y="92" width="46" height="28" rx="6" fill="#F5F7FA" stroke="#2563EB" stroke-width="1.5"/>
+                <rect x="44" y="101" width="22" height="3" rx="1.5" fill="#2563EB"/>
+                <rect x="44" y="108" width="14" height="3" rx="1.5" fill="#CBD5E1"/>
+                <circle cx="154" cy="60" r="15" fill="#2563EB"/>
+                <path d="M 148 60 L 152 64 L 160 56" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="154" cy="100" r="15" fill="#2563EB"/>
+                <path d="M 148 100 L 152 104 L 160 96" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="215" y="65" width="36" height="32" rx="6" fill="#FF8A00"/>
+                <path d="M 225 82 L 230 87 L 242 76" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
             <div class="svc-card__body">
-              <h3 class="svc-card__title">Cabinets professionnels</h3>
+              <h3 class="svc-card__title">Automatisations</h3>
               <p class="svc-card__desc">
-                Comptables, avocats, consultants : votre métier, c'est le conseil, pas la chasse aux documents.
-                Nous automatisons la collecte, les relances et le reporting client.
+                Chaque tâche qui se répète est une automatisation qui attend d'être construite.
+                Relances commerciales, collecte de documents, rapports hebdomadaires, onboarding client :
+                on connecte vos outils entre eux et on laisse tourner.
               </p>
               <ul class="svc-card__features">
-                <li>Workflow de collecte de documents avec relances</li>
-                <li>Calendrier fiscal automatisé avec alertes clients</li>
-                <li>Génération de rapports mensuels en un clic</li>
-                <li>Facturation et relance intégrées</li>
+                <li>Workflows sur mesure construits sur vos processus réels</li>
+                <li>Connexion entre vos outils existants (CRM, email, WhatsApp, comptabilité…)</li>
+                <li>Zéro intervention manuelle sur les tâches récurrentes</li>
+                <li>Mise en place complète et documentation incluses</li>
+                <li>Maintenance et évolution avec votre activité</li>
               </ul>
-              <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="svc-card__cta">
-                Obtenir un audit
+              <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="svc-card__cta" aria-label="Automatiser mon activité">
+                Automatiser mon activité
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"/>
                   <polyline points="12 5 19 12 12 19"/>
@@ -283,32 +311,45 @@
             </div>
           </article>
 
-          <!-- Service 4 : Santé -->
+          <!-- Service 4 : Formation Gen AI -->
           <article class="svc-card reveal">
-            <div class="svc-card__visual svc-card__visual--sante" aria-hidden="true">
-              <div class="svc-card__bubble svc-card__bubble--a"></div>
-              <div class="svc-card__bubble svc-card__bubble--b"></div>
-              <div class="svc-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                </svg>
-              </div>
-              <span class="svc-card__tag">Santé</span>
+            <div class="svc-card__visual svc-card__visual--formation" aria-hidden="true">
+              <span class="svc-card__tag">Formation</span>
+              <!-- Mockup illustratif : interface de formation avec vidéo + sommaire -->
+              <svg class="svc-illu" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                <rect x="35" y="20" width="210" height="120" rx="10" fill="#FFFFFF" stroke="#E1E7EF" stroke-width="1.5"/>
+                <rect x="35" y="20" width="210" height="20" rx="10" fill="#F5F7FA"/>
+                <circle cx="48" cy="30" r="2.5" fill="#CBD5E1"/>
+                <circle cx="57" cy="30" r="2.5" fill="#CBD5E1"/>
+                <circle cx="66" cy="30" r="2.5" fill="#CBD5E1"/>
+                <rect x="50" y="52" width="100" height="60" rx="6" fill="#0D1117"/>
+                <polygon points="90,72 90,98 113,85" fill="#FF8A00"/>
+                <rect x="160" y="52" width="68" height="7" rx="3.5" fill="#2563EB" fill-opacity="0.70"/>
+                <rect x="160" y="66" width="60" height="4" rx="2" fill="#CBD5E1"/>
+                <rect x="160" y="77" width="50" height="4" rx="2" fill="#CBD5E1"/>
+                <rect x="160" y="88" width="55" height="4" rx="2" fill="#CBD5E1"/>
+                <rect x="160" y="99" width="48" height="4" rx="2" fill="#CBD5E1"/>
+                <rect x="50" y="122" width="178" height="6" rx="3" fill="#F5F7FA"/>
+                <rect x="50" y="122" width="105" height="6" rx="3" fill="#2563EB"/>
+                <path d="M 222 28 L 224 32 L 228 34 L 224 36 L 222 40 L 220 36 L 216 34 L 220 32 Z" fill="#FF8A00"/>
+              </svg>
             </div>
             <div class="svc-card__body">
-              <h3 class="svc-card__title">Santé</h3>
+              <h3 class="svc-card__title">Formation Gen AI</h3>
               <p class="svc-card__desc">
-                Cliniques, cabinets médicaux et pharmacies : finissez avec les no-shows et les ruptures de stock.
-                Nos automatisations fluidifient le parcours patient et libèrent vos équipes.
+                L'IA ne remplace pas vos équipes — elle les rend redoutables. On forme vos collaborateurs
+                à utiliser les bons outils, dans les bons cas, avec les bonnes pratiques. Résultat : une
+                équipe qui gagne 2 à 3 heures par jour sans changer ses habitudes de fond.
               </p>
               <ul class="svc-card__features">
-                <li>Prise de RDV WhatsApp 24/7 avec calendrier synchronisé</li>
-                <li>Rappels auto de RDV (J-1, H-2) — chute des no-shows</li>
-                <li>Alertes stock pharmacie + suggestion de réassort</li>
-                <li>Suivi patients chroniques &amp; rappel renouvellement d'ordonnance</li>
+                <li>Ateliers pratiques adaptés à votre secteur d'activité</li>
+                <li>Cas d'usage concrets tirés de votre quotidien professionnel</li>
+                <li>Maîtrise des outils IA générative les plus utiles en entreprise</li>
+                <li>Méthodes pour intégrer l'IA sans perturber les équipes</li>
+                <li>Supports et ressources réutilisables après la formation</li>
               </ul>
-              <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="svc-card__cta">
-                Obtenir un audit
+              <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="svc-card__cta" aria-label="Réserver ma formation">
+                Réserver ma formation
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"/>
                   <polyline points="12 5 19 12 12 19"/>
@@ -323,118 +364,196 @@
     </section>
 
     <!-- ======================================================
-         SECTION 4 — PACKS / FORMULES (déplacé avant les témoignages)
-         Style compact inspiré des cards d'agents IA
+         SECTION 3 — AGENTS IA (5 collaborateurs IA sectoriels)
+         Nouveaux collaborateurs : Fatou (comptable), Koffi (RH),
+         Serge (commercial), Aïssatou (support), Léa (contenu).
          ====================================================== -->
-    <section id="packs" class="packs section section--dark">
+    <section id="agents" class="agents section section--dark">
       <div class="container">
+
         <header class="section__header reveal">
-          <span class="section__kicker">Nos formules</span>
-          <h2 class="section__title">Trois formules adaptées à votre taille</h2>
+          <span class="section__kicker section__kicker--accent">Agents IA</span>
+          <h2 class="section__title">Vos nouveaux collaborateurs — disponibles dès maintenant</h2>
           <p class="section__lead">
-            Après le diagnostic, nous vous proposons l'une de ces trois trajectoires d'accompagnement.
-            Engagement 6 mois minimum · Garantie remboursement intégral si non opérationnel dans les délais.
+            Chaque agent est conçu pour un métier précis. Pas un chatbot qui répond
+            « je ne comprends pas ». Un professionnel IA qui connaît votre secteur,
+            parle à vos clients et opère sans supervision.
           </p>
         </header>
 
-        <div class="packs__grid">
+        <div class="agents__grid">
 
-          <!-- Formule ESSENTIEL -->
-          <article class="pack reveal">
-            <div class="pack__avatar pack__avatar--essentiel" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              </svg>
+          <!-- AGENT 1 — Fatou · Assistante comptable IA -->
+          <article class="agent reveal">
+            <div class="agent__top">
+              <div class="agent__avatar agent__avatar--fatou" aria-hidden="true">
+                <svg class="agent-avatar-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="38" r="15" fill="#1E3A8A"/>
+                  <path d="M 22 92 Q 22 62 50 62 Q 78 62 78 92 Z" fill="#1E3A8A"/>
+                </svg>
+              </div>
+              <span class="agent__name">Fatou</span>
             </div>
-            <div class="pack__head">
-              <span class="pack__badge">Porte d'entrée</span>
-              <h3 class="pack__name">Essentiel</h3>
-              <p class="pack__target">Petites boutiques, commerçants indépendants, solopreneurs</p>
-            </div>
-            <div class="pack__delay">Déploiement 5 à 7 jours · Engagement 6 mois</div>
-
-            <ul class="pack__features">
-              <li>1 agent WhatsApp basique</li>
-              <li>Capture basique de leads (5 scénarios)</li>
-              <li>Formation 1 h</li>
-              <li>Support sous 24 h</li>
+            <h3 class="agent__role">Assistante comptable IA</h3>
+            <p class="agent__desc">
+              Fatou reçoit vos factures PDF, génère les écritures SYSCOHADA et relance vos
+              clients avant que vous n'ayez à le demander. Elle ne se fatigue pas en période fiscale.
+            </p>
+            <ul class="agent__features">
+              <li>Réceptionne les factures clients via une boîte email dédiée</li>
+              <li>Lit et extrait les données de chaque PDF automatiquement</li>
+              <li>Génère les écritures comptables conformes au plan SYSCOHADA</li>
+              <li>Signale les anomalies pour que vos assistants vérifient — pas ressaisissent</li>
+              <li>Relance les clients retardataires selon votre calendrier fiscal</li>
             </ul>
-            <p class="pack__pitch">« Vous avez lancé cette boutique pour être cheffe d'entreprise, pas pour passer vos soirées sur WhatsApp. »</p>
-            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--ghost btn--block">
-              Réserver mon audit IA gratuit
+            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener"
+               class="agent__cta" aria-label="Réserver une démo avec l'agent Fatou">
+              Réserver une démo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
             </a>
           </article>
 
-          <!-- Formule GROWTH (FEATURED ⭐) -->
-          <article class="pack pack--featured reveal">
-            <div class="pack__ribbon">⭐ La plus populaire</div>
-            <div class="pack__avatar pack__avatar--growth" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
-                <polyline points="16 7 22 7 22 13"/>
-              </svg>
+          <!-- AGENT 2 — Koffi · Coordinateur RH IA -->
+          <article class="agent reveal">
+            <div class="agent__top">
+              <div class="agent__avatar agent__avatar--koffi" aria-hidden="true">
+                <svg class="agent-avatar-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="38" r="15" fill="#166534"/>
+                  <path d="M 22 92 Q 22 62 50 62 Q 78 62 78 92 Z" fill="#166534"/>
+                </svg>
+              </div>
+              <span class="agent__name">Koffi</span>
             </div>
-            <div class="pack__head">
-              <span class="pack__badge pack__badge--featured">Notre formule phare</span>
-              <h3 class="pack__name">Growth IA PME</h3>
-              <p class="pack__target">PME structurées, e-commerces actifs, cabinets RH, cliniques, restaurants &amp; hôtels</p>
-            </div>
-            <div class="pack__delay">Déploiement 7 jours · Engagement 6 mois</div>
-
-            <ul class="pack__features">
-              <li><strong>Ventes :</strong> agent WhatsApp avancé, relances auto, scoring leads, intégration CRM</li>
-              <li><strong>Marketing :</strong> 8 contenus / mois, 1 script de vente, optimisation continue</li>
-              <li><strong>RH :</strong> tri CV auto, réponses candidats, préqualification</li>
-              <li>Formation 3 h + suivi mensuel (45 min)</li>
-              <li>Tableau de bord &amp; support sous 6 h</li>
+            <h3 class="agent__role">Coordinateur RH IA</h3>
+            <p class="agent__desc">
+              Koffi trie les candidatures, planifie les entretiens et accueille les nouvelles recrues
+              — sans que vos consultants ne passent leurs journées sur des tâches administratives.
+            </p>
+            <ul class="agent__features">
+              <li>Analyse et classe les CV selon les critères de chaque mission</li>
+              <li>Envoie les convocations et confirmations d'entretiens automatiquement</li>
+              <li>Prépare les dossiers d'onboarding pour chaque nouvelle recrue</li>
+              <li>Répond aux questions RH courantes des employés par chat</li>
+              <li>Collecte les retours d'équipe via sondages automatisés</li>
             </ul>
-            <p class="pack__pitch">« Un freelance solo peut traiter autant de missions qu'un cabinet entier. La différence, c'est l'automatisation. »</p>
-            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary btn--block">
-              Réserver mon audit IA gratuit
+            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener"
+               class="agent__cta" aria-label="Réserver une démo avec l'agent Koffi">
+              Réserver une démo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
             </a>
           </article>
 
-          <!-- Formule PREMIUM -->
-          <article class="pack reveal">
-            <div class="pack__avatar pack__avatar--premium" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2l3 7h7l-5.5 4.5 2 7-6.5-4.5-6.5 4.5 2-7L2 9h7z"/>
-              </svg>
+          <!-- AGENT 3 — Serge · Commercial IA -->
+          <article class="agent reveal">
+            <div class="agent__top">
+              <div class="agent__avatar agent__avatar--serge" aria-hidden="true">
+                <svg class="agent-avatar-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="38" r="15" fill="#9A3412"/>
+                  <path d="M 22 92 Q 22 62 50 62 Q 78 62 78 92 Z" fill="#9A3412"/>
+                </svg>
+              </div>
+              <span class="agent__name">Serge</span>
             </div>
-            <div class="pack__head">
-              <span class="pack__badge">Entreprises établies</span>
-              <h3 class="pack__name">Premium</h3>
-              <p class="pack__target">Cabinets RH fort volume, chaînes multi-sites, groupes</p>
-            </div>
-            <div class="pack__delay">Déploiement 10 à 14 jours · Engagement 6 mois</div>
-
-            <ul class="pack__features">
-              <li>Tout le Growth, multi-sites &amp; multi-départements</li>
-              <li>CRM avancé + 2 outils métiers intégrés</li>
-              <li>Automatisations sur mesure</li>
-              <li>20 contenus / mois + 2 campagnes email</li>
-              <li>Système RH complet, dashboard 24/7</li>
-              <li>Formation 6 h + suivi bimensuel</li>
-              <li>Support prioritaire 2 h + audit trimestriel</li>
+            <h3 class="agent__role">Commercial IA</h3>
+            <p class="agent__desc">
+              Serge prospecte, qualifie et relance — pendant que vos commerciaux se concentrent
+              sur les deals qui méritent leur attention. Votre pipeline ne dort plus jamais.
+            </p>
+            <ul class="agent__features">
+              <li>Qualifie les leads entrants avec les bonnes questions au bon moment</li>
+              <li>Réserve les rendez-vous directement dans votre agenda</li>
+              <li>Relance les prospects froids avec des messages personnalisés selon leur profil</li>
+              <li>Gère les objections courantes en autonomie sur WhatsApp ou email</li>
+              <li>Met à jour votre CRM à chaque interaction sans saisie manuelle</li>
             </ul>
-            <p class="pack__pitch">« Quand votre groupe atteint une taille critique, la qualité de l'exécution devient votre différenciateur. »</p>
-            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--ghost btn--block">
-              Réserver mon audit IA gratuit
+            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener"
+               class="agent__cta" aria-label="Réserver une démo avec l'agent Serge">
+              Réserver une démo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </article>
+
+          <!-- AGENT 4 — Aïssatou · Support client IA -->
+          <article class="agent reveal">
+            <div class="agent__top">
+              <div class="agent__avatar agent__avatar--aissatou" aria-hidden="true">
+                <svg class="agent-avatar-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="38" r="15" fill="#5B21B6"/>
+                  <path d="M 22 92 Q 22 62 50 62 Q 78 62 78 92 Z" fill="#5B21B6"/>
+                </svg>
+              </div>
+              <span class="agent__name">Aïssatou</span>
+            </div>
+            <h3 class="agent__role">Support client IA</h3>
+            <p class="agent__desc">
+              Aïssatou répond à vos clients à toute heure, sur WhatsApp ou par email. Elle règle
+              les demandes simples en moins d'une minute et sait exactement quand passer la main à un humain.
+            </p>
+            <ul class="agent__features">
+              <li>Répond instantanément aux questions fréquentes 24h/24</li>
+              <li>Gère les demandes de suivi de commande ou de réservation</li>
+              <li>Escalade vers vos équipes les situations qui le nécessitent vraiment</li>
+              <li>Collecte la satisfaction client après chaque résolution</li>
+              <li>S'adapte à votre ton de marque et à votre vocabulaire métier</li>
+            </ul>
+            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener"
+               class="agent__cta" aria-label="Réserver une démo avec l'agent Aïssatou">
+              Réserver une démo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </article>
+
+          <!-- AGENT 5 — Léa · Créatrice de contenu IA -->
+          <article class="agent reveal">
+            <div class="agent__top">
+              <div class="agent__avatar agent__avatar--lea" aria-hidden="true">
+                <svg class="agent-avatar-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="38" r="15" fill="#9D174D"/>
+                  <path d="M 22 92 Q 22 62 50 62 Q 78 62 78 92 Z" fill="#9D174D"/>
+                </svg>
+              </div>
+              <span class="agent__name">Léa</span>
+            </div>
+            <h3 class="agent__role">Créatrice de contenu IA</h3>
+            <p class="agent__desc">
+              Léa produit vos posts LinkedIn, vos newsletters et vos captions Instagram dans votre ton
+              — chaque mois, sans retard, sans blocage de la page blanche.
+            </p>
+            <ul class="agent__features">
+              <li>Rédige des contenus LinkedIn, Instagram et email adaptés à votre cible</li>
+              <li>Construit et maintient votre calendrier éditorial mensuel</li>
+              <li>Adapte le message selon le canal, le ton et l'objectif de chaque publication</li>
+              <li>Génère des idées d'articles à partir de votre actualité ou de vos produits</li>
+              <li>Propose des accroches et angles différents pour tester l'engagement</li>
+            </ul>
+            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener"
+               class="agent__cta" aria-label="Réserver une démo avec l'agent Léa">
+              Réserver une démo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
             </a>
           </article>
 
         </div>
-
-        <p class="packs__note reveal">
-          <strong>Pourquoi pas de prix affichés ?</strong> Chaque entreprise est unique. Le périmètre exact —
-          et donc le devis — est défini à l'issue de l'audit IA, en fonction de vos vrais besoins.
-          Pas de surprise, pas de pack qui ne correspond pas à votre réalité.
-        </p>
       </div>
     </section>
 
     <!-- ======================================================
-         SECTION 5 — TÉMOIGNAGES (déplacé après les packs)
+         SECTION 5 — TÉMOIGNAGES
          Approche honnête : pas de faux témoignages au lancement
          ====================================================== -->
     <section id="temoignages" class="clients clients--warm section">
@@ -670,10 +789,6 @@
             <span class="faq__tab-bg" aria-hidden="true"></span>
             <span class="faq__tab-label">Notre méthode</span>
           </button>
-          <button class="faq__tab" role="tab" data-tab="formules" aria-selected="false" aria-controls="faq-panel-formules">
-            <span class="faq__tab-bg" aria-hidden="true"></span>
-            <span class="faq__tab-label">Les formules</span>
-          </button>
         </div>
 
         <!-- Panneaux de contenu -->
@@ -868,69 +983,6 @@
             </div>
           </div>
 
-          <!-- ========== Panel : Les formules ========== -->
-          <div class="faq__panel" id="faq-panel-formules" role="tabpanel" data-panel="formules" aria-labelledby="faq-tab-formules" hidden>
-            <div class="faq__item">
-              <button class="faq__question" aria-expanded="false" aria-controls="faq-f-1">
-                <span>Pourquoi pas de prix affichés sur le site ?</span>
-                <span class="faq__chevron" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </span>
-              </button>
-              <div class="faq__answer" id="faq-f-1" role="region" hidden>
-                <p>Chaque entreprise est unique. Le périmètre exact — et donc le devis — est défini à l'issue de l'audit IA, en fonction de vos vrais besoins. Pas de surprise, pas de formule qui ne correspond pas à votre réalité.</p>
-              </div>
-            </div>
-
-            <div class="faq__item">
-              <button class="faq__question" aria-expanded="false" aria-controls="faq-f-2">
-                <span>Comment choisir entre Essentiel, Growth et Premium ?</span>
-                <span class="faq__chevron" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </span>
-              </button>
-              <div class="faq__answer" id="faq-f-2" role="region" hidden>
-                <p><strong>Essentiel</strong> : pour les solopreneurs et petites boutiques qui veulent leur premier agent WhatsApp. <strong>Growth IA PME</strong> : pour les PME structurées qui veulent automatiser ventes + marketing + RH. <strong>Premium</strong> : pour les groupes multi-sites avec un fort volume. Nous vous recommandons la bonne formule après l'audit.</p>
-              </div>
-            </div>
-
-            <div class="faq__item">
-              <button class="faq__question" aria-expanded="false" aria-controls="faq-f-3">
-                <span>Quel est l'engagement minimum ?</span>
-                <span class="faq__chevron" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </span>
-              </button>
-              <div class="faq__answer" id="faq-f-3" role="region" hidden>
-                <p>Engagement initial de <strong>6 mois</strong> (pour amortir le travail de setup). Au-delà : résiliation simple avec 30 jours de préavis. Pas de piège, pas de reconduction forcée 2 ans.</p>
-              </div>
-            </div>
-
-            <div class="faq__item">
-              <button class="faq__question" aria-expanded="false" aria-controls="faq-f-4">
-                <span>Y a-t-il une garantie si ça ne fonctionne pas ?</span>
-                <span class="faq__chevron" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </span>
-              </button>
-              <div class="faq__answer" id="faq-f-4" role="region" hidden>
-                <p>Oui. Si nous ne livrons pas les automatisations opérationnelles dans le délai garanti (5 à 14 jours selon la formule), nous remboursons intégralement le setup. Une promesse contractuelle, pas un slogan marketing.</p>
-              </div>
-            </div>
-
-            <div class="faq__item">
-              <button class="faq__question" aria-expanded="false" aria-controls="faq-f-5">
-                <span>Puis-je évoluer d'une formule à l'autre ?</span>
-                <span class="faq__chevron" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </span>
-              </button>
-              <div class="faq__answer" id="faq-f-5" role="region" hidden>
-                <p>Oui. Vous pouvez basculer d'une formule à une autre à tout moment. Le travail de setup déjà réalisé est crédité — vous ne payez que la différence. Aucun verrou.</p>
-              </div>
-            </div>
-          </div>
-
         </div>
 
         <p class="faq__contact reveal">
@@ -976,7 +1028,7 @@
         <h4 class="footer__title">Navigation</h4>
         <ul>
           <li><a href="#services">Services</a></li>
-          <li><a href="#packs">Packs</a></li>
+          <li><a href="#agents">Agents IA</a></li>
           <li><a href="#temoignages">Témoignages</a></li>
           <li><a href="#process">Méthode</a></li>
           <li><a href="#about">À propos</a></li>
