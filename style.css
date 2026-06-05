@@ -593,11 +593,10 @@ p { margin: 0 0 var(--sp-3); }
   max-width: 900px;
   margin: 0 auto;
   padding: var(--sp-4);
-  background:
-    linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(201, 169, 104, 0.06));
-  border: 1px solid rgba(201, 169, 104, 0.30);
+  background: var(--c-bg-light-2);
+  border: 1px solid rgba(201, 169, 104, 0.35);
   border-radius: var(--radius);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-soft);
   overflow: hidden;
 }
 .diagnostic::before {
@@ -637,16 +636,16 @@ p { margin: 0 0 var(--sp-3); }
   font-family: var(--ff-title);
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--c-text);
+  color: var(--c-text-dark);
   margin: 0 0 var(--sp-2);
 }
 .diagnostic__desc {
-  color: var(--c-text-muted);
+  color: var(--c-text-dark-muted);
   font-size: 1rem;
   margin: 0 0 var(--sp-3);
   line-height: 1.6;
 }
-.diagnostic__desc strong { color: var(--c-text); }
+.diagnostic__desc strong { color: var(--c-text-dark); }
 .diagnostic__link {
   display: inline-flex;
   align-items: center;
@@ -837,16 +836,13 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   8B. AGENTS IA — Grille 3 colonnes des collaborateurs IA (#agents)
+   8B. AGENTS IA — Grille 2×2 des collaborateurs IA (#agents)
    Cards portrait : avatar coloré + prénom + rôle + features + CTA.
    Inspiré du pattern "agents personifiés" — donne un visage à l'IA.
    ===================================================================== */
 .agents {
   position: relative;
-  background:
-    radial-gradient(ellipse 60% 50% at 10% 0%, rgba(37, 99, 235, 0.10), transparent 60%),
-    radial-gradient(ellipse 50% 50% at 90% 100%, rgba(255, 138, 0, 0.07), transparent 60%),
-    var(--c-bg-dark);
+  background: var(--c-bg-light);
 }
 .agents .container { position: relative; }
 
@@ -899,7 +895,6 @@ p { margin: 0 0 var(--sp-3); }
 .agent__avatar--koffi     { background: #F0FDF4; }
 .agent__avatar--serge     { background: #FFF7ED; }
 .agent__avatar--aissatou  { background: #F5F3FF; }
-.agent__avatar--lea       { background: #FDF2F8; }
 
 /* Image / silhouette dans l'avatar — classe partagée pour remplacement futur */
 .agent-avatar-img {
@@ -991,20 +986,17 @@ p { margin: 0 0 var(--sp-3); }
 .method {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse 60% 50% at 20% 20%, rgba(37, 99, 235, 0.12), transparent 60%),
-    radial-gradient(ellipse 50% 50% at 80% 80%, rgba(201, 169, 104, 0.10), transparent 60%),
-    var(--c-bg-dark);
+  background: var(--c-bg-light);
 }
 .method__bg {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(245, 247, 250, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 247, 250, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(13, 17, 23, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 17, 23, 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.5;
   mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
   -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
 }
@@ -1040,10 +1032,11 @@ p { margin: 0 0 var(--sp-3); }
 
 .mphase {
   position: relative;
-  background: var(--c-bg-dark-2);
-  border: 1px solid var(--c-border);
+  background: var(--c-bg-light-2);
+  border: 1px solid var(--c-border-light);
   border-radius: var(--radius);
   padding: var(--sp-4);
+  box-shadow: var(--shadow-soft);
   transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
 }
 .mphase:hover {
@@ -1055,8 +1048,8 @@ p { margin: 0 0 var(--sp-3); }
 /* Phase 1 mise en valeur */
 .mphase--featured {
   border: 1.5px solid rgba(201, 169, 104, 0.50);
-  background: linear-gradient(180deg, rgba(201, 169, 104, 0.10) 0%, var(--c-bg-dark-2) 50%);
-  box-shadow: 0 0 30px rgba(201, 169, 104, 0.15);
+  background: linear-gradient(180deg, rgba(201, 169, 104, 0.15) 0%, var(--c-bg-light-2) 50%);
+  box-shadow: 0 8px 30px rgba(201, 169, 104, 0.15);
 }
 .mphase--featured:hover {
   border-color: var(--c-gold);
@@ -1069,13 +1062,13 @@ p { margin: 0 0 var(--sp-3); }
   justify-content: center;
   width: 56px;
   height: 56px;
-  background: var(--c-bg-dark);
-  border: 1.5px solid var(--c-border);
+  background: var(--c-bg-light);
+  border: 1.5px solid var(--c-border-light);
   border-radius: 50%;
   font-family: var(--ff-title);
   font-weight: 700;
   font-size: 1.1rem;
-  color: var(--c-text-muted);
+  color: var(--c-text-dark-muted);
   margin-bottom: var(--sp-3);
 }
 .mphase--featured .mphase__num {
@@ -1111,13 +1104,13 @@ p { margin: 0 0 var(--sp-3); }
   font-family: var(--ff-title);
   font-weight: 700;
   font-size: 1.35rem;
-  color: var(--c-text);
+  color: var(--c-text-dark);
   margin: 0 0 var(--sp-2);
 }
 .mphase__desc {
   margin: 0;
   font-size: 0.95rem;
-  color: var(--c-text-muted);
+  color: var(--c-text-dark-muted);
   line-height: 1.55;
 }
 
@@ -1405,13 +1398,13 @@ p { margin: 0 0 var(--sp-3); }
   font-family: var(--ff-title);
   font-weight: 600;
   font-size: 1.15rem;
-  color: var(--c-text);
+  color: var(--c-text-dark);
   margin: 0 0 var(--sp-3);
 }
 .method__cta-note {
   margin: var(--sp-2) 0 0;
   font-size: 0.85rem;
-  color: var(--c-text-muted);
+  color: var(--c-text-dark-muted);
 }
 
 
@@ -1419,10 +1412,7 @@ p { margin: 0 0 var(--sp-3); }
    10. WHY — Pourquoi AfriAutomate (reproduction maquette en 2 colonnes)
    ===================================================================== */
 .why--light {
-  background:
-    radial-gradient(ellipse 50% 60% at 100% 30%, rgba(201, 169, 104, 0.18), transparent 70%),
-    radial-gradient(ellipse 60% 50% at 0% 80%, rgba(255, 255, 255, 0.5), transparent 70%),
-    linear-gradient(135deg, var(--c-bg-cream) 0%, var(--c-bg-cream-light) 100%);
+  background: var(--c-bg-light);
   color: var(--c-text-dark);
 }
 .why__inner {
@@ -1668,10 +1658,7 @@ p { margin: 0 0 var(--sp-3); }
    11. CLIENTS — Témoignages (fond crème chaleureux)
    ===================================================================== */
 .clients--warm {
-  background:
-    radial-gradient(ellipse 50% 60% at 20% 20%, rgba(201, 169, 104, 0.18), transparent 70%),
-    radial-gradient(ellipse 60% 50% at 100% 80%, rgba(255, 138, 0, 0.10), transparent 70%),
-    linear-gradient(135deg, var(--c-bg-cream) 0%, var(--c-bg-cream-light) 100%);
+  background: var(--c-bg-light);
   color: var(--c-text-dark);
 }
 .clients--warm .section__kicker {
@@ -1971,44 +1958,108 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   13. CTA FINAL
+   13. CTA FINAL — Card saumon arrondie, inspirée Naiom
+   La section a le même fond uniforme #F5F7FA que le reste du site.
+   La card elle-même est la pièce maîtresse colorée.
    ===================================================================== */
 .cta-final {
   position: relative;
+  background: var(--c-bg-light);
+}
+
+/* La card centrale : gradient peach/saumon vertical doux, coins très arrondis */
+.cta-final__card {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: var(--sp-6) var(--sp-4) calc(var(--sp-6) - var(--sp-1));
+  text-align: center;
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg,
+      #FFFAF4 0%,
+      #FFE8D6 50%,
+      #FFD3B0 100%);
+  box-shadow:
+    0 30px 80px rgba(255, 138, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
   overflow: hidden;
 }
-.cta-final::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 50%, rgba(37,99,235,0.25), transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(255,138,0,0.15), transparent 50%);
-  pointer-events: none;
+
+/* Icône centrée au sommet (cercle dark + étincelle orange) */
+.cta-final__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--c-bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--sp-3);
+  box-shadow: 0 12px 28px rgba(13, 17, 23, 0.18);
 }
-.cta-final__inner {
-  position: relative;
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto;
+.cta-final__icon svg {
+  width: 28px;
+  height: 28px;
 }
+
 .cta-final__title {
-  font-size: var(--fs-h1-mob);
-  margin-bottom: var(--sp-3);
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 1.85rem;
+  line-height: 1.15;
+  color: var(--c-bg-dark);
+  margin: 0 0 var(--sp-2);
+  letter-spacing: -0.01em;
 }
 .cta-final__lead {
-  color: var(--c-text-muted);
-  font-size: 1.1rem;
-  margin-bottom: var(--sp-4);
+  color: rgba(13, 17, 23, 0.70);
+  font-size: 1.05rem;
+  max-width: 620px;
+  margin: 0 auto var(--sp-4);
 }
+
+/* Bouton pill blanc avec flèche — inspiration directe Naiom */
+.cta-final__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1.75rem;
+  background: #FFFFFF;
+  color: var(--c-bg-dark);
+  font-family: var(--ff-title);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  box-shadow: 0 10px 28px rgba(13, 17, 23, 0.15);
+  transition: transform var(--t-fast), box-shadow var(--t-base), gap var(--t-fast);
+}
+.cta-final__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(13, 17, 23, 0.22);
+  gap: 0.9rem;
+  color: var(--c-bg-dark);
+}
+.cta-final__btn svg {
+  width: 18px;
+  height: 18px;
+}
+
 .cta-final__sub {
-  margin-top: var(--sp-3);
-  color: var(--c-text-muted);
-  font-size: 0.95rem;
+  margin: var(--sp-3) 0 0;
+  color: rgba(13, 17, 23, 0.65);
+  font-size: 0.9rem;
 }
 .cta-final__sub a {
-  color: var(--c-accent);
+  color: var(--c-bg-dark);
   font-weight: 600;
+  border-bottom: 1px solid rgba(13, 17, 23, 0.30);
+  padding-bottom: 1px;
+  transition: border-color var(--t-fast);
+}
+.cta-final__sub a:hover {
+  border-color: var(--c-bg-dark);
 }
 
 
@@ -2193,10 +2244,13 @@ p { margin: 0 0 var(--sp-3); }
   .method__title { font-size: 2.75rem; }
   .phase--featured .phase__title { font-size: 2.25rem; }
 
-  /* Agents IA — 3 colonnes desktop (5 cards : 3 + 2 alignées à gauche) */
+  /* Agents IA — 2 colonnes desktop (grille 2×2 pour 4 cards) */
   .agents__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-4);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

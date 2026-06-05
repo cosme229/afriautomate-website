@@ -118,7 +118,7 @@
          SECTION 2 — SERVICES (Diagnostic + 4 services)
          Inspiration : NAIOM, Smala AI, agences IA francophones
          ====================================================== -->
-    <section id="services" class="services section section--dark">
+    <section id="services" class="services section section--light">
       <div class="container">
 
         <!-- Bloc d'ouverture : Tout commence par un diagnostic -->
@@ -364,11 +364,11 @@
     </section>
 
     <!-- ======================================================
-         SECTION 3 — AGENTS IA (5 collaborateurs IA sectoriels)
+         SECTION 3 — AGENTS IA (4 collaborateurs IA sectoriels)
          Nouveaux collaborateurs : Fatou (comptable), Koffi (RH),
-         Serge (commercial), Aïssatou (support), Léa (contenu).
+         Serge (commercial), Aïssatou (support).
          ====================================================== -->
-    <section id="agents" class="agents section section--dark">
+    <section id="agents" class="agents section section--light">
       <div class="container">
 
         <header class="section__header reveal">
@@ -515,39 +515,6 @@
             </a>
           </article>
 
-          <!-- AGENT 5 — Léa · Créatrice de contenu IA -->
-          <article class="agent reveal">
-            <div class="agent__top">
-              <div class="agent__avatar agent__avatar--lea" aria-hidden="true">
-                <svg class="agent-avatar-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="50" cy="38" r="15" fill="#9D174D"/>
-                  <path d="M 22 92 Q 22 62 50 62 Q 78 62 78 92 Z" fill="#9D174D"/>
-                </svg>
-              </div>
-              <span class="agent__name">Léa</span>
-            </div>
-            <h3 class="agent__role">Créatrice de contenu IA</h3>
-            <p class="agent__desc">
-              Léa produit vos posts LinkedIn, vos newsletters et vos captions Instagram dans votre ton
-              — chaque mois, sans retard, sans blocage de la page blanche.
-            </p>
-            <ul class="agent__features">
-              <li>Rédige des contenus LinkedIn, Instagram et email adaptés à votre cible</li>
-              <li>Construit et maintient votre calendrier éditorial mensuel</li>
-              <li>Adapte le message selon le canal, le ton et l'objectif de chaque publication</li>
-              <li>Génère des idées d'articles à partir de votre actualité ou de vos produits</li>
-              <li>Propose des accroches et angles différents pour tester l'engagement</li>
-            </ul>
-            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener"
-               class="agent__cta" aria-label="Réserver une démo avec l'agent Léa">
-              Réserver une démo
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </article>
-
         </div>
       </div>
     </section>
@@ -556,7 +523,7 @@
          SECTION 4 — TÉMOIGNAGES
          Approche honnête : pas de faux témoignages au lancement
          ====================================================== -->
-    <section id="temoignages" class="clients clients--warm section">
+    <section id="temoignages" class="clients clients--warm section section--light">
       <div class="container clients__inner">
         <div class="clients__photo reveal">
           <img src="assets/photos-equipe/fondateur.png"
@@ -593,7 +560,7 @@
     <!-- ======================================================
          SECTION 5 — MÉTHODE (simplifiée — 3 grandes lignes)
          ====================================================== -->
-    <section id="process" class="method method--simple section section--dark">
+    <section id="process" class="method method--simple section section--light">
       <div class="method__bg" aria-hidden="true"></div>
       <div class="container method__container">
 
@@ -662,7 +629,7 @@
          SECTION 6 — À PROPOS DE NOUS (ex "Pourquoi AfriAutomate")
          CTA mis à jour : "Réservez un appel"
          ====================================================== -->
-    <section id="about" class="why why--light section">
+    <section id="about" class="why why--light section section--light">
       <div class="container why__inner">
 
         <div class="why__content reveal">
@@ -993,20 +960,43 @@
     </section>
 
     <!-- ======================================================
-         SECTION 8 — CTA FINAL
+         SECTION 8 — CTA FINAL (card saumon arrondie, style Naiom)
          ====================================================== -->
-    <section id="contact" class="cta-final section section--dark">
-      <div class="container cta-final__inner reveal">
-        <h2 class="cta-final__title">Prêt à libérer votre temps ?</h2>
-        <p class="cta-final__lead">30 minutes d'appel offert. Diagnostic gratuit, recommandation honnête, zéro pression commerciale.</p>
-        <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary btn--xl">
-          Réserver mon appel gratuit →
-        </a>
-        <p class="cta-final__sub">
-          Ou écrivez-nous sur WhatsApp :
-          <!-- TODO: vérifier le format du numéro WhatsApp (11 chiffres après 229) -->
-          <a href="https://wa.me/2290143102911" target="_blank" rel="noopener">+229 01 43 10 29 11</a>
-        </p>
+    <section id="contact" class="cta-final section">
+      <div class="container">
+        <div class="cta-final__card reveal">
+
+          <!-- Icône centrée au sommet (cercle sombre avec étincelle orange) -->
+          <div class="cta-final__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3 L13.7 9.3 L20 11 L13.7 12.7 L12 19 L10.3 12.7 L4 11 L10.3 9.3 Z"
+                    fill="#FF8A00"/>
+            </svg>
+          </div>
+
+          <h2 class="cta-final__title">Prêt à libérer votre temps ?</h2>
+          <p class="cta-final__lead">
+            30 minutes d'appel offert. Diagnostic gratuit, recommandation honnête,
+            zéro pression commerciale.
+          </p>
+
+          <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener"
+             class="cta-final__btn" aria-label="Réserver mon appel gratuit">
+            <span>Réserver mon appel gratuit</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+
+          <p class="cta-final__sub">
+            Ou écrivez-nous sur WhatsApp :
+            <!-- TODO: vérifier le format du numéro WhatsApp (11 chiffres après 229) -->
+            <a href="https://wa.me/2290143102911" target="_blank" rel="noopener">+229 01 43 10 29 11</a>
+          </p>
+
+        </div>
       </div>
     </section>
 
@@ -1076,7 +1066,7 @@
 
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
-        <p>© 2025 AfriAutomate — Tous droits réservés.</p>
+        <p>© 2026 AfriAutomate — Tous droits réservés.</p>
         <ul class="footer__legal">
           <!-- TODO: pages légales à créer -->
           <li><a href="#">Mentions légales</a></li>
