@@ -1,4 +1,4 @@
-/* =====================================================================
+﻿/* =====================================================================
    AfriAutomate — Feuille de style officielle
    =====================================================================
    Synthèse design (Étape 1 du brief — recherche d'inspiration) :
@@ -571,11 +571,6 @@ p { margin: 0 0 var(--sp-3); }
 }
 .services .container { position: relative; }
 
-/* La section Packs colle plus naturellement après Services */
-.services + .packs {
-  padding-top: var(--sp-5);
-}
-
 /* Variante d'accent du kicker (or doré pour les sous-headers) */
 .section__kicker--accent {
   background: linear-gradient(90deg, var(--c-gold-dark), var(--c-gold), var(--c-gold-dark));
@@ -694,57 +689,37 @@ p { margin: 0 0 var(--sp-3); }
   box-shadow: 0 20px 50px rgba(13, 17, 23, 0.12);
 }
 
-/* Visuel d'en-tête : zone colorée avec icône centrale + bulles décoratives */
+/* Visuel d'en-tête : zone claire avec mockup SVG centré + badge catégorie */
 .svc-card__visual {
   position: relative;
-  height: 160px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
-.svc-card__visual--rh        { background: linear-gradient(135deg, #FFE8D6 0%, #FFD4B8 100%); }
-.svc-card__visual--commerce  { background: linear-gradient(135deg, #DCEBFF 0%, #BFDBFE 100%); }
-.svc-card__visual--cabinet   { background: linear-gradient(135deg, #FFF1D6 0%, #FFE0A3 100%); }
-.svc-card__visual--sante     { background: linear-gradient(135deg, #FFE0E0 0%, #FFC9C9 100%); }
-
-.svc-card__bubble {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(8px);
-  opacity: 0.6;
-}
-.svc-card__bubble--a {
-  width: 100px;
-  height: 100px;
-  top: -30px;
-  right: -20px;
-  background: rgba(255, 255, 255, 0.7);
-}
-.svc-card__bubble--b {
-  width: 80px;
-  height: 80px;
-  bottom: -25px;
-  left: -15px;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--c-bg-light);
 }
 
-.svc-card__icon {
+/* Variantes par offre — fonds doux et clairs, accents subtils par teinte */
+.svc-card__visual--audit       { background: linear-gradient(135deg, #F5F7FA 0%, #E8EEF8 100%); }
+.svc-card__visual--agent       { background: linear-gradient(135deg, #F5F7FA 0%, #ECEAFB 100%); }
+.svc-card__visual--auto        { background: linear-gradient(135deg, #F5F7FA 0%, #FCEFE3 100%); }
+.svc-card__visual--formation   { background: linear-gradient(135deg, #F5F7FA 0%, #FBF4E0 100%); }
+
+/* SVG illustratif centré dans la zone visuelle (mockups épurés) */
+.svc-illu {
   position: relative;
   z-index: 1;
-  width: 72px;
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 18px;
-  color: var(--c-text-dark);
-  box-shadow: 0 8px 24px rgba(13, 17, 23, 0.12);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  width: 88%;
+  max-width: 280px;
+  height: auto;
+  max-height: 150px;
+  filter: drop-shadow(0 8px 20px rgba(13, 17, 23, 0.08));
+  transition: transform var(--t-base);
 }
-.svc-card__icon svg { width: 32px; height: 32px; }
+.svc-card:hover .svc-illu {
+  transform: translateY(-3px) scale(1.02);
+}
 
 .svc-card__tag {
   position: absolute;
@@ -845,198 +820,173 @@ p { margin: 0 0 var(--sp-3); }
 .section--dark .svc-card__cta { background: var(--c-primary); }
 .section--dark .svc-card__cta:hover { background: var(--c-primary-hover); }
 
-
-/* ----- (Legacy) Grille des 4 secteurs — conservée pour compat ----- */
-.sectors__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--sp-3);
-  margin-bottom: var(--sp-5);
+/* Lien sur le titre d'une card service (vers la page détail du service) */
+.svc-card__title-link {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0 1.5px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size var(--t-base), color var(--t-fast);
 }
-
-.sector {
-  position: relative;
-  background: var(--c-bg-dark-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-  padding: var(--sp-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-3);
-  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
-}
-.sector:hover {
-  transform: translateY(-6px);
-  border-color: var(--c-primary);
-  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.18);
-}
-
-/* Variante SIGNATURE — secteur RH (terrain naturel) */
-.sector--signature {
-  border: 1.5px solid rgba(201, 169, 104, 0.50);
-  background:
-    linear-gradient(180deg, rgba(201, 169, 104, 0.10) 0%, var(--c-bg-dark-2) 60%);
-  box-shadow: 0 0 40px rgba(201, 169, 104, 0.10);
-}
-.sector--signature:hover {
-  border-color: var(--c-gold);
-  box-shadow: 0 20px 50px rgba(201, 169, 104, 0.25);
-}
-.sector__signature-tag {
-  position: absolute;
-  top: -12px;
-  left: var(--sp-3);
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  background: linear-gradient(90deg, var(--c-gold-dark), var(--c-gold));
-  color: var(--c-text-dark);
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  border-radius: var(--radius-pill);
-  box-shadow: 0 4px 16px rgba(201, 169, 104, 0.40);
-}
-
-.sector__head {
-  padding-bottom: var(--sp-3);
-  border-bottom: 1px solid var(--c-border);
-}
-.sector__icon {
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(37, 99, 235, 0.12);
+.svc-card__title-link:hover {
   color: var(--c-primary);
-  border-radius: var(--radius-sm);
-  margin-bottom: var(--sp-3);
-}
-.sector__icon svg { width: 28px; height: 28px; }
-.sector--signature .sector__icon {
-  background: rgba(201, 169, 104, 0.18);
-  color: var(--c-gold);
-}
-.sector:nth-child(3) .sector__icon {
-  background: rgba(255, 138, 0, 0.12);
-  color: var(--c-accent);
-}
-.sector:nth-child(4) .sector__icon {
-  background: rgba(255, 100, 100, 0.12);
-  color: #FF6B6B;
-}
-.sector__title {
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 1.35rem;
-  color: var(--c-text);
-  margin: 0 0 0.4rem;
-}
-.sector__target {
-  font-size: 0.875rem;
-  color: var(--c-text-muted);
-  margin: 0;
-}
-
-.sector__block {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-.sector__subtitle {
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.10em;
-  margin: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-.sector__subtitle::before {
-  content: '';
-  display: inline-block;
-  width: 18px;
-  height: 2px;
-  background: currentColor;
-  border-radius: 2px;
-}
-.sector__subtitle--pain { color: #FF6B6B; }
-.sector__subtitle--auto { color: #4CD9A6; }
-
-.sector__list {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-.sector__list li {
-  position: relative;
-  padding-left: 1.5rem;
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: var(--c-text);
-}
-.sector__list--pain li::before {
-  content: '−';
-  position: absolute;
-  left: 0;
-  top: -1px;
-  width: 16px;
-  height: 16px;
-  background: rgba(255, 107, 107, 0.18);
-  color: #FF6B6B;
-  font-weight: 700;
-  font-size: 0.85rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-top: 4px;
-}
-.sector__list--auto li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  top: -1px;
-  width: 16px;
-  height: 16px;
-  background: rgba(76, 217, 166, 0.18);
-  color: #4CD9A6;
-  font-weight: 700;
-  font-size: 0.7rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-top: 4px;
-}
-
-/* ----- CTA central Services ----- */
-.services__cta {
-  text-align: center;
-  padding: var(--sp-4);
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(255, 138, 0, 0.05));
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-}
-.services__cta-text {
-  font-size: 1.05rem;
-  color: var(--c-text-muted);
-  margin: 0 0 var(--sp-3);
-}
-.services__cta-note {
-  margin: var(--sp-2) 0 0;
-  font-size: 0.85rem;
-  color: var(--c-text-muted);
+  background-size: 100% 1.5px;
 }
 
 
 /* =====================================================================
-   8 bis. MÉTHODE — Timeline premium 3 phases (pièce maîtresse)
+   8B. AGENTS IA — Grille 3 colonnes des collaborateurs IA (#agents)
+   Cards portrait : avatar coloré + prénom + rôle + features + CTA.
+   Inspiré du pattern "agents personifiés" — donne un visage à l'IA.
+   ===================================================================== */
+.agents {
+  position: relative;
+  background:
+    radial-gradient(ellipse 60% 50% at 10% 0%, rgba(37, 99, 235, 0.10), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 90% 100%, rgba(255, 138, 0, 0.07), transparent 60%),
+    var(--c-bg-dark);
+}
+.agents .container { position: relative; }
+
+.agents__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-3);
+  margin-top: var(--sp-5);
+}
+
+/* Carte agent — portrait, fond clair, accent coloré sur l'avatar */
+.agent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--c-bg-light-2);
+  border: 1px solid var(--c-border-light);
+  border-radius: 18px;
+  padding: var(--sp-4);
+  box-shadow: 0 4px 20px rgba(13, 17, 23, 0.06);
+  transition: transform var(--t-base), box-shadow var(--t-base);
+}
+.agent:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(13, 17, 23, 0.18);
+}
+
+/* Bloc supérieur : avatar + prénom dessous */
+.agent__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: var(--sp-3);
+}
+
+.agent__avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(13, 17, 23, 0.10);
+}
+
+/* Couleurs de fond spécifiques à chaque agent (couleurs douces du brief) */
+.agent__avatar--fatou     { background: #EFF6FF; }
+.agent__avatar--koffi     { background: #F0FDF4; }
+.agent__avatar--serge     { background: #FFF7ED; }
+.agent__avatar--aissatou  { background: #F5F3FF; }
+.agent__avatar--lea       { background: #FDF2F8; }
+
+/* Image / silhouette dans l'avatar — classe partagée pour remplacement futur */
+.agent-avatar-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.agent__name {
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--c-text-dark);
+  letter-spacing: 0.01em;
+}
+
+.agent__role {
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--c-text-dark);
+  margin: 0 0 var(--sp-2);
+  text-align: center;
+}
+
+.agent__desc {
+  font-size: 0.93rem;
+  color: var(--c-text-dark-muted);
+  line-height: 1.55;
+  margin: 0 0 var(--sp-3);
+  text-align: center;
+}
+
+.agent__features {
+  flex: 1;
+  margin: 0 0 var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.agent__features li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--c-text-dark);
+  line-height: 1.5;
+}
+.agent__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 8px;
+  height: 8px;
+  background: var(--c-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.agent__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  align-self: stretch;
+  padding: 0.75rem 1.1rem;
+  background: var(--c-text-dark);
+  color: #fff;
+  font-family: var(--ff-title);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: gap var(--t-fast), background var(--t-fast), transform var(--t-fast);
+  margin-top: auto;
+}
+.agent__cta:hover {
+  background: var(--c-primary);
+  color: #fff;
+  gap: 0.75rem;
+  transform: translateY(-2px);
+}
+.agent__cta svg { width: 16px; height: 16px; }
+
+
+/* =====================================================================
+   9. MÉTHODE — Timeline premium 3 phases (pièce maîtresse)
    ===================================================================== */
 .method {
   position: relative;
@@ -1466,325 +1416,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   9. PROCESS (4 étapes)
-   ===================================================================== */
-.process__steps {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--sp-3);
-  counter-reset: step;
-}
-.process__step {
-  position: relative;
-  background: var(--c-bg-light-2);
-  padding: var(--sp-4);
-  border-radius: var(--radius);
-  border: 1px solid var(--c-border-light);
-  transition: transform var(--t-base), box-shadow var(--t-base);
-}
-.process__step:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-soft);
-}
-.process__num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--c-primary);
-  color: #fff;
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin-bottom: var(--sp-3);
-}
-.process__step--highlight .process__num {
-  background: var(--c-accent);
-  color: var(--c-text-dark);
-  box-shadow: var(--shadow-accent);
-}
-.process__title {
-  color: var(--c-text-dark);
-  margin-bottom: var(--sp-2);
-}
-.process__desc {
-  margin: 0;
-  color: var(--c-text-dark-muted);
-  font-size: 0.95rem;
-}
-
-
-/* =====================================================================
-   10. PACKS (3 cards, Growth featured + offre lancement)
-   ===================================================================== */
-
-/* Bandeau d'urgence "OFFRE LANCEMENT" au-dessus de la grille */
-.packs__launch-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--sp-2);
-  max-width: 720px;
-  margin: 0 auto var(--sp-5);
-  padding: 0.85rem 1.5rem;
-  background:
-    linear-gradient(90deg, rgba(255,138,0,0.06), rgba(255,138,0,0.14), rgba(255,138,0,0.06));
-  border: 1px solid rgba(255, 138, 0, 0.40);
-  border-radius: var(--radius-pill);
-  font-family: var(--ff-title);
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--c-accent);
-  text-align: center;
-  box-shadow: 0 0 30px rgba(255, 138, 0, 0.15);
-}
-.packs__launch-banner strong {
-  color: #FFC689;
-  letter-spacing: 0.05em;
-}
-.packs__launch-banner-icon {
-  font-size: 1.2rem;
-  display: inline-block;
-  animation: pulseGlow 2.5s ease-in-out infinite;
-}
-@keyframes pulseGlow {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50%      { transform: scale(1.18); opacity: 0.85; }
-}
-
-.packs__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--sp-4);
-  margin-bottom: var(--sp-4);
-}
-.pack {
-  position: relative;
-  background: var(--c-bg-dark-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-  padding: var(--sp-4);
-  display: flex;
-  flex-direction: column;
-  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
-}
-.pack:hover {
-  transform: translateY(-4px);
-  border-color: var(--c-primary);
-}
-.pack--featured {
-  border: 2px solid var(--c-accent);
-  box-shadow: var(--shadow-blue);
-  background: linear-gradient(180deg, rgba(37,99,235,0.06), var(--c-bg-dark-2) 30%);
-}
-.pack--featured:hover {
-  transform: translateY(-6px);
-  border-color: var(--c-accent);
-}
-
-.pack__ribbon {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--c-accent);
-  color: var(--c-text-dark);
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 0.875rem;
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-pill);
-  white-space: nowrap;
-  box-shadow: var(--shadow-accent);
-}
-.pack__head { margin-bottom: var(--sp-3); }
-
-/* Avatar coloré en haut des cards Packs (inspiré capture 1 — agents IA) */
-.pack__avatar {
-  width: 64px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  margin-bottom: var(--sp-3);
-  color: #fff;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-}
-.pack__avatar svg { width: 30px; height: 30px; }
-.pack__avatar--essentiel {
-  background: linear-gradient(135deg, #4F46E5, #7C3AED);
-}
-.pack__avatar--growth {
-  background: linear-gradient(135deg, var(--c-accent), #FFB454);
-  color: var(--c-text-dark);
-  box-shadow: 0 10px 24px rgba(255, 138, 0, 0.35);
-}
-.pack__avatar--premium {
-  background: linear-gradient(135deg, var(--c-gold-dark), var(--c-gold));
-  color: var(--c-text-dark);
-  box-shadow: 0 10px 24px rgba(201, 169, 104, 0.35);
-}
-
-/* Badge "Offre fondateurs · 10 places" — orange chaud */
-.pack__launch-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--c-accent);
-  background: rgba(255, 138, 0, 0.12);
-  border: 1px solid rgba(255, 138, 0, 0.35);
-  padding: 0.3rem 0.7rem;
-  border-radius: var(--radius-pill);
-  margin-bottom: var(--sp-2);
-  white-space: nowrap;
-}
-.pack--featured .pack__launch-badge {
-  background: rgba(255, 138, 0, 0.18);
-  border-color: rgba(255, 138, 0, 0.55);
-  box-shadow: 0 0 20px rgba(255, 138, 0, 0.25);
-}
-
-.pack__badge {
-  display: inline-block;
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--c-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: var(--sp-2);
-}
-.pack__badge--featured { color: var(--c-primary); }
-.pack__name {
-  color: var(--c-text);
-  font-size: 1.6rem;
-  margin-bottom: var(--sp-1);
-}
-.pack__target {
-  color: var(--c-text-muted);
-  font-size: 0.875rem;
-  margin: 0;
-}
-.pack__price {
-  padding: var(--sp-3) 0;
-  border-top: 1px solid var(--c-border);
-  border-bottom: 1px solid var(--c-border);
-  margin-bottom: var(--sp-3);
-}
-.pack__setup,
-.pack__monthly {
-  font-family: var(--ff-title);
-  margin-bottom: 0.25rem;
-}
-.pack__setup strong,
-.pack__monthly strong {
-  font-size: 1.5rem;
-  color: var(--c-text);
-}
-.pack__monthly strong { color: var(--c-primary); }
-.pack--featured .pack__monthly strong { color: var(--c-accent); }
-.pack__setup span,
-.pack__monthly span {
-  font-family: var(--ff-body);
-  font-size: 0.875rem;
-  color: var(--c-text-muted);
-  font-weight: 400;
-}
-
-/* Ancien tarif barré à côté du nouveau */
-.pack__price-was {
-  display: inline-block;
-  margin-left: 0.6rem;
-  font-family: var(--ff-body);
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: var(--c-text-muted);
-  text-decoration: line-through;
-  text-decoration-color: rgba(255, 138, 0, 0.7);
-  text-decoration-thickness: 2px;
-  vertical-align: 2px;
-}
-
-.pack__delay {
-  margin-top: 0.5rem;
-  color: var(--c-text-muted);
-  font-size: 0.875rem;
-}
-
-/* Mention de garantie sous le bloc prix */
-.pack__guarantee {
-  margin: var(--sp-2) 0 var(--sp-3);
-  padding: 0.65rem 0.85rem;
-  font-family: var(--ff-title);
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--c-amber);
-  background: rgba(201, 169, 104, 0.10);
-  border-left: 3px solid var(--c-gold);
-  border-radius: 4px;
-  line-height: 1.4;
-}
-.pack__guarantee small {
-  display: block;
-  margin-top: 0.2rem;
-  font-family: var(--ff-body);
-  font-weight: 400;
-  font-size: 0.72rem;
-  color: var(--c-text-muted);
-  letter-spacing: 0.02em;
-}
-.pack--featured .pack__guarantee {
-  background: rgba(255, 138, 0, 0.10);
-  border-left-color: var(--c-accent);
-  color: var(--c-accent);
-}
-.pack__features {
-  flex-grow: 1;
-  margin-bottom: var(--sp-3);
-}
-.pack__features li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.6rem;
-  font-size: 0.95rem;
-}
-.pack__features li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--c-primary);
-  font-weight: 700;
-}
-.pack--featured .pack__features li::before { color: var(--c-accent); }
-.pack__pitch {
-  font-style: italic;
-  color: var(--c-text-muted);
-  font-size: 0.9rem;
-  padding: var(--sp-2) 0;
-  margin-bottom: var(--sp-3);
-  border-left: 3px solid var(--c-primary);
-  padding-left: var(--sp-2);
-}
-.pack--featured .pack__pitch { border-left-color: var(--c-accent); }
-
-.packs__note {
-  text-align: center;
-  color: var(--c-text-muted);
-  font-size: 0.875rem;
-  max-width: 800px;
-  margin: var(--sp-4) auto 0;
-}
-
-
-/* =====================================================================
-   11. WHY — Pourquoi AfriAutomate (reproduction maquette en 2 colonnes)
+   10. WHY — Pourquoi AfriAutomate (reproduction maquette en 2 colonnes)
    ===================================================================== */
 .why--light {
   background:
@@ -1896,7 +1528,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   11 bis. WHY — Animations modernes (style 21st.dev / Linear)
+   10 bis. WHY — Animations modernes (style 21st.dev / Linear)
    ===================================================================== */
 
 /* (a) Title shimmer doré sur "AfriAutomate ?" */
@@ -2033,7 +1665,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   12. CLIENTS — Témoignages (fond crème chaleureux)
+   11. CLIENTS — Témoignages (fond crème chaleureux)
    ===================================================================== */
 .clients--warm {
   background:
@@ -2122,7 +1754,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   13. FAQ — Onglets + accordéon (inspiré du composant React faq-tabs)
+   12. FAQ — Onglets + accordéon (inspiré du composant React faq-tabs)
    ===================================================================== */
 .faq--tabs {
   position: relative;
@@ -2339,7 +1971,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   14. CTA FINAL
+   13. CTA FINAL
    ===================================================================== */
 .cta-final {
   position: relative;
@@ -2381,7 +2013,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   15. FOOTER
+   14. FOOTER
    ===================================================================== */
 .footer {
   background: #07090C;
@@ -2451,7 +2083,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   16. MEDIA QUERIES
+   15. MEDIA QUERIES
    ===================================================================== */
 
 /* ≥ 768px — Tablette */
@@ -2505,32 +2137,25 @@ p { margin: 0 0 var(--sp-3); }
   }
   .diagnostic__title { font-size: 1.75rem; }
 
-  /* Services 2 colonnes (4 cards 2×2 style capture 2) */
+  /* Services 2 colonnes (4 cards 2×2 — 4 offres produit) */
   .svc-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-4);
   }
-  .svc-card__visual { height: 180px; }
-  .svc-card__icon { width: 80px; height: 80px; }
-  .svc-card__icon svg { width: 36px; height: 36px; }
+  .svc-card__visual { height: 200px; }
+  .svc-illu { max-height: 170px; }
+
+  /* Agents IA — 2 colonnes tablette */
+  .agents__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-4);
+  }
 
   /* Méthode SIMPLIFIÉE — 3 cards en ligne */
   .method__cards {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  /* Sectors 2 colonnes (legacy) */
-  .sectors__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--sp-4);
-  }
   .method__title { font-size: var(--fs-h2); }
-
-  /* Packs 3 colonnes */
-  .packs__grid {
-    grid-template-columns: repeat(3, 1fr);
-    align-items: stretch;
-  }
 
   /* Clients 2 colonnes */
   .clients__inner {
@@ -2564,21 +2189,20 @@ p { margin: 0 0 var(--sp-3); }
 
   .cta-final__title { font-size: 2.75rem; }
 
-  .pack--featured {
-    transform: scale(1.04);
-  }
-  .pack--featured:hover {
-    transform: scale(1.04) translateY(-6px);
-  }
-
   /* Méthode — titre encore plus imposant en desktop */
   .method__title { font-size: 2.75rem; }
   .phase--featured .phase__title { font-size: 2.25rem; }
+
+  /* Agents IA — 3 colonnes desktop (5 cards : 3 + 2 alignées à gauche) */
+  .agents__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-4);
+  }
 }
 
 
 /* =====================================================================
-   17. ACCESSIBILITÉ — focus visible & reduced motion
+   16. ACCESSIBILITÉ — focus visible & reduced motion
    ===================================================================== */
 :focus-visible {
   outline: 2px solid var(--c-accent);
