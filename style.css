@@ -1,4 +1,4 @@
-/* =====================================================================
+﻿/* =====================================================================
    AfriAutomate — Feuille de style officielle
    =====================================================================
    Synthèse design (Étape 1 du brief — recherche d'inspiration) :
@@ -571,11 +571,6 @@ p { margin: 0 0 var(--sp-3); }
 }
 .services .container { position: relative; }
 
-/* La section Packs colle plus naturellement après Services */
-.services + .packs {
-  padding-top: var(--sp-5);
-}
-
 /* Variante d'accent du kicker (or doré pour les sous-headers) */
 .section__kicker--accent {
   background: linear-gradient(90deg, var(--c-gold-dark), var(--c-gold), var(--c-gold-dark));
@@ -842,7 +837,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   8C. AGENTS IA — Grille 3 colonnes des collaborateurs IA (#agents)
+   8B. AGENTS IA — Grille 3 colonnes des collaborateurs IA (#agents)
    Cards portrait : avatar coloré + prénom + rôle + features + CTA.
    Inspiré du pattern "agents personifiés" — donne un visage à l'IA.
    ===================================================================== */
@@ -991,551 +986,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   8B. CABINETS COMPTABLES — Page de service détaillée (#cabinets-comptables)
-   Réutilise au max les patterns du site : .section--dark, .section__kicker,
-   .section__title, .section__lead, .btn--primary. Ajoute uniquement les
-   composants spécifiques à cette page de détail.
-   ===================================================================== */
-.cabinets {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse 60% 50% at 20% 20%, rgba(37, 99, 235, 0.10), transparent 60%),
-    radial-gradient(ellipse 50% 50% at 80% 80%, rgba(201, 169, 104, 0.07), transparent 60%),
-    var(--c-bg-dark);
-}
-.cabinets .container { position: relative; }
-
-/* ----- Citation d'introduction (bordure gauche bleue) ----- */
-.cab-quote {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto var(--sp-6);
-  padding: var(--sp-4) var(--sp-4) var(--sp-4) calc(var(--sp-4) + 8px);
-  background:
-    linear-gradient(135deg, rgba(37, 99, 235, 0.10), rgba(245, 247, 250, 0.02));
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-}
-.cab-quote::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--c-primary), var(--c-gold));
-  border-radius: var(--radius) 0 0 var(--radius);
-}
-.cab-quote__text {
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: var(--c-text);
-  margin: 0 0 var(--sp-2);
-}
-.cab-quote__source {
-  display: block;
-  font-style: normal;
-  color: var(--c-text-muted);
-  font-size: 0.9rem;
-}
-
-/* ----- Sous-headers de bloc (titres intermédiaires de la page service) ----- */
-.cab-subhead {
-  text-align: center;
-  max-width: 780px;
-  margin: var(--sp-6) auto var(--sp-4);
-}
-.cab-subhead__title {
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: var(--c-text);
-  margin: 0;
-}
-
-/* Badge contextuel sous un sous-header */
-.cab-badge {
-  display: inline-block;
-  font-family: var(--ff-body);
-  font-size: 0.85rem;
-  color: var(--c-gold);
-  background: rgba(201, 169, 104, 0.10);
-  border: 1px solid rgba(201, 169, 104, 0.30);
-  padding: 0.45rem 0.95rem;
-  border-radius: var(--radius-pill);
-  margin-top: var(--sp-3);
-  line-height: 1.4;
-}
-
-/* ----- Grille à 4 cards (problème / modules) — 1col mobile, 2col tablette ----- */
-.cab-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--sp-3);
-  margin-bottom: var(--sp-3);
-}
-
-/* Card "problème" — icône + titre + description, version compacte */
-.cab-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-2);
-  padding: var(--sp-4);
-  background: var(--c-bg-dark-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
-}
-.cab-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--c-primary);
-  box-shadow: 0 14px 40px rgba(37, 99, 235, 0.15);
-}
-.cab-card__icon {
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(37, 99, 235, 0.12);
-  border: 1px solid rgba(37, 99, 235, 0.30);
-  border-radius: 14px;
-  color: var(--c-primary);
-}
-.cab-card__icon svg { width: 26px; height: 26px; }
-.cab-card__title {
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--c-text);
-  margin: var(--sp-1) 0 0;
-}
-.cab-card__desc {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--c-text-muted);
-  line-height: 1.6;
-}
-
-/* Card "module" — icône + titre + liste de features */
-.cab-module {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-3);
-  padding: var(--sp-4);
-  background: var(--c-bg-dark-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
-}
-.cab-module:hover {
-  transform: translateY(-4px);
-  border-color: var(--c-primary);
-  box-shadow: 0 14px 40px rgba(37, 99, 235, 0.15);
-}
-.cab-module__head {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
-}
-.cab-module__icon {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(255, 138, 0, 0.10));
-  border: 1px solid rgba(37, 99, 235, 0.30);
-  border-radius: 14px;
-  color: var(--c-text);
-}
-.cab-module__icon svg { width: 24px; height: 24px; }
-.cab-module__title {
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--c-text);
-  margin: 0;
-  line-height: 1.3;
-}
-.cab-module__features {
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-  margin: 0;
-}
-.cab-module__features li {
-  position: relative;
-  padding-left: 1.5rem;
-  font-size: 0.93rem;
-  color: var(--c-text-muted);
-  line-height: 1.55;
-}
-.cab-module__features li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.55rem;
-  width: 8px;
-  height: 8px;
-  background: var(--c-primary);
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
-.cab-module__features code {
-  font-family: 'Menlo', 'Courier New', monospace;
-  font-size: 0.82em;
-  background: rgba(37, 99, 235, 0.12);
-  border: 1px solid rgba(37, 99, 235, 0.25);
-  padding: 0.05em 0.4em;
-  border-radius: 4px;
-  color: var(--c-text);
-}
-
-/* ----- Timeline verticale des 5 étapes ----- */
-.cab-steps {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-3);
-  max-width: 920px;
-  margin: 0 auto var(--sp-5);
-  padding: 0;
-  list-style: none;
-}
-.cab-step {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: var(--sp-3);
-  align-items: flex-start;
-  background: var(--c-bg-dark-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-  padding: var(--sp-3) var(--sp-4);
-  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
-}
-.cab-step:hover {
-  transform: translateY(-3px);
-  border-color: var(--c-primary);
-  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.12);
-}
-.cab-step__num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: var(--c-bg-dark);
-  border: 1.5px solid var(--c-border);
-  border-radius: 50%;
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--c-primary);
-  flex-shrink: 0;
-}
-.cab-step:hover .cab-step__num {
-  border-color: var(--c-primary);
-  box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
-}
-.cab-step__content { min-width: 0; }
-.cab-step__when {
-  display: inline-block;
-  font-family: var(--ff-title);
-  font-weight: 600;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--c-accent);
-  background: rgba(255, 138, 0, 0.10);
-  border: 1px solid rgba(255, 138, 0, 0.30);
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-pill);
-  margin-bottom: var(--sp-2);
-}
-.cab-step__title {
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--c-text);
-  margin: 0 0 var(--sp-1);
-}
-.cab-step__desc {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--c-text-muted);
-  line-height: 1.6;
-}
-
-/* ----- Stat cards (4 métriques) ----- */
-.cab-stats {
-  display: grid;
-  /* minmax(0, 1fr) empêche les contenus en nowrap d'élargir leur colonne */
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: var(--sp-3);
-  max-width: 1080px;
-  margin: 0 auto var(--sp-3);
-}
-.cab-stat {
-  text-align: center;
-  padding: var(--sp-4) var(--sp-3);
-  background:
-    linear-gradient(180deg, rgba(37, 99, 235, 0.08), var(--c-bg-dark-2));
-  border: 1px solid rgba(37, 99, 235, 0.25);
-  border-radius: var(--radius);
-  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
-}
-.cab-stat:hover {
-  transform: translateY(-3px);
-  border-color: var(--c-accent);
-  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.15);
-}
-.cab-stat__value {
-  display: block;
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 1.85rem;
-  line-height: 1.1;
-  background: linear-gradient(135deg, var(--c-primary), var(--c-accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  margin-bottom: var(--sp-1);
-}
-.cab-stat__label {
-  display: block;
-  font-size: 0.88rem;
-  color: var(--c-text-muted);
-  line-height: 1.4;
-}
-
-.cab-stats__note {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto var(--sp-5);
-  font-size: 0.85rem;
-  color: var(--c-text-muted);
-  font-style: italic;
-  opacity: 0.85;
-}
-
-/* ----- CTA final du service (encadré avec citation + bouton) ----- */
-.cab-cta {
-  text-align: center;
-  max-width: 780px;
-  margin: 0 auto;
-  padding: var(--sp-5) var(--sp-4);
-  background:
-    linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(201, 169, 104, 0.08));
-  border: 1px solid rgba(201, 169, 104, 0.25);
-  border-radius: var(--radius);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-}
-.cab-cta__quote {
-  font-family: var(--ff-title);
-  font-weight: 600;
-  font-size: 1.1rem;
-  line-height: 1.55;
-  color: var(--c-text);
-  margin: 0 0 var(--sp-4);
-}
-
-
-/* ----- (Legacy) Grille des 4 secteurs — conservée pour compat ----- */
-.sectors__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--sp-3);
-  margin-bottom: var(--sp-5);
-}
-
-.sector {
-  position: relative;
-  background: var(--c-bg-dark-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-  padding: var(--sp-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-3);
-  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
-}
-.sector:hover {
-  transform: translateY(-6px);
-  border-color: var(--c-primary);
-  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.18);
-}
-
-/* Variante SIGNATURE — secteur RH (terrain naturel) */
-.sector--signature {
-  border: 1.5px solid rgba(201, 169, 104, 0.50);
-  background:
-    linear-gradient(180deg, rgba(201, 169, 104, 0.10) 0%, var(--c-bg-dark-2) 60%);
-  box-shadow: 0 0 40px rgba(201, 169, 104, 0.10);
-}
-.sector--signature:hover {
-  border-color: var(--c-gold);
-  box-shadow: 0 20px 50px rgba(201, 169, 104, 0.25);
-}
-.sector__signature-tag {
-  position: absolute;
-  top: -12px;
-  left: var(--sp-3);
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  background: linear-gradient(90deg, var(--c-gold-dark), var(--c-gold));
-  color: var(--c-text-dark);
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  border-radius: var(--radius-pill);
-  box-shadow: 0 4px 16px rgba(201, 169, 104, 0.40);
-}
-
-.sector__head {
-  padding-bottom: var(--sp-3);
-  border-bottom: 1px solid var(--c-border);
-}
-.sector__icon {
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(37, 99, 235, 0.12);
-  color: var(--c-primary);
-  border-radius: var(--radius-sm);
-  margin-bottom: var(--sp-3);
-}
-.sector__icon svg { width: 28px; height: 28px; }
-.sector--signature .sector__icon {
-  background: rgba(201, 169, 104, 0.18);
-  color: var(--c-gold);
-}
-.sector:nth-child(3) .sector__icon {
-  background: rgba(255, 138, 0, 0.12);
-  color: var(--c-accent);
-}
-.sector:nth-child(4) .sector__icon {
-  background: rgba(255, 100, 100, 0.12);
-  color: #FF6B6B;
-}
-.sector__title {
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 1.35rem;
-  color: var(--c-text);
-  margin: 0 0 0.4rem;
-}
-.sector__target {
-  font-size: 0.875rem;
-  color: var(--c-text-muted);
-  margin: 0;
-}
-
-.sector__block {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-.sector__subtitle {
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.10em;
-  margin: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-.sector__subtitle::before {
-  content: '';
-  display: inline-block;
-  width: 18px;
-  height: 2px;
-  background: currentColor;
-  border-radius: 2px;
-}
-.sector__subtitle--pain { color: #FF6B6B; }
-.sector__subtitle--auto { color: #4CD9A6; }
-
-.sector__list {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-.sector__list li {
-  position: relative;
-  padding-left: 1.5rem;
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: var(--c-text);
-}
-.sector__list--pain li::before {
-  content: '−';
-  position: absolute;
-  left: 0;
-  top: -1px;
-  width: 16px;
-  height: 16px;
-  background: rgba(255, 107, 107, 0.18);
-  color: #FF6B6B;
-  font-weight: 700;
-  font-size: 0.85rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-top: 4px;
-}
-.sector__list--auto li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  top: -1px;
-  width: 16px;
-  height: 16px;
-  background: rgba(76, 217, 166, 0.18);
-  color: #4CD9A6;
-  font-weight: 700;
-  font-size: 0.7rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-top: 4px;
-}
-
-/* ----- CTA central Services ----- */
-.services__cta {
-  text-align: center;
-  padding: var(--sp-4);
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(255, 138, 0, 0.05));
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-}
-.services__cta-text {
-  font-size: 1.05rem;
-  color: var(--c-text-muted);
-  margin: 0 0 var(--sp-3);
-}
-.services__cta-note {
-  margin: var(--sp-2) 0 0;
-  font-size: 0.85rem;
-  color: var(--c-text-muted);
-}
-
-
-/* =====================================================================
-   8 bis. MÉTHODE — Timeline premium 3 phases (pièce maîtresse)
+   9. MÉTHODE — Timeline premium 3 phases (pièce maîtresse)
    ===================================================================== */
 .method {
   position: relative;
@@ -1965,325 +1416,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   9. PROCESS (4 étapes)
-   ===================================================================== */
-.process__steps {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--sp-3);
-  counter-reset: step;
-}
-.process__step {
-  position: relative;
-  background: var(--c-bg-light-2);
-  padding: var(--sp-4);
-  border-radius: var(--radius);
-  border: 1px solid var(--c-border-light);
-  transition: transform var(--t-base), box-shadow var(--t-base);
-}
-.process__step:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-soft);
-}
-.process__num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--c-primary);
-  color: #fff;
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin-bottom: var(--sp-3);
-}
-.process__step--highlight .process__num {
-  background: var(--c-accent);
-  color: var(--c-text-dark);
-  box-shadow: var(--shadow-accent);
-}
-.process__title {
-  color: var(--c-text-dark);
-  margin-bottom: var(--sp-2);
-}
-.process__desc {
-  margin: 0;
-  color: var(--c-text-dark-muted);
-  font-size: 0.95rem;
-}
-
-
-/* =====================================================================
-   10. PACKS (3 cards, Growth featured + offre lancement)
-   ===================================================================== */
-
-/* Bandeau d'urgence "OFFRE LANCEMENT" au-dessus de la grille */
-.packs__launch-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--sp-2);
-  max-width: 720px;
-  margin: 0 auto var(--sp-5);
-  padding: 0.85rem 1.5rem;
-  background:
-    linear-gradient(90deg, rgba(255,138,0,0.06), rgba(255,138,0,0.14), rgba(255,138,0,0.06));
-  border: 1px solid rgba(255, 138, 0, 0.40);
-  border-radius: var(--radius-pill);
-  font-family: var(--ff-title);
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--c-accent);
-  text-align: center;
-  box-shadow: 0 0 30px rgba(255, 138, 0, 0.15);
-}
-.packs__launch-banner strong {
-  color: #FFC689;
-  letter-spacing: 0.05em;
-}
-.packs__launch-banner-icon {
-  font-size: 1.2rem;
-  display: inline-block;
-  animation: pulseGlow 2.5s ease-in-out infinite;
-}
-@keyframes pulseGlow {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50%      { transform: scale(1.18); opacity: 0.85; }
-}
-
-.packs__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--sp-4);
-  margin-bottom: var(--sp-4);
-}
-.pack {
-  position: relative;
-  background: var(--c-bg-dark-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-  padding: var(--sp-4);
-  display: flex;
-  flex-direction: column;
-  transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
-}
-.pack:hover {
-  transform: translateY(-4px);
-  border-color: var(--c-primary);
-}
-.pack--featured {
-  border: 2px solid var(--c-accent);
-  box-shadow: var(--shadow-blue);
-  background: linear-gradient(180deg, rgba(37,99,235,0.06), var(--c-bg-dark-2) 30%);
-}
-.pack--featured:hover {
-  transform: translateY(-6px);
-  border-color: var(--c-accent);
-}
-
-.pack__ribbon {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--c-accent);
-  color: var(--c-text-dark);
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 0.875rem;
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-pill);
-  white-space: nowrap;
-  box-shadow: var(--shadow-accent);
-}
-.pack__head { margin-bottom: var(--sp-3); }
-
-/* Avatar coloré en haut des cards Packs (inspiré capture 1 — agents IA) */
-.pack__avatar {
-  width: 64px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  margin-bottom: var(--sp-3);
-  color: #fff;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-}
-.pack__avatar svg { width: 30px; height: 30px; }
-.pack__avatar--essentiel {
-  background: linear-gradient(135deg, #4F46E5, #7C3AED);
-}
-.pack__avatar--growth {
-  background: linear-gradient(135deg, var(--c-accent), #FFB454);
-  color: var(--c-text-dark);
-  box-shadow: 0 10px 24px rgba(255, 138, 0, 0.35);
-}
-.pack__avatar--premium {
-  background: linear-gradient(135deg, var(--c-gold-dark), var(--c-gold));
-  color: var(--c-text-dark);
-  box-shadow: 0 10px 24px rgba(201, 169, 104, 0.35);
-}
-
-/* Badge "Offre fondateurs · 10 places" — orange chaud */
-.pack__launch-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--ff-title);
-  font-weight: 700;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--c-accent);
-  background: rgba(255, 138, 0, 0.12);
-  border: 1px solid rgba(255, 138, 0, 0.35);
-  padding: 0.3rem 0.7rem;
-  border-radius: var(--radius-pill);
-  margin-bottom: var(--sp-2);
-  white-space: nowrap;
-}
-.pack--featured .pack__launch-badge {
-  background: rgba(255, 138, 0, 0.18);
-  border-color: rgba(255, 138, 0, 0.55);
-  box-shadow: 0 0 20px rgba(255, 138, 0, 0.25);
-}
-
-.pack__badge {
-  display: inline-block;
-  font-size: var(--fs-small);
-  font-weight: 600;
-  color: var(--c-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: var(--sp-2);
-}
-.pack__badge--featured { color: var(--c-primary); }
-.pack__name {
-  color: var(--c-text);
-  font-size: 1.6rem;
-  margin-bottom: var(--sp-1);
-}
-.pack__target {
-  color: var(--c-text-muted);
-  font-size: 0.875rem;
-  margin: 0;
-}
-.pack__price {
-  padding: var(--sp-3) 0;
-  border-top: 1px solid var(--c-border);
-  border-bottom: 1px solid var(--c-border);
-  margin-bottom: var(--sp-3);
-}
-.pack__setup,
-.pack__monthly {
-  font-family: var(--ff-title);
-  margin-bottom: 0.25rem;
-}
-.pack__setup strong,
-.pack__monthly strong {
-  font-size: 1.5rem;
-  color: var(--c-text);
-}
-.pack__monthly strong { color: var(--c-primary); }
-.pack--featured .pack__monthly strong { color: var(--c-accent); }
-.pack__setup span,
-.pack__monthly span {
-  font-family: var(--ff-body);
-  font-size: 0.875rem;
-  color: var(--c-text-muted);
-  font-weight: 400;
-}
-
-/* Ancien tarif barré à côté du nouveau */
-.pack__price-was {
-  display: inline-block;
-  margin-left: 0.6rem;
-  font-family: var(--ff-body);
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: var(--c-text-muted);
-  text-decoration: line-through;
-  text-decoration-color: rgba(255, 138, 0, 0.7);
-  text-decoration-thickness: 2px;
-  vertical-align: 2px;
-}
-
-.pack__delay {
-  margin-top: 0.5rem;
-  color: var(--c-text-muted);
-  font-size: 0.875rem;
-}
-
-/* Mention de garantie sous le bloc prix */
-.pack__guarantee {
-  margin: var(--sp-2) 0 var(--sp-3);
-  padding: 0.65rem 0.85rem;
-  font-family: var(--ff-title);
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--c-amber);
-  background: rgba(201, 169, 104, 0.10);
-  border-left: 3px solid var(--c-gold);
-  border-radius: 4px;
-  line-height: 1.4;
-}
-.pack__guarantee small {
-  display: block;
-  margin-top: 0.2rem;
-  font-family: var(--ff-body);
-  font-weight: 400;
-  font-size: 0.72rem;
-  color: var(--c-text-muted);
-  letter-spacing: 0.02em;
-}
-.pack--featured .pack__guarantee {
-  background: rgba(255, 138, 0, 0.10);
-  border-left-color: var(--c-accent);
-  color: var(--c-accent);
-}
-.pack__features {
-  flex-grow: 1;
-  margin-bottom: var(--sp-3);
-}
-.pack__features li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.6rem;
-  font-size: 0.95rem;
-}
-.pack__features li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--c-primary);
-  font-weight: 700;
-}
-.pack--featured .pack__features li::before { color: var(--c-accent); }
-.pack__pitch {
-  font-style: italic;
-  color: var(--c-text-muted);
-  font-size: 0.9rem;
-  padding: var(--sp-2) 0;
-  margin-bottom: var(--sp-3);
-  border-left: 3px solid var(--c-primary);
-  padding-left: var(--sp-2);
-}
-.pack--featured .pack__pitch { border-left-color: var(--c-accent); }
-
-.packs__note {
-  text-align: center;
-  color: var(--c-text-muted);
-  font-size: 0.875rem;
-  max-width: 800px;
-  margin: var(--sp-4) auto 0;
-}
-
-
-/* =====================================================================
-   11. WHY — Pourquoi AfriAutomate (reproduction maquette en 2 colonnes)
+   10. WHY — Pourquoi AfriAutomate (reproduction maquette en 2 colonnes)
    ===================================================================== */
 .why--light {
   background:
@@ -2395,7 +1528,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   11 bis. WHY — Animations modernes (style 21st.dev / Linear)
+   10 bis. WHY — Animations modernes (style 21st.dev / Linear)
    ===================================================================== */
 
 /* (a) Title shimmer doré sur "AfriAutomate ?" */
@@ -2532,7 +1665,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   12. CLIENTS — Témoignages (fond crème chaleureux)
+   11. CLIENTS — Témoignages (fond crème chaleureux)
    ===================================================================== */
 .clients--warm {
   background:
@@ -2621,7 +1754,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   13. FAQ — Onglets + accordéon (inspiré du composant React faq-tabs)
+   12. FAQ — Onglets + accordéon (inspiré du composant React faq-tabs)
    ===================================================================== */
 .faq--tabs {
   position: relative;
@@ -2838,7 +1971,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   14. CTA FINAL
+   13. CTA FINAL
    ===================================================================== */
 .cta-final {
   position: relative;
@@ -2880,7 +2013,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   15. FOOTER
+   14. FOOTER
    ===================================================================== */
 .footer {
   background: #07090C;
@@ -2950,7 +2083,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   16. MEDIA QUERIES
+   15. MEDIA QUERIES
    ===================================================================== */
 
 /* ≥ 768px — Tablette */
@@ -3018,35 +2151,11 @@ p { margin: 0 0 var(--sp-3); }
     gap: var(--sp-4);
   }
 
-  /* Cabinets comptables — typographie agrandie + cards 2×2 + stats 4 colonnes */
-  .cab-subhead__title    { font-size: 1.85rem; }
-  .cab-quote             { padding: var(--sp-5); padding-left: calc(var(--sp-5) + 8px); }
-  .cab-quote__text       { font-size: 1.3rem; }
-  .cab-grid              { grid-template-columns: repeat(2, 1fr); gap: var(--sp-4); }
-  .cab-stats             { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-3); }
-  .cab-stat__value       { font-size: 2.5rem; }
-  .cab-step              { padding: var(--sp-4); gap: var(--sp-4); }
-  .cab-step__num         { width: 56px; height: 56px; font-size: 1.1rem; }
-  .cab-step__title       { font-size: 1.25rem; }
-  .cab-cta__quote        { font-size: 1.25rem; }
-
   /* Méthode SIMPLIFIÉE — 3 cards en ligne */
   .method__cards {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  /* Sectors 2 colonnes (legacy) */
-  .sectors__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--sp-4);
-  }
   .method__title { font-size: var(--fs-h2); }
-
-  /* Packs 3 colonnes */
-  .packs__grid {
-    grid-template-columns: repeat(3, 1fr);
-    align-items: stretch;
-  }
 
   /* Clients 2 colonnes */
   .clients__inner {
@@ -3080,20 +2189,9 @@ p { margin: 0 0 var(--sp-3); }
 
   .cta-final__title { font-size: 2.75rem; }
 
-  .pack--featured {
-    transform: scale(1.04);
-  }
-  .pack--featured:hover {
-    transform: scale(1.04) translateY(-6px);
-  }
-
   /* Méthode — titre encore plus imposant en desktop */
   .method__title { font-size: 2.75rem; }
   .phase--featured .phase__title { font-size: 2.25rem; }
-
-  /* Cabinets comptables — métriques plus généreuses en desktop */
-  .cab-stat__value     { font-size: 2.75rem; }
-  .cab-subhead__title  { font-size: 2rem; }
 
   /* Agents IA — 3 colonnes desktop (5 cards : 3 + 2 alignées à gauche) */
   .agents__grid {
@@ -3104,7 +2202,7 @@ p { margin: 0 0 var(--sp-3); }
 
 
 /* =====================================================================
-   17. ACCESSIBILITÉ — focus visible & reduced motion
+   16. ACCESSIBILITÉ — focus visible & reduced motion
    ===================================================================== */
 :focus-visible {
   outline: 2px solid var(--c-accent);
