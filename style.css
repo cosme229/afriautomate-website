@@ -1967,7 +1967,7 @@ p { margin: 0 0 var(--sp-3); }
   background: var(--c-bg-light);
 }
 
-/* La card centrale : gradient peach/saumon vertical doux, coins très arrondis */
+/* La card centrale : gradient bleu vertical doux (brand AfriAutomate), coins très arrondis */
 .cta-final__card {
   position: relative;
   max-width: 980px;
@@ -1977,11 +1977,11 @@ p { margin: 0 0 var(--sp-3); }
   border-radius: 32px;
   background:
     linear-gradient(180deg,
-      #FFFAF4 0%,
-      #FFE8D6 50%,
-      #FFD3B0 100%);
+      #F5F8FF 0%,
+      #DBE7FE 50%,
+      #A8C4FB 100%);
   box-shadow:
-    0 30px 80px rgba(255, 138, 0, 0.18),
+    0 30px 80px rgba(37, 99, 235, 0.22),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
   overflow: hidden;
 }
