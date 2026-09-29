@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Plan du site AfriAutomate — domaine canonique sans www
+     (www.afriautomate.com redirige en 301 vers afriautomate.com) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://afriautomate.com/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://afriautomate.com/combien-coute-agent-ia-local-benin</loc>
+    <lastmod>2026-09-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>
