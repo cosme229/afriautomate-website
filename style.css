@@ -2339,6 +2339,8 @@ p { margin: 0 0 var(--sp-3); }
 }
 .aa-cout .aa-liste li { margin-bottom: 0.6em; }
 
+/* Fil d'Ariane */
+.aa-cout .aa-fil { font-size: var(--fs-small); color: var(--aa-doux); margin-bottom: 0.75rem; }
 .aa-cout .aa-meta { color: var(--aa-doux); font-size: var(--fs-small); margin-bottom: 0.5em; }
 .aa-cout .aa-chapo { font-size: 1.125rem; color: var(--aa-doux); }
 .aa-cout .aa-note { font-size: var(--fs-small); color: var(--aa-doux); }
@@ -2533,7 +2535,8 @@ p { margin: 0 0 var(--sp-3); }
   color: #fff;
 }
 .aa-cout .aa-res .d { display: block; font-size: 0.8125rem; color: var(--c-text-muted); }
-.aa-cout .aa-verdict { margin: 1rem 0; font-weight: 600; color: var(--aa-titre); }
+.aa-cout .aa-verdict { margin: 1rem 0 0.35rem; font-weight: 600; color: var(--aa-titre); }
+.aa-cout .aa-seuil { margin: 0 0 1rem; font-size: 0.9375rem; color: var(--aa-doux); }
 
 /* FAQ (details/summary natif) */
 .aa-cout details { border-bottom: 1px solid var(--aa-ligne); padding: 0.75rem 0; }
