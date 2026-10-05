@@ -2635,6 +2635,9 @@ p { margin: 0 0 var(--sp-3); }
 /* Groupe insécable (ex. « J-1 », « H-2 ») */
 .aa-cout .aa-nb { white-space: nowrap; }
 
+/* Tableau à 2 colonnes (outils) : tient sur mobile sans défilement */
+.aa-cout .aa-table--etroit table { min-width: 0; }
+
 /* Titre h4 dans une carte (phases de mise en place, sous un h3) */
 .aa-cout .aa-carte h4 { margin: 0 0 0.4rem; font-size: 1.0625rem; color: var(--aa-titre); }
 
@@ -2756,6 +2759,16 @@ p { margin: 0 0 var(--sp-3); }
 .aa-cout .aa-offre-bloc__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .aa-cout .aa-offre-bloc__actions .btn { white-space: normal; }
 .aa-cout .aa-offre-bloc .aa-offre-bloc__note { margin: 1rem 0 0; font-size: 0.8125rem; color: var(--c-text-muted); }
+
+/* Lien « Guide : … » sous le bouton de chaque carte agent (accueil) */
+.agent__guide {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
 /* Cartes agents de l'accueil : ancres #agent-xxx visées depuis les articles */
 .agent { scroll-margin-top: calc(var(--header-h) + 16px); }
