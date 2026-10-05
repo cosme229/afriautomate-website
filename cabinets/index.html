@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ======================================================
+       Article secteur — Cabinets comptables & de conseil
+       URL publique : /cabinets/
+       Mise en page : classes .aa-cout (style.css, sections 17 et 19)
+       Mesure d'audience et bandeau de consentement : script.js
+       ====================================================== -->
+  <title>Automatiser un cabinet comptable : pièces, échéances | AfriAutomate</title>
+  <meta name="description" content="Collecte des pièces, saisie des factures, échéances fiscales, rapports : ce qu'un cabinet comptable peut automatiser, pourquoi, et comment le faire." />
+  <meta name="theme-color" content="#0D1117" />
+  <link rel="canonical" href="https://afriautomate.com/cabinets/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="AfriAutomate" />
+  <meta property="og:title" content="Comment automatiser un cabinet comptable : pièces, saisie, échéances et rapports" />
+  <meta property="og:description" content="Collecte des pièces, saisie des factures, échéances fiscales, rapports : ce qu'un cabinet comptable peut automatiser, pourquoi, et comment le faire." />
+  <meta property="og:url" content="https://afriautomate.com/cabinets/" />
+  <meta property="og:image" content="https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Comment automatiser un cabinet comptable : pièces, saisie, échéances et rapports" />
+  <meta name="twitter:description" content="Collecte des pièces, saisie des factures, échéances fiscales, rapports : ce qu'un cabinet comptable peut automatiser, pourquoi, et comment le faire." />
+  <meta name="twitter:image" content="https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg" />
+
+  <!-- Favicon : version 96×96 dédiée -->
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/logo/favicon-afriautomate-96.png" />
+
+  <!-- Données structurées : Article, fil d'Ariane, FAQ (reprend la FAQ visible) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Comment automatiser un cabinet comptable : pièces, saisie, échéances et rapports",
+    "description": "Collecte des pièces, saisie des factures, échéances fiscales, rapports : ce qu'un cabinet comptable peut automatiser, pourquoi, et comment le faire.",
+    "image": "https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg",
+    "datePublished": "2026-10-05",
+    "dateModified": "2026-10-05",
+    "inLanguage": "fr",
+    "author": {
+      "@type": "Organization",
+      "name": "AfriAutomate",
+      "url": "https://afriautomate.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AfriAutomate",
+      "url": "https://afriautomate.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://afriautomate.com/branding/lg_AfriAutomate.png"
+      }
+    },
+    "mainEntityOfPage": "https://afriautomate.com/cabinets/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://afriautomate.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Comment automatiser un cabinet comptable : pièces, saisie, échéances et rapports",
+        "item": "https://afriautomate.com/cabinets/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Est-ce compatible avec notre logiciel comptable ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cela dépend du logiciel, et c'est l'un des premiers points que l'audit vérifie. Selon les cas, les écritures sont transmises par import de fichier ou par connexion directe. Nous vous disons clairement ce qui est possible avant de construire quoi que ce soit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qui est responsable des écritures ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Votre cabinet, comme aujourd'hui. L'IA propose une écriture et signale ce qui lui paraît anormal ; un collaborateur vérifie et valide avant toute intégration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Et le secret professionnel ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vos données et celles de vos clients restent votre propriété. Elles sont stockées sur des services professionnels (chiffrement, sauvegardes), nous signons un accord de confidentialité sur demande et nous ne les utilisons jamais pour un autre client. Si vous voulez qu'elles ne quittent pas votre infrastructure, une IA installée sur votre propre serveur est possible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que se passe-t-il si un client ne répond pas aux relances ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Après plusieurs relances espacées, le dossier est remonté au collaborateur ou à l'associé en charge, avec l'historique des messages. L'automatisation gère la routine ; l'humain traite les cas difficiles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps avant que ce soit opérationnel ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Après l'audit, qui dure 1 à 2 semaines, la construction et le déploiement prennent 5 à 7 jours. Vos premières automatisations tournent en production en moins d'un mois."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Polices Google Fonts (Montserrat + Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       HEADER STICKY (identique à l'accueil, liens absolus)
+       ====================================================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="AfriAutomate — Accueil">
+        <img src="/assets/logo/logo-afriautomate-160.png" alt="Logo AfriAutomate" width="38" height="38" />
+      </a>
+
+      <nav class="header__nav" id="nav" aria-label="Navigation principale">
+        <ul class="header__list">
+          <li><a href="/#services" class="header__link">Services</a></li>
+          <li><a href="/#agents" class="header__link">Agents IA</a></li>
+          <li><a href="/#process" class="header__link">Méthode</a></li>
+          <li><a href="/#about" class="header__link">À propos</a></li>
+          <li><a href="/#faq" class="header__link">FAQ</a></li>
+        </ul>
+        <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary header__cta">
+          Prendre rendez-vous
+        </a>
+      </nav>
+
+      <button type="button" class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======================================================
+       ARTICLE — problème › solution › pourquoi › bénéfices ›
+       comment automatiser › offre (« Réserver une démo »)
+       Chiffres : uniquement les projections documentées dans content/
+       ====================================================== -->
+  <main class="aa-cout">
+  <article class="aa-wrap">
+
+    <nav class="aa-fil" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> <span aria-hidden="true">›</span> <span aria-current="page">Guide Cabinets comptables &amp; de conseil</span>
+    </nav>
+    <p class="aa-meta">Guide secteur · Mis à jour le 5 octobre 2026 · Lecture : 7 min</p>
+    <h1>Comment automatiser un cabinet comptable : pièces, saisie, échéances et rapports</h1>
+    <p class="aa-chapo">Collecte des pièces, saisie des factures, calendrier fiscal, rapports mensuels, relance des honoraires : ce qu'il faut automatiser, pourquoi, et comment le mettre en place étape par étape.</p>
+
+    <div class="aa-reponse">
+      <p><strong>En bref.</strong> Un cabinet comptable peut automatiser la collecte des pièces, la saisie des factures, le suivi des échéances fiscales et la production des rapports mensuels. Vos collaborateurs vérifient et conseillent, au lieu de relancer et de ressaisir. La même logique vaut pour les cabinets d'avocats et de conseil qui courent après les documents de leurs clients. <a href="#offre">Voir notre offre</a>.</p>
+    </div>
+
+    <nav class="aa-sommaire" aria-label="Sommaire">
+      <strong>Dans ce guide</strong>
+      <ol>
+        <li><a href="#probleme">Le problème</a></li>
+        <li><a href="#solution">La solution</a></li>
+        <li><a href="#pourquoi">Pourquoi automatiser</a></li>
+        <li><a href="#benefices">Les bénéfices</a></li>
+        <li><a href="#comment">Comment automatiser, étape par étape</a></li>
+        <li><a href="#offre">Notre offre</a></li>
+        <li><a href="#faq">Questions fréquentes</a></li>
+      </ol>
+    </nav>
+
+    <!-- ========== 1. Le problème ========== -->
+    <h2 id="probleme">1. Le problème</h2>
+    <p>Votre métier, c'est le conseil, pas la chasse aux documents. Pourtant, chaque dossier génère sa course aux pièces, ses échéances et ses relances. Multipliées par le nombre de clients, ces tâches finissent par occuper l'essentiel du mois&nbsp;:</p>
+    <div class="aa-postes">
+      <div class="aa-carte"><h3>La course mensuelle aux pièces</h3><p>Plusieurs relances par dossier pour obtenir des documents banals. Un travail de pompier qui use l'équipe.</p></div>
+      <div class="aa-carte"><h3>La ressaisie des factures</h3><p>Recopier à la main des montants déjà écrits sur un PDF : des heures sans valeur ajoutée, et des erreurs de frappe.</p></div>
+      <div class="aa-carte"><h3>Des échéances à surveiller client par client</h3><p>TVA, impôts, déclarations sociales : chaque client a son calendrier. Un oubli se paie en pénalités pour lui, et en confiance perdue pour vous.</p></div>
+      <div class="aa-carte"><h3>Des rapports et des relances faits à la main</h3><p>Les tableaux de bord mensuels mangent les fins de mois, et les honoraires impayés attendent parce que personne n'ose relancer un client fidèle.</p></div>
+    </div>
+
+    <!-- ========== 2. La solution ========== -->
+    <h2 id="solution">2. La solution</h2>
+    <p>La solution : laisser un assistant IA préparer le travail, et réserver à vos collaborateurs la vérification et le conseil. Quatre automatisations couvrent l'essentiel de la vie d'un dossier&nbsp;:</p>
+    <div class="aa-table" role="region" aria-label="Avant et après l'automatisation" tabindex="0">
+      <table>
+        <thead><tr><th scope="col">Tâche</th><th scope="col">Aujourd'hui</th><th scope="col">Avec l'automatisation</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Collecte des pièces</th><td class="ko">Relances par téléphone et WhatsApp, une par une</td><td class="ok">Liste des pièces envoyée à chaque client, relances automatiques, suivi dans un seul tableau</td></tr>
+          <tr><th scope="row">Saisie des factures</th><td class="ko">Ressaisie manuelle depuis les PDF</td><td class="ok">L'IA lit la facture et propose l'écriture SYSCOHADA ; le collaborateur vérifie</td></tr>
+          <tr><th scope="row">Échéances fiscales</th><td class="ko">Suivi de tête ou sur des fichiers séparés</td><td class="ok">Calendrier unique, alertes envoyées aux clients avant chaque date</td></tr>
+          <tr><th scope="row">Rapports et honoraires</th><td class="ko">Mise en forme à la main, relances repoussées</td><td class="ok">Rapport mensuel pré-rempli, facturation et relances graduées</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>L'automatisation prépare et signale ; elle ne valide rien à votre place.</p>
+
+    <!-- ========== 3. Pourquoi automatiser ========== -->
+    <h2 id="pourquoi">3. Pourquoi automatiser</h2>
+    <p>Votre cabinet tourne déjà sans automatisation. Quatre raisons de changer&nbsp;:</p>
+    <ul class="aa-liste">
+      <li><strong>La période fiscale ne s'allonge pas.</strong> Le volume monte, les délais restent. Ce qui peut être préparé par une machine doit l'être.</li>
+      <li><strong>Vos collaborateurs valent mieux que la ressaisie.</strong> Vérifier une écriture proposée prend moins de temps que la saisir, et laisse de la place au conseil.</li>
+      <li><strong>Une relance régulière est mieux acceptée.</strong> Un rappel automatique, courtois et prévu, ne met personne mal à l'aise.</li>
+      <li><strong>Vos clients attendent de la visibilité.</strong> Un rapport qui arrive chaque mois à date fixe distingue un cabinet qui pilote d'un cabinet qui subit.</li>
+    </ul>
+
+    <!-- ========== 4. Les bénéfices ========== -->
+    <h2 id="benefices">4. Les bénéfices</h2>
+    <div class="aa-postes">
+      <div class="aa-carte"><h3>Moins de relances manuelles</h3><p>Les pièces arrivent sans que l'équipe passe ses journées au téléphone.</p></div>
+      <div class="aa-carte"><h3>Des collaborateurs qui vérifient</h3><p>L'IA prépare les écritures et signale les anomalies. Vos assistants contrôlent, ils ne ressaisissent plus.</p></div>
+      <div class="aa-carte"><h3>Des échéances sous contrôle</h3><p>Chaque date est suivie et chaque client prévenu à temps.</p></div>
+      <div class="aa-carte"><h3>Des rapports réguliers</h3><p>Le même modèle, à la même date, pour chaque client.</p></div>
+      <div class="aa-carte"><h3>Des honoraires relancés sans gêne</h3><p>Les rappels partent seuls, sans oubli, et l'associé n'intervient que sur les cas bloqués.</p></div>
+    </div>
+    <p class="aa-note">Transparence : AfriAutomate est en phase de lancement. Les chiffres cités sont nos projections, pas encore des résultats clients. Nous les mesurons chez vous dès le déploiement.</p>
+
+    <!-- ========== 5. Comment automatiser ========== -->
+    <h2 id="comment">5. Comment automatiser, étape par étape</h2>
+    <p>Pour chacune des quatre automatisations, voici ce qui la déclenche, ce que fait le système et ce qui reste entre vos mains. Les outils cités sont ceux que nous utilisons : une boîte email dédiée, n8n pour relier les étapes, un modèle d'IA, et le tableur ou le logiciel que vous avez déjà.</p>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 1</span>
+      <h3 id="flux-1">Collecte des pièces avec relances</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> une nouvelle période commence (mois, trimestre) ou un dossier s'ouvre.</p>
+      <ol class="aa-flux__etapes">
+        <li>Chaque client reçoit la liste des pièces attendues pour son dossier.</li>
+        <li>Il les envoie sur une boîte email dédiée au cabinet.</li>
+        <li>Le workflow coche les pièces reçues dans le tableau de suivi du dossier.</li>
+        <li>Tant qu'une pièce manque, des relances espacées partent automatiquement.</li>
+        <li>Après plusieurs relances sans réponse, le dossier est remonté au collaborateur en charge, avec l'historique.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>La liste des pièces par type de dossier et le traitement des clients qui ne répondent pas.</dd></div>
+        <div><dt>Outils</dt><dd>Boîte email dédiée, n8n, tableau de suivi, WhatsApp ou email pour les relances.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 2</span>
+      <h3 id="flux-2">Lecture des factures et écritures SYSCOHADA</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> une facture arrive dans la boîte email dédiée.</p>
+      <ol class="aa-flux__etapes">
+        <li>L'IA lit le PDF et en extrait les données : fournisseur, date, référence, montants.</li>
+        <li>Elle propose l'écriture comptable conforme au plan SYSCOHADA.</li>
+        <li>Elle contrôle la cohérence et signale les anomalies : montant incohérent, doublon, pièce illisible.</li>
+        <li>Votre collaborateur vérifie et valide. L'écriture rejoint ensuite votre logiciel comptable, selon le mode d'échange défini pendant l'audit.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>La validation de chaque écriture. La responsabilité comptable reste celle du cabinet.</dd></div>
+        <div><dt>Outils</dt><dd>Boîte email dédiée, modèle d'IA, n8n, votre logiciel comptable.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 3</span>
+      <h3 id="flux-3">Calendrier fiscal avec alertes clients</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> une échéance approche pour l'un de vos clients.</p>
+      <ol class="aa-flux__etapes">
+        <li>Les échéances de chaque client sont saisies une fois dans un calendrier central : TVA, impôts, déclarations sociales.</li>
+        <li>À l'approche d'une date, le client reçoit une alerte avec ce qu'il doit fournir.</li>
+        <li>L'équipe voit sur un seul tableau ce qui est prêt et ce qui est en retard.</li>
+        <li>Les clients retardataires sont relancés selon votre calendrier.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>Les dates et les obligations de chaque client : le système rappelle, il ne décide pas des échéances.</dd></div>
+        <div><dt>Outils</dt><dd>Calendrier partagé, n8n, WhatsApp ou email.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 4</span>
+      <h3 id="flux-4">Rapports mensuels et relance des honoraires</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> la fin du mois arrive, ou une facture d'honoraires dépasse son échéance.</p>
+      <ol class="aa-flux__etapes">
+        <li>Le workflow récupère les chiffres du dossier, depuis un export de votre logiciel ou un tableur.</li>
+        <li>Il remplit votre modèle de rapport, à la charte du cabinet.</li>
+        <li>Le collaborateur relit, ajoute son commentaire et envoie.</li>
+        <li>La facture d'honoraires est émise. Si elle reste impayée, des relances graduées partent, puis l'associé est prévenu.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>Le commentaire du rapport et la relation avec le client en cas d'impayé.</dd></div>
+        <div><dt>Outils</dt><dd>Export comptable ou tableur, n8n, email.</dd></div>
+      </dl>
+    </div>
+
+    <h3>La mise en place, en 3 phases</h3>
+    <div class="aa-postes">
+      <div class="aa-carte"><h4>① Audit IA &amp; diagnostic</h4><p><strong>1 à 2 semaines.</strong> Nous interrogeons vos collaborateurs, cartographions la vie d'un dossier et vérifions ce que votre logiciel comptable permet d'échanger.</p></div>
+      <div class="aa-carte"><h4>② Construction &amp; déploiement</h4><p><strong>5 à 7 jours.</strong> Nous construisons les automatisations validées, les relions à vos outils, les testons sur des cas réels et formons votre équipe.</p></div>
+      <div class="aa-carte"><h4>③ Maintenance &amp; évolution</h4><p><strong>Chaque mois ou chaque trimestre.</strong> Nous surveillons, ajustons et ajoutons de nouveaux workflows au fil de vos besoins.</p></div>
+    </div>
+
+    <!-- ========== 6. Notre offre (contenu repris de la section Agents IA de l'accueil) ========== -->
+    <h2 id="offre">6. Notre offre</h2>
+    <p>Vous n'avez pas à construire tout cela vous-même. Nous le déployons pour vous, avec un agent IA déjà pensé pour votre métier.</p>
+    <div class="aa-offre-bloc">
+      <p class="aa-offre-bloc__kicker">Agent IA · Cabinets comptables &amp; de conseil</p>
+      <h3>Fatou, votre assistante comptable IA</h3>
+      <p>Fatou reçoit vos factures PDF, génère les écritures SYSCOHADA et relance vos clients avant que vous n'ayez à le demander. Elle ne se fatigue pas en période fiscale.</p>
+      <ul class="aa-offre-bloc__liste">
+        <li>Réceptionne les factures clients via une boîte email dédiée</li>
+        <li>Lit et extrait les données de chaque PDF automatiquement</li>
+        <li>Génère les écritures comptables conformes au plan SYSCOHADA</li>
+        <li>Signale les anomalies pour que vos assistants vérifient, sans ressaisir</li>
+        <li>Relance les clients retardataires selon votre calendrier fiscal</li>
+      </ul>
+      <div class="aa-offre-bloc__actions">
+        <a class="btn btn--primary btn--lg" href="https://calendly.com/afriautomate" target="_blank" rel="noopener">Réserver une démo</a>
+        <a class="btn btn--ghost btn--lg" href="/#agent-fatou">Voir l'offre sur le site</a>
+      </div>
+      <p class="aa-offre-bloc__note">30 minutes · Sans engagement · Recommandation honnête</p>
+    </div>
+
+    <!-- ========== 7. FAQ ========== -->
+    <h2 id="faq">7. Questions fréquentes</h2>
+    <details><summary>Est-ce compatible avec notre logiciel comptable&nbsp;?</summary><p>Cela dépend du logiciel, et c'est l'un des premiers points que l'audit vérifie. Selon les cas, les écritures sont transmises par import de fichier ou par connexion directe. Nous vous disons clairement ce qui est possible avant de construire quoi que ce soit.</p></details>
+    <details><summary>Qui est responsable des écritures&nbsp;?</summary><p>Votre cabinet, comme aujourd'hui. L'IA propose une écriture et signale ce qui lui paraît anormal ; un collaborateur vérifie et valide avant toute intégration.</p></details>
+    <details><summary>Et le secret professionnel&nbsp;?</summary><p>Vos données et celles de vos clients restent votre propriété. Elles sont stockées sur des services professionnels (chiffrement, sauvegardes), nous signons un accord de confidentialité sur demande et nous ne les utilisons jamais pour un autre client. Si vous voulez qu'elles ne quittent pas votre infrastructure, une IA installée sur votre propre serveur est possible.</p></details>
+    <details><summary>Que se passe-t-il si un client ne répond pas aux relances&nbsp;?</summary><p>Après plusieurs relances espacées, le dossier est remonté au collaborateur ou à l'associé en charge, avec l'historique des messages. L'automatisation gère la routine ; l'humain traite les cas difficiles.</p></details>
+    <details><summary>Combien de temps avant que ce soit opérationnel&nbsp;?</summary><p>Après l'audit, qui dure 1 à 2 semaines, la construction et le déploiement prennent 5 à 7 jours. Vos premières automatisations tournent en production en moins d'un mois.</p></details>
+
+    <!-- ========== Lire aussi (maillage interne) ========== -->
+    <h2 class="aa-sources-titre">Lire aussi</h2>
+    <ul class="aa-liste">
+      <li><a href="/rh-recrutement/">Comment automatiser le recrutement dans un cabinet RH</a></li>
+      <li><a href="/commerce/">Comment automatiser un commerce : ventes WhatsApp, relances, stock et fidélité</a></li>
+      <li><a href="/sante/">Comment automatiser une clinique ou une pharmacie : rendez-vous, rappels, stock et suivi</a></li>
+      <li><a href="/combien-coute-agent-ia-local-benin">Combien coûte un agent IA local au Bénin&nbsp;?</a></li>
+    </ul>
+
+  </article>
+  </main>
+
+  <!-- ======================================================
+       FOOTER (repris de l'accueil, liens absolus)
+       Titres en h2 : la page se termine par des h2, on évite
+       un saut de niveau h2 → h4.
+       ====================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <img src="/assets/logo/logo-afriautomate-160.png" alt="Logo AfriAutomate" class="footer__logo" width="40" height="40" loading="lazy" />
+        <p class="footer__slogan">Moins d'effort. Plus de revenus.<br />Grâce à l'automatisation.</p>
+        <p class="footer__location">📍 Cotonou, Bénin · Afrique francophone</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Navigation footer">
+        <h2 class="footer__title">Navigation</h2>
+        <ul>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#agents">Agents IA</a></li>
+          <li><a href="/#temoignages">Témoignages</a></li>
+          <li><a href="/#process">Méthode</a></li>
+          <li><a href="/#about">À propos</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Guides">
+        <h2 class="footer__title">Guides</h2>
+        <ul>
+          <li><a href="/rh-recrutement/">Automatiser le recrutement</a></li>
+          <li><a href="/commerce/">Automatiser un commerce</a></li>
+          <li><a href="/cabinets/" aria-current="page">Automatiser un cabinet comptable</a></li>
+          <li><a href="/sante/">Automatiser une clinique ou une pharmacie</a></li>
+          <li><a href="/combien-coute-agent-ia-local-benin">Combien coûte un agent IA local ?</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Contact</h2>
+        <ul>
+          <li><a href="https://wa.me/2290143102911" target="_blank" rel="noopener">WhatsApp : +229 01 43 10 29 11</a></li>
+          <li><a href="mailto:afriautomate@gmail.com">afriautomate@gmail.com</a></li>
+          <li><a href="https://calendly.com/afriautomate" target="_blank" rel="noopener">Prendre rendez-vous</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Suivez-nous</h2>
+        <ul class="footer__social">
+          <li>
+            <a href="https://www.linkedin.com/company/afriautomate/" target="_blank" rel="noopener" aria-label="LinkedIn AfriAutomate">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.14 1.45-2.14 2.96v5.7h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v6.46z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 AfriAutomate — Tous droits réservés.</p>
+        <ul class="footer__legal">
+          <!-- Rouvre le bandeau de consentement (script.js › initAnalytics) -->
+          <li><button type="button" class="footer__cookies" data-cookies-open>Gérer les cookies</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>

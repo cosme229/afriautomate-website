@@ -389,8 +389,8 @@
 
         <div class="agents__grid">
 
-          <!-- AGENT 1 — Fatou · Assistante comptable IA -->
-          <article class="agent reveal">
+          <!-- AGENT 1 — Fatou · Assistante comptable IA (ancre visée par /cabinets/) -->
+          <article class="agent reveal" id="agent-fatou">
             <div class="agent__top">
               <div class="agent__avatar agent__avatar--fatou" aria-hidden="true">
                 <svg class="agent-avatar-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -422,8 +422,8 @@
             </a>
           </article>
 
-          <!-- AGENT 2 — Koffi · Coordinateur RH IA -->
-          <article class="agent reveal">
+          <!-- AGENT 2 — Koffi · Coordinateur RH IA (ancre visée par /rh-recrutement/) -->
+          <article class="agent reveal" id="agent-koffi">
             <div class="agent__top">
               <div class="agent__avatar agent__avatar--koffi" aria-hidden="true">
                 <svg class="agent-avatar-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -455,8 +455,8 @@
             </a>
           </article>
 
-          <!-- AGENT 3 — Serge · Commercial IA -->
-          <article class="agent reveal">
+          <!-- AGENT 3 — Serge · Commercial IA (ancre visée par /commerce/) -->
+          <article class="agent reveal" id="agent-serge">
             <div class="agent__top">
               <div class="agent__avatar agent__avatar--serge" aria-hidden="true">
                 <svg class="agent-avatar-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -488,8 +488,8 @@
             </a>
           </article>
 
-          <!-- AGENT 4 — Aïssatou · Support client IA -->
-          <article class="agent reveal">
+          <!-- AGENT 4 — Aïssatou · Support client IA (ancre visée par /sante/) -->
+          <article class="agent reveal" id="agent-aissatou">
             <div class="agent__top">
               <div class="agent__avatar agent__avatar--aissatou" aria-hidden="true">
                 <svg class="agent-avatar-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -1042,6 +1042,17 @@
           <li><a href="#process">Méthode</a></li>
           <li><a href="#about">À propos</a></li>
           <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Guides : articles par secteur + guide des prix -->
+      <nav class="footer__col" aria-label="Guides">
+        <h4 class="footer__title">Guides</h4>
+        <ul>
+          <li><a href="/rh-recrutement/">Automatiser le recrutement</a></li>
+          <li><a href="/commerce/">Automatiser un commerce</a></li>
+          <li><a href="/cabinets/">Automatiser un cabinet comptable</a></li>
+          <li><a href="/sante/">Automatiser une clinique ou une pharmacie</a></li>
           <li><a href="/combien-coute-agent-ia-local-benin">Combien coûte un agent IA local ?</a></li>
         </ul>
       </nav>

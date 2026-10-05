@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ======================================================
+       Article secteur — Santé
+       URL publique : /sante/
+       Mise en page : classes .aa-cout (style.css, sections 17 et 19)
+       Mesure d'audience et bandeau de consentement : script.js
+       ====================================================== -->
+  <title>Automatiser une clinique ou une pharmacie : RDV, stock | AfriAutomate</title>
+  <meta name="description" content="Rendez-vous sur WhatsApp, rappels, alertes de stock, suivi des patients chroniques : ce qu'une clinique ou une pharmacie peut automatiser, et comment." />
+  <meta name="theme-color" content="#0D1117" />
+  <link rel="canonical" href="https://afriautomate.com/sante/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="AfriAutomate" />
+  <meta property="og:title" content="Comment automatiser une clinique ou une pharmacie : rendez-vous, rappels, stock et suivi" />
+  <meta property="og:description" content="Rendez-vous sur WhatsApp, rappels, alertes de stock, suivi des patients chroniques : ce qu'une clinique ou une pharmacie peut automatiser, et comment." />
+  <meta property="og:url" content="https://afriautomate.com/sante/" />
+  <meta property="og:image" content="https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Comment automatiser une clinique ou une pharmacie : rendez-vous, rappels, stock et suivi" />
+  <meta name="twitter:description" content="Rendez-vous sur WhatsApp, rappels, alertes de stock, suivi des patients chroniques : ce qu'une clinique ou une pharmacie peut automatiser, et comment." />
+  <meta name="twitter:image" content="https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg" />
+
+  <!-- Favicon : version 96×96 dédiée -->
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/logo/favicon-afriautomate-96.png" />
+
+  <!-- Données structurées : Article, fil d'Ariane, FAQ (reprend la FAQ visible) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Comment automatiser une clinique ou une pharmacie : rendez-vous, rappels, stock et suivi",
+    "description": "Rendez-vous sur WhatsApp, rappels, alertes de stock, suivi des patients chroniques : ce qu'une clinique ou une pharmacie peut automatiser, et comment.",
+    "image": "https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg",
+    "datePublished": "2026-10-05",
+    "dateModified": "2026-10-05",
+    "inLanguage": "fr",
+    "author": {
+      "@type": "Organization",
+      "name": "AfriAutomate",
+      "url": "https://afriautomate.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AfriAutomate",
+      "url": "https://afriautomate.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://afriautomate.com/branding/lg_AfriAutomate.png"
+      }
+    },
+    "mainEntityOfPage": "https://afriautomate.com/sante/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://afriautomate.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Comment automatiser une clinique ou une pharmacie : rendez-vous, rappels, stock et suivi",
+        "item": "https://afriautomate.com/sante/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "L'agent donne-t-il des conseils médicaux ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non, jamais. Il prend les rendez-vous et répond aux questions pratiques : horaires, adresse, praticiens disponibles. Toute question médicale est transmise à votre équipe, et en cas d'urgence l'agent invite le patient à appeler immédiatement le numéro que vous lui avez indiqué."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment le secret médical est-il respecté ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les messages ne contiennent que des informations pratiques (date, heure, lieu), jamais de diagnostic ni de résultat. Les dossiers médicaux restent dans votre logiciel. Les données restent votre propriété et ne sont jamais utilisées pour un autre client."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Et les patients qui n'utilisent pas WhatsApp ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le téléphone reste disponible. L'automatisation soulage le standard des demandes simples ; elle ne le remplace pas. Les patients qui préfèrent appeler continuent de le faire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Notre agenda est sur papier : par où commencer ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Par l'agenda. La prise de rendez-vous automatique a besoin d'un agenda numérique partagé. Nous le mettons en place avec vous pendant l'audit, puis nous branchons l'agent dessus."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps avant que ce soit opérationnel ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Après l'audit, qui dure 1 à 2 semaines, la construction et le déploiement prennent 5 à 7 jours. Vos premières automatisations tournent en production en moins d'un mois."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Polices Google Fonts (Montserrat + Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       HEADER STICKY (identique à l'accueil, liens absolus)
+       ====================================================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="AfriAutomate — Accueil">
+        <img src="/assets/logo/logo-afriautomate-160.png" alt="Logo AfriAutomate" width="38" height="38" />
+      </a>
+
+      <nav class="header__nav" id="nav" aria-label="Navigation principale">
+        <ul class="header__list">
+          <li><a href="/#services" class="header__link">Services</a></li>
+          <li><a href="/#agents" class="header__link">Agents IA</a></li>
+          <li><a href="/#process" class="header__link">Méthode</a></li>
+          <li><a href="/#about" class="header__link">À propos</a></li>
+          <li><a href="/#faq" class="header__link">FAQ</a></li>
+        </ul>
+        <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary header__cta">
+          Prendre rendez-vous
+        </a>
+      </nav>
+
+      <button type="button" class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======================================================
+       ARTICLE — problème › solution › pourquoi › bénéfices ›
+       comment automatiser › offre (« Réserver une démo »)
+       Chiffres : uniquement les projections documentées dans content/
+       ====================================================== -->
+  <main class="aa-cout">
+  <article class="aa-wrap">
+
+    <nav class="aa-fil" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> <span aria-hidden="true">›</span> <span aria-current="page">Guide Santé</span>
+    </nav>
+    <p class="aa-meta">Guide secteur · Mis à jour le 5 octobre 2026 · Lecture : 7 min</p>
+    <h1>Comment automatiser une clinique ou une pharmacie : rendez-vous, rappels, stock et suivi</h1>
+    <p class="aa-chapo">Prise de rendez-vous sur WhatsApp, rappels aux patients, alertes de stock, suivi des patients chroniques : ce qu'il faut automatiser, pourquoi, et comment le mettre en place étape par étape.</p>
+
+    <div class="aa-reponse">
+      <p><strong>En bref.</strong> Une clinique, un cabinet médical ou une pharmacie peut automatiser la prise de rendez-vous, les rappels aux patients, la surveillance du stock et le suivi des patients chroniques. L'agent ne donne aucun avis médical : il s'occupe de la logistique et laisse le soin à vos équipes. <a href="#offre">Voir notre offre</a>.</p>
+    </div>
+
+    <nav class="aa-sommaire" aria-label="Sommaire">
+      <strong>Dans ce guide</strong>
+      <ol>
+        <li><a href="#probleme">Le problème</a></li>
+        <li><a href="#solution">La solution</a></li>
+        <li><a href="#pourquoi">Pourquoi automatiser</a></li>
+        <li><a href="#benefices">Les bénéfices</a></li>
+        <li><a href="#comment">Comment automatiser, étape par étape</a></li>
+        <li><a href="#offre">Notre offre</a></li>
+        <li><a href="#faq">Questions fréquentes</a></li>
+      </ol>
+    </nav>
+
+    <!-- ========== 1. Le problème ========== -->
+    <h2 id="probleme">1. Le problème</h2>
+    <p>Un établissement de santé cumule un flux de patients élevé, une équipe sous pression et, souvent, des outils limités au cahier et au téléphone. Quatre difficultés en découlent&nbsp;:</p>
+    <div class="aa-postes">
+      <div class="aa-carte"><h3>Des rendez-vous manqués</h3><p>Un patient qui ne vient pas, c'est un créneau perdu pour le praticien, et pour un autre patient qui attendait.</p></div>
+      <div class="aa-carte"><h3>Un standard saturé</h3><p>Le téléphone sonne pendant les consultations, et les demandes du soir ou du week-end restent sans réponse.</p></div>
+      <div class="aa-carte"><h3>Des ruptures découvertes au comptoir</h3><p>En pharmacie, on apprend souvent qu'un produit manque au moment où un patient le demande.</p></div>
+      <div class="aa-carte"><h3>Des patients chroniques perdus de vue</h3><p>Renouvellement d'ordonnance, contrôle régulier : sans rappel, certains patients ne reviennent pas à temps.</p></div>
+    </div>
+
+    <!-- ========== 2. La solution ========== -->
+    <h2 id="solution">2. La solution</h2>
+    <p>La solution : automatiser la logistique autour du soin, jamais le soin lui-même. Quatre automatisations fluidifient le parcours du patient&nbsp;:</p>
+    <div class="aa-table" role="region" aria-label="Avant et après l'automatisation" tabindex="0">
+      <table>
+        <thead><tr><th scope="col">Tâche</th><th scope="col">Aujourd'hui</th><th scope="col">Avec l'automatisation</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Prise de rendez-vous</th><td class="ko">Par téléphone, aux heures d'ouverture</td><td class="ok">Sur WhatsApp, 24&nbsp;h/24, avec un agenda synchronisé</td></tr>
+          <tr><th scope="row">Rappels</th><td class="ko">Aucun, ou des appels passés à la main</td><td class="ok">Rappel automatique la veille (<span class="aa-nb">J-1</span>) et deux heures avant (<span class="aa-nb">H-2</span>)</td></tr>
+          <tr><th scope="row">Stock de pharmacie</th><td class="ko">Rupture constatée au comptoir</td><td class="ok">Alerte sous le seuil, avec une suggestion de réassort</td></tr>
+          <tr><th scope="row">Patients chroniques</th><td class="ko">Suivi selon la mémoire de chacun</td><td class="ok">Rappel de renouvellement d'ordonnance et de contrôle</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Vos équipes gardent tout ce qui touche au diagnostic, au traitement et à la relation avec le patient.</p>
+
+    <!-- ========== 3. Pourquoi automatiser ========== -->
+    <h2 id="pourquoi">3. Pourquoi automatiser</h2>
+    <p>Le téléphone et le cahier fonctionnent. Quatre raisons d'aller plus loin&nbsp;:</p>
+    <ul class="aa-liste">
+      <li><strong>Chaque créneau compte.</strong> Un rappel coûte presque rien ; un rendez-vous manqué ne se rattrape pas.</li>
+      <li><strong>Vos équipes sont là pour soigner.</strong> Le temps passé au téléphone à fixer ou déplacer un rendez-vous n'est pas du temps de soin.</li>
+      <li><strong>Vos patients sont déjà sur WhatsApp.</strong> Leur proposer d'y prendre rendez-vous, c'est aller là où ils sont.</li>
+      <li><strong>Le suivi protège les patients.</strong> Un rappel envoyé à temps aide à éviter qu'un traitement s'interrompe par simple oubli.</li>
+    </ul>
+
+    <!-- ========== 4. Les bénéfices ========== -->
+    <h2 id="benefices">4. Les bénéfices</h2>
+    <div class="aa-postes">
+      <div class="aa-carte"><h3>Moins de rendez-vous manqués</h3><p>Les patients sont prévenus la veille et deux heures avant, et peuvent annuler à temps.</p></div>
+      <div class="aa-carte"><h3>Un standard soulagé</h3><p>Les prises de rendez-vous simples ne passent plus par le téléphone.</p></div>
+      <div class="aa-carte"><h3>Des ruptures anticipées</h3><p>Le gérant est prévenu avant que le produit manque.</p></div>
+      <div class="aa-carte"><h3>Des patients chroniques suivis</h3><p>Chaque renouvellement et chaque contrôle est rappelé.</p></div>
+      <div class="aa-carte"><h3>Des équipes disponibles pour le soin</h3><p>Moins d'administratif, plus de temps avec les patients.</p></div>
+    </div>
+    <p class="aa-note">Transparence : AfriAutomate est en phase de lancement. Les chiffres cités sont nos projections, pas encore des résultats clients. Nous les mesurons chez vous dès le déploiement.</p>
+
+    <!-- ========== 5. Comment automatiser ========== -->
+    <h2 id="comment">5. Comment automatiser, étape par étape</h2>
+    <p>Pour chacune des quatre automatisations, voici ce qui la déclenche, ce que fait le système et ce qui reste entre vos mains. Les outils cités sont ceux que nous utilisons : WhatsApp Business, n8n pour relier les étapes, un modèle d'IA, et un agenda partagé.</p>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 1</span>
+      <h3 id="flux-1">Prise de rendez-vous sur WhatsApp, 24 h/24</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> un patient écrit sur le WhatsApp de l'établissement.</p>
+      <ol class="aa-flux__etapes">
+        <li>L'agent demande le motif de la visite et le praticien souhaité.</li>
+        <li>Il consulte l'agenda synchronisé et propose les créneaux libres.</li>
+        <li>Le patient choisit ; le rendez-vous est inscrit dans l'agenda du praticien.</li>
+        <li>Une confirmation est envoyée avec la date, l'heure et le lieu.</li>
+        <li>Toute demande qui n'est pas une prise de rendez-vous ou une question pratique est transmise au secrétariat.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>Toute question médicale, et les urgences : l'agent invite alors le patient à appeler immédiatement le numéro que vous lui avez indiqué.</dd></div>
+        <div><dt>Outils</dt><dd>WhatsApp Business API, agent conversationnel IA, agenda partagé, n8n.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 2</span>
+      <h3 id="flux-2">Rappels de rendez-vous (<span class="aa-nb">J-1</span> et <span class="aa-nb">H-2</span>)</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> un rendez-vous approche dans l'agenda.</p>
+      <ol class="aa-flux__etapes">
+        <li>Chaque jour, le workflow lit les rendez-vous du lendemain.</li>
+        <li>Il envoie un rappel la veille (<span class="aa-nb">J-1</span>), avec une demande de confirmation.</li>
+        <li>Un second rappel part deux heures avant le rendez-vous (<span class="aa-nb">H-2</span>).</li>
+        <li>Si le patient annule, le créneau est libéré dans l'agenda et peut être proposé à un autre patient.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>Les exceptions : patients à rappeler de vive voix, créneaux à réattribuer en priorité.</dd></div>
+        <div><dt>Outils</dt><dd>Agenda partagé, n8n, WhatsApp Business API ou SMS.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 3</span>
+      <h3 id="flux-3">Alertes de stock en pharmacie</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> une sortie de stock est enregistrée.</p>
+      <ol class="aa-flux__etapes">
+        <li>Les sorties sont enregistrées dans votre outil de gestion ou dans un tableur.</li>
+        <li>Le workflow compare chaque produit au seuil que vous avez fixé.</li>
+        <li>Sous le seuil, le gérant reçoit une alerte WhatsApp avec une suggestion de réassort.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>Les seuils par produit et la commande auprès du fournisseur.</dd></div>
+        <div><dt>Outils</dt><dd>Outil de gestion de stock ou tableur, n8n, WhatsApp Business API.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 4</span>
+      <h3 id="flux-4">Suivi des patients chroniques</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> la fin d'une ordonnance ou la date d'un contrôle approche.</p>
+      <ol class="aa-flux__etapes">
+        <li>Pour chaque patient suivi qui a donné son accord, la date de fin d'ordonnance ou du prochain contrôle est enregistrée.</li>
+        <li>Quelques jours avant, le patient reçoit un rappel de renouvellement ou de consultation.</li>
+        <li>Il peut prendre rendez-vous directement dans la même conversation.</li>
+        <li>Les patients qui ne donnent plus de nouvelles sont signalés à l'équipe.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>Le suivi médical lui-même, et la décision de rappeler un patient.</dd></div>
+        <div><dt>Outils</dt><dd>Fichier de suivi, n8n, WhatsApp Business API, agenda partagé.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-alerte">
+      <p><strong>Données de santé : un cadre à part.</strong> Les messages envoyés aux patients ne contiennent que des informations pratiques (date, heure, lieu), jamais de diagnostic ni de résultat. Les dossiers médicaux restent dans votre logiciel. Les données de santé comptent parmi les plus protégées par le Code du numérique béninois : nous cadrons ce point avec vous dès l'audit, et une IA installée sur votre propre serveur est possible. Voir notre <a href="/combien-coute-agent-ia-local-benin#apdp">guide sur la conformité APDP</a>. Ceci est une information générale, pas un avis juridique.</p>
+    </div>
+
+    <h3>La mise en place, en 3 phases</h3>
+    <div class="aa-postes">
+      <div class="aa-carte"><h4>① Audit IA &amp; diagnostic</h4><p><strong>1 à 2 semaines.</strong> Nous interrogeons vos équipes, cartographions le parcours du patient et mettons en place, si besoin, un agenda numérique partagé.</p></div>
+      <div class="aa-carte"><h4>② Construction &amp; déploiement</h4><p><strong>5 à 7 jours.</strong> Nous construisons les automatisations validées, les relions à vos outils, les testons sur des cas réels et formons votre équipe.</p></div>
+      <div class="aa-carte"><h4>③ Maintenance &amp; évolution</h4><p><strong>Chaque mois ou chaque trimestre.</strong> Nous surveillons, ajustons et ajoutons de nouveaux workflows au fil de vos besoins.</p></div>
+    </div>
+
+    <!-- ========== 6. Notre offre (contenu repris de la section Agents IA de l'accueil) ========== -->
+    <h2 id="offre">6. Notre offre</h2>
+    <p>Vous n'avez pas à construire tout cela vous-même. Nous le déployons pour vous, avec un agent IA déjà pensé pour votre métier.</p>
+    <div class="aa-offre-bloc">
+      <p class="aa-offre-bloc__kicker">Agent IA · Santé</p>
+      <h3>Aïssatou, l'agent d'accueil de votre établissement</h3>
+      <p>Aïssatou est notre agent de support client IA. Pour un établissement de santé, nous la configurons pour l'accueil des patients et la prise de rendez-vous, et nous construisons les rappels et les alertes de stock avec notre service Automatisations.</p>
+      <ul class="aa-offre-bloc__liste">
+        <li>Répond instantanément aux questions fréquentes 24h/24</li>
+        <li>Gère les demandes de réservation, ici les rendez-vous</li>
+        <li>Escalade vers vos équipes les situations qui le nécessitent vraiment</li>
+        <li>Collecte la satisfaction après chaque demande traitée</li>
+        <li>S'adapte à votre ton et à votre vocabulaire métier</li>
+      </ul>
+      <div class="aa-offre-bloc__actions">
+        <a class="btn btn--primary btn--lg" href="https://calendly.com/afriautomate" target="_blank" rel="noopener">Réserver une démo</a>
+        <a class="btn btn--ghost btn--lg" href="/#agent-aissatou">Voir l'offre sur le site</a>
+      </div>
+      <p class="aa-offre-bloc__note">30 minutes · Sans engagement · Recommandation honnête</p>
+    </div>
+
+    <!-- ========== 7. FAQ ========== -->
+    <h2 id="faq">7. Questions fréquentes</h2>
+    <details><summary>L'agent donne-t-il des conseils médicaux&nbsp;?</summary><p>Non, jamais. Il prend les rendez-vous et répond aux questions pratiques : horaires, adresse, praticiens disponibles. Toute question médicale est transmise à votre équipe, et en cas d'urgence l'agent invite le patient à appeler immédiatement le numéro que vous lui avez indiqué.</p></details>
+    <details><summary>Comment le secret médical est-il respecté&nbsp;?</summary><p>Les messages ne contiennent que des informations pratiques (date, heure, lieu), jamais de diagnostic ni de résultat. Les dossiers médicaux restent dans votre logiciel. Les données restent votre propriété et ne sont jamais utilisées pour un autre client.</p></details>
+    <details><summary>Et les patients qui n'utilisent pas WhatsApp&nbsp;?</summary><p>Le téléphone reste disponible. L'automatisation soulage le standard des demandes simples ; elle ne le remplace pas. Les patients qui préfèrent appeler continuent de le faire.</p></details>
+    <details><summary>Notre agenda est sur papier : par où commencer&nbsp;?</summary><p>Par l'agenda. La prise de rendez-vous automatique a besoin d'un agenda numérique partagé. Nous le mettons en place avec vous pendant l'audit, puis nous branchons l'agent dessus.</p></details>
+    <details><summary>Combien de temps avant que ce soit opérationnel&nbsp;?</summary><p>Après l'audit, qui dure 1 à 2 semaines, la construction et le déploiement prennent 5 à 7 jours. Vos premières automatisations tournent en production en moins d'un mois.</p></details>
+
+    <!-- ========== Lire aussi (maillage interne) ========== -->
+    <h2 class="aa-sources-titre">Lire aussi</h2>
+    <ul class="aa-liste">
+      <li><a href="/rh-recrutement/">Comment automatiser le recrutement dans un cabinet RH</a></li>
+      <li><a href="/commerce/">Comment automatiser un commerce : ventes WhatsApp, relances, stock et fidélité</a></li>
+      <li><a href="/cabinets/">Comment automatiser un cabinet comptable : pièces, saisie, échéances et rapports</a></li>
+      <li><a href="/combien-coute-agent-ia-local-benin">Combien coûte un agent IA local au Bénin&nbsp;?</a></li>
+    </ul>
+
+  </article>
+  </main>
+
+  <!-- ======================================================
+       FOOTER (repris de l'accueil, liens absolus)
+       Titres en h2 : la page se termine par des h2, on évite
+       un saut de niveau h2 → h4.
+       ====================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <img src="/assets/logo/logo-afriautomate-160.png" alt="Logo AfriAutomate" class="footer__logo" width="40" height="40" loading="lazy" />
+        <p class="footer__slogan">Moins d'effort. Plus de revenus.<br />Grâce à l'automatisation.</p>
+        <p class="footer__location">📍 Cotonou, Bénin · Afrique francophone</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Navigation footer">
+        <h2 class="footer__title">Navigation</h2>
+        <ul>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#agents">Agents IA</a></li>
+          <li><a href="/#temoignages">Témoignages</a></li>
+          <li><a href="/#process">Méthode</a></li>
+          <li><a href="/#about">À propos</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Guides">
+        <h2 class="footer__title">Guides</h2>
+        <ul>
+          <li><a href="/rh-recrutement/">Automatiser le recrutement</a></li>
+          <li><a href="/commerce/">Automatiser un commerce</a></li>
+          <li><a href="/cabinets/">Automatiser un cabinet comptable</a></li>
+          <li><a href="/sante/" aria-current="page">Automatiser une clinique ou une pharmacie</a></li>
+          <li><a href="/combien-coute-agent-ia-local-benin">Combien coûte un agent IA local ?</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Contact</h2>
+        <ul>
+          <li><a href="https://wa.me/2290143102911" target="_blank" rel="noopener">WhatsApp : +229 01 43 10 29 11</a></li>
+          <li><a href="mailto:afriautomate@gmail.com">afriautomate@gmail.com</a></li>
+          <li><a href="https://calendly.com/afriautomate" target="_blank" rel="noopener">Prendre rendez-vous</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Suivez-nous</h2>
+        <ul class="footer__social">
+          <li>
+            <a href="https://www.linkedin.com/company/afriautomate/" target="_blank" rel="noopener" aria-label="LinkedIn AfriAutomate">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.14 1.45-2.14 2.96v5.7h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v6.46z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 AfriAutomate — Tous droits réservés.</p>
+        <ul class="footer__legal">
+          <!-- Rouvre le bandeau de consentement (script.js › initAnalytics) -->
+          <li><button type="button" class="footer__cookies" data-cookies-open>Gérer les cookies</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>

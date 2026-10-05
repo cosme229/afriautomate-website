@@ -52,10 +52,11 @@
   function zoneOf(el) {
     if (el.closest('.header')) return 'header';
     if (el.closest('.footer')) return 'footer';
+    if (el.closest('.aa-offre-bloc')) return 'offre_article';   // bouton « Réserver une démo » des articles secteur
     if (el.closest('.aa-cta')) return 'cta_guide';
     const section = el.closest('section[id]');
     if (section) return section.id;
-    return el.closest('.aa-cout') ? 'guide_prix' : 'page';
+    return el.closest('.aa-cout') ? 'article' : 'page';
   }
 
   // Choix mémorisé : 'accepte', 'refuse' ou null (jamais demandé / expiré)
