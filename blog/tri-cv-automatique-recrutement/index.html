@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr-BJ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tri CV automatique : l'IA qui divise le temps par 3</title>
+  <meta name="description" content="Trier 200 CV à la main, c'est fini. Voici comment l'IA automatise le tri sans biais, divise le temps par 3 et libère les recruteurs pour le vrai travail." />
+  <meta name="theme-color" content="#0D1117" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Cosme A. DENON" />
+  <link rel="canonical" href="https://afriautomate.com/blog/tri-cv-automatique-recrutement/" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="AfriAutomate" />
+  <meta property="og:url" content="https://afriautomate.com/blog/tri-cv-automatique-recrutement/" />
+  <meta property="og:title" content="Tri CV automatique : comment l'IA divise par 3 le temps de recrutement" />
+  <meta property="og:description" content="Cas concret d'un cabinet RH de Cotonou : du tri manuel chronophage au tri IA, anti-biais inclus." />
+  <meta property="og:image" content="https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="1000" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="article:published_time" content="2026-06-11T08:00:00+01:00" />
+  <meta property="article:modified_time" content="2026-06-11T08:00:00+01:00" />
+  <meta property="article:author" content="Cosme A. DENON" />
+  <meta property="article:section" content="RH" />
+  <meta property="article:tag" content="tri CV, automatisation recrutement, IA RH, ATS Afrique" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tri CV automatique : l'IA qui divise le temps par 3" />
+  <meta name="twitter:description" content="Méthode complète + cas concret cabinet RH Cotonou." />
+  <meta name="twitter:image" content="https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg" />
+
+  <link rel="icon" type="image/png" href="/branding/lg_AfriAutomate.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/blog/style-blog.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Tri CV automatique : comment l'IA divise par 3 le temps de recrutement",
+    "description": "Méthode complète et cas concret d'automatisation du tri de CV pour cabinets RH africains, incluant la prévention des biais.",
+    "image": "https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg",
+    "datePublished": "2026-06-11T08:00:00+01:00",
+    "dateModified": "2026-06-11T08:00:00+01:00",
+    "author": {
+      "@type": "Person",
+      "name": "Cosme A. DENON",
+      "jobTitle": "Fondateur & Directeur d'AfriAutomate",
+      "url": "https://afriautomate.com/#about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AfriAutomate",
+      "logo": { "@type": "ImageObject", "url": "https://afriautomate.com/branding/lg_AfriAutomate.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://afriautomate.com/blog/tri-cv-automatique-recrutement/" },
+    "inLanguage": "fr",
+    "wordCount": 1900,
+    "keywords": "tri CV automatique, automatisation recrutement, IA RH, ATS Afrique, présélection CV IA"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "L'IA peut-elle vraiment lire un CV scanné ou pris en photo ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les modèles d'OCR couplés à un LLM lisent un CV scanné ou photographié avec un niveau de précision élevé. La qualité de la photo joue : un CV pris au flash en angle de 45° peut poser problème, mais une photo correcte de face est traitée sans difficulté." } },
+      { "@type": "Question", "name": "Et si un excellent candidat a un CV mal structuré ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "L'IA moderne juge sur le contenu sémantique, pas sur la mise en forme. Un excellent profil avec un CV sommaire sera détecté tant que les informations essentielles (expérience, compétences, formation) sont présentes." } },
+      { "@type": "Question", "name": "Comment éviter que l'IA discrimine ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Trois leviers : (1) ne pas inclure dans le scoring des champs sensibles (genre, âge, photo, origine) ; (2) tester le modèle sur l'historique de l'entreprise pour mesurer les écarts de scoring entre groupes ; (3) garder l'humain dans la boucle de décision finale." } },
+      { "@type": "Question", "name": "Combien coûte un tri CV automatique pour un cabinet de 5 personnes ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Setup entre 400 000 et 900 000 FCFA selon le périmètre, plus un abonnement mensuel de 100 000 à 200 000 FCFA. Pour un cabinet traitant 8-10 missions/mois, le payback se fait typiquement en 2 à 3 mois." } },
+      { "@type": "Question", "name": "Mes consultants vont-ils être remplacés ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Non. Le tri CV manuel est la tâche la moins valorisante du métier de consultant en recrutement. L'automatiser libère vos consultants pour le vrai travail : qualifier les top profils, négocier, construire des carrières. C'est une promotion, pas un remplacement." } }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://afriautomate.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://afriautomate.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Tri CV automatique", "item": "https://afriautomate.com/blog/tri-cv-automatique-recrutement/" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="AfriAutomate — Accueil">
+        <img src="/branding/lg_AfriAutomate.png" alt="Logo AfriAutomate" width="180" />
+      </a>
+      <nav class="header__nav" id="nav" aria-label="Navigation principale">
+        <ul class="header__list">
+          <li><a href="/#services" class="header__link">Services</a></li>
+          <li><a href="/#packs" class="header__link">Packs</a></li>
+          <li><a href="/#process" class="header__link">Méthode</a></li>
+          <li><a href="/#about" class="header__link">À propos</a></li>
+          <li><a href="/blog/" class="header__link">Blog</a></li>
+          <li><a href="/#faq" class="header__link">FAQ</a></li>
+        </ul>
+        <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary header__cta">Prendre rendez-vous</a>
+      </nav>
+      <button type="button" class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <ol>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><span aria-current="page">Tri CV automatique : comment l'IA divise par 3 le temps de recrutement</span></li>
+      </ol>
+    </nav>
+
+    <article class="article">
+      <div class="article__container">
+
+        <span class="article__category">RH &amp; Recrutement</span>
+        <h1 class="article__title">Tri CV automatique : comment l'IA divise par 3 le temps de recrutement (cas concret cabinet RH)</h1>
+        <p class="article__lead">
+          Trier 200 CV à la main pour ne garder que les 5 % qui méritent un entretien :
+          c'est usant, c'est répétitif, c'est du temps consultant gaspillé. Voici comment
+          un cabinet de Cotonou a divisé ce temps par 3 — méthode, chiffres, anti-biais
+          inclus.
+        </p>
+
+        <div class="article__meta">
+          <div class="article__meta-author">
+            <img src="/assets/photos-equipe/fondateur.png" alt="Cosme A. DENON" />
+            <span>Par <strong>Cosme A. DENON</strong>, Fondateur d'AfriAutomate</span>
+          </div>
+          <time datetime="2026-06-11">11 juin 2026</time>
+          <span>10 min de lecture</span>
+        </div>
+
+        <div class="article__hero-image">
+          <div class="article__hero-placeholder">Tri CV automatique — l'IA libère les recruteurs pour le vrai travail</div>
+        </div>
+
+        <nav class="article__toc" aria-label="Table des matières">
+          <p class="article__toc-title">Dans cet article</p>
+          <ol>
+            <li><a href="#cout-cache">Le coût caché du tri CV manuel</a></li>
+            <li><a href="#fonctionnement">Comment fonctionne un tri CV automatique en 2026</a></li>
+            <li><a href="#6-criteres">Les 6 critères de scoring à paramétrer</a></li>
+            <li><a href="#cas-concret">Cas concret : cabinet RH de 5 personnes à Cotonou</a></li>
+            <li><a href="#pieges-biais">Les 5 pièges et la question des biais</a></li>
+            <li><a href="#migration">Comment migrer en 30 jours</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ol>
+        </nav>
+
+        <div class="article__body">
+
+          <p>
+            Jean-Baptiste dirige un cabinet de recrutement à Cotonou. Volume mensuel
+            moyen : 150 candidatures par offre. Sur certains postes — assistant
+            administratif, commercial junior — il monte à 400.
+          </p>
+
+          <p>
+            Tri manuel : 2 personnes, 3 jours par semaine, à éliminer 95 % des CV pour ne
+            garder que les 5 % qui mériteront un vrai entretien. C'est usant. C'est
+            répétitif. Et surtout, c'est du temps consultant gaspillé sur du travail à
+            faible valeur ajoutée.
+          </p>
+
+          <p>
+            Jean-Baptiste a automatisé ce tri en avril 2026. Voici ce qui a changé,
+            comment ça marche, et où sont les vrais pièges.
+          </p>
+
+          <h2 id="cout-cache">Le coût caché du tri CV manuel dans un cabinet RH africain</h2>
+
+          <p>
+            Un cabinet de 5 personnes qui traite 8 missions par mois reçoit en moyenne
+            <strong>1 200 candidatures mensuelles</strong>. À 30 secondes par CV juste
+            pour le scanner et décider « oui / non / à creuser », cela représente 10
+            heures de tri pur. Multiplié par 2 personnes (double validation) et par les
+            allers-retours, on monte à <strong>24 jours-personne par mois</strong>
+            consommés rien que pour la pré-sélection.
+          </p>
+
+          <p>
+            Le coût visible : ~600 000 FCFA/mois de salaire absorbé par le tri (à
+            25 000 FCFA/jour-personne chargé).
+          </p>
+
+          <p>
+            Le coût invisible — et bien plus grave : <strong>vos consultants seniors
+            qui font du tri au lieu de la stratégie commerciale</strong>. À 5 missions
+            seniors perdues par an parce que la commerciale n'a pas eu le temps de
+            relancer, on parle de plusieurs millions de FCFA de marge laissés sur la
+            table.
+          </p>
+
+          <blockquote>
+            <p>
+              L'effet de bord pernicieux : les bons CV qui passent à la trappe par
+              fatigue de fin de journée. Le 198<sup>e</sup> CV de la pile n'est pas lu
+              avec la même attention que le 12<sup>e</sup>. L'IA, elle, est aussi
+              attentive au 1 000<sup>e</sup> CV qu'au premier.
+            </p>
+          </blockquote>
+
+          <h2 id="fonctionnement">Comment fonctionne un tri CV automatique en 2026 (sans jargon)</h2>
+
+          <h3>Étape 1 — Capture du CV</h3>
+          <p>
+            Les CV arrivent par tous les canaux : formulaire de votre site, email,
+            WhatsApp, parfois LinkedIn. Le système les ingère automatiquement, qu'ils
+            soient en PDF, Word, ou même photographiés au téléphone.
+          </p>
+
+          <h3>Étape 2 — Lecture intelligente (OCR + extraction)</h3>
+          <p>
+            Le CV est converti en données structurées : nom, expériences, années de
+            chaque poste, compétences, formation, langues, certifications. L'OCR (lecture
+            optique) gère même les CV scannés ou photographiés.
+          </p>
+
+          <h3>Étape 3 — Scoring par IA selon vos critères</h3>
+          <p>
+            C'est ici que la magie opère. L'IA ne cherche pas <em>« le mot exact »</em> —
+            elle cherche <em>« le sens »</em>. Un candidat « chef de projet digital » et
+            un candidat « product manager » ressortent comme équivalents. Un « gestionnaire
+            de stock » et un « responsable approvisionnement » aussi.
+          </p>
+
+          <h3>Étape 4 — Présentation au recruteur</h3>
+          <p>
+            Le consultant ne voit plus une pile de 200 CV. Il voit un tableau de bord avec
+            les <strong>top 10 profils scorés</strong>, la raison du score pour chacun, et
+            un accès direct au CV complet en un clic. La décision finale reste humaine.
+          </p>
+
+          <blockquote>
+            <p>
+              <strong>L'IA ne décide pas. Elle pré-classe.</strong> C'est le recruteur qui
+              valide, qui appelle, qui négocie. Le métier de recruteur n'est pas remplacé —
+              il est libéré de sa partie la moins gratifiante.
+            </p>
+          </blockquote>
+
+          <h2 id="6-criteres">Les 6 critères de scoring à paramétrer correctement</h2>
+
+          <ol>
+            <li><strong>Adéquation des compétences techniques</strong> (hard skills) — la base</li>
+            <li><strong>Expérience pertinente</strong> — années + qualité des postes occupés</li>
+            <li><strong>Localisation et mobilité géographique</strong> — Abidjan vs Yamoussoukro change tout</li>
+            <li><strong>Disponibilité réelle</strong> — préavis, contrats en cours</li>
+            <li><strong>Adéquation rémunération attendue / fourchette du poste</strong></li>
+            <li><strong>Signaux faibles</strong> — langues, certifications, projets perso</li>
+          </ol>
+
+          <blockquote>
+            <p>
+              <strong>Pondération.</strong> Le client final définit l'importance de chaque
+              critère lors du brief. Pour un poste de développeur seniors, les hard skills
+              pèsent 50 %. Pour un poste commercial terrain, la localisation et la
+              mobilité pèsent 35 %. Ce n'est pas l'IA qui choisit — c'est vous.
+            </p>
+          </blockquote>
+
+          <!-- CTA milieu -->
+          <aside class="article__cta">
+            <h3>Vous reconnaissez votre cabinet dans ce cas ?</h3>
+            <p>On peut faire la simulation avec vos vrais chiffres en 30 minutes. Combien de jours-personne libérés, combien de FCFA récupérés, en combien de temps. Recommandation honnête.</p>
+            <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Réserver mon audit gratuit →</a>
+          </aside>
+
+          <h2 id="cas-concret">Cas concret : cabinet RH de 5 personnes à Cotonou</h2>
+
+          <p><em>Scénario représentatif construit à partir du persona Jean-Baptiste — directeur de cabinet de recrutement.</em></p>
+
+          <table>
+            <thead>
+              <tr><th>Indicateur</th><th>Avant</th><th>Après</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Missions traitées / mois</td><td>8</td><td>8 (capacité élargie à 12)</td></tr>
+              <tr><td>Candidatures / mission</td><td>150</td><td>150</td></tr>
+              <tr><td>Jours-personne de tri / mois</td><td>24</td><td>4</td></tr>
+              <tr><td>Coût direct du tri / mois</td><td>~600 000 FCFA</td><td>~100 000 FCFA</td></tr>
+              <tr><td>Setup unique</td><td>—</td><td>750 000 FCFA</td></tr>
+              <tr><td>Abonnement mensuel</td><td>—</td><td>150 000 FCFA</td></tr>
+              <tr><td>Économie nette mensuelle</td><td>—</td><td><strong>~350 000 FCFA</strong></td></tr>
+              <tr><td>Payback</td><td>—</td><td><strong>~2,5 mois</strong></td></tr>
+            </tbody>
+          </table>
+
+          <p>
+            <strong>Au-delà du payback :</strong> 20 jours-personne libérés par mois sont
+            mobilisables sur des missions seniors à plus forte marge, ou sur le
+            développement commercial. C'est là que se trouve le vrai gain — pas dans
+            l'économie de salaire, mais dans la <strong>capacité de croissance à
+            effectif constant</strong>.
+          </p>
+
+          <h2 id="pieges-biais">Les 5 pièges à éviter (et la vraie question des biais)</h2>
+
+          <ol>
+            <li>
+              <strong>Sélectionner sur le mot exact.</strong> Les vieux ATS cherchent
+              « développeur Python ». Ils éliminent un excellent profil qui a écrit
+              « ingénieur logiciel maîtrisant Django et FastAPI ». L'IA générative évite
+              ce piège — utilisez-la.
+            </li>
+            <li>
+              <strong>Ignorer les biais de modèle.</strong> Les IA héritent des biais
+              présents dans leur entraînement. Testez sur votre historique : mesurez
+              l'écart de scoring entre hommes et femmes pour des CV équivalents. Mesurez
+              l'écart entre régions. Si l'écart est significatif, corrigez avant la mise
+              en production.
+            </li>
+            <li>
+              <strong>Tout automatiser jusqu'à la décision finale.</strong> L'IA classe.
+              L'humain décide. Toujours. Sinon vous perdez le sens du métier — et la
+              responsabilité juridique vous tombe dessus.
+            </li>
+            <li>
+              <strong>Oublier la conformité données.</strong> Au Bénin, la
+              <strong>loi 2017-20</strong> sur la protection des données personnelles
+              s'applique. RGPD-équivalent pour vos clients UE. Documentez le traitement,
+              prévoyez un droit à l'effacement.
+            </li>
+            <li>
+              <strong>Ne pas tracer le scoring.</strong> Vous devez pouvoir expliquer, 6
+              mois plus tard, pourquoi tel CV a obtenu un score de 87 et tel autre 42.
+              Conservez les logs. C'est non-négociable.
+            </li>
+          </ol>
+
+          <blockquote>
+            <p>
+              Le biais n'est pas une fatalité, mais il existe. Un audit pré-mise en
+              production — sur 200 à 500 CV historiques avec leur résultat de recrutement —
+              est non-négociable. Si votre prestataire saute cette étape, méfiez-vous.
+            </p>
+          </blockquote>
+
+          <h2 id="migration">Comment passer du tri manuel au tri automatique en 30 jours</h2>
+
+          <ol>
+            <li>
+              <strong>Semaine 1 — Audit du process actuel et brief.</strong> Atelier avec
+              les consultants : quels sont vos vrais critères ? Quels postes attirent
+              quel type de profil ? Quels sont les signaux de bon recrutement <em>a
+              posteriori</em> ?
+            </li>
+            <li>
+              <strong>Semaine 2 — Connexion sources et import historique.</strong> On
+              branche vos canaux de réception (formulaire, email, WhatsApp) et on
+              importe 6-12 mois de CV historiques pour entraîner et tester.
+            </li>
+            <li>
+              <strong>Semaine 3 — Tests en parallèle.</strong> Sur 2 missions réelles, le
+              tri manuel et le tri automatique tournent en parallèle. On compare. On
+              ajuste les pondérations.
+            </li>
+            <li>
+              <strong>Semaine 4 — Bascule progressive et formation équipe.</strong> Le
+              tri automatique devient la source primaire. L'équipe est formée à
+              l'interface, au transfert humain, à l'audit des biais.
+            </li>
+          </ol>
+
+          <p>
+            Pour aller plus loin, consultez <a href="/#services">notre offre dédiée RH &amp;
+            Recrutement</a> ou planifiez un audit avec
+            <a href="/blog/audit-ia-entreprise-2026/">notre méthode d'audit IA</a>.
+          </p>
+
+          <h2 id="faq">FAQ</h2>
+
+          <section class="article__faq" aria-label="Questions fréquentes">
+            <details>
+              <summary>L'IA peut-elle vraiment lire un CV scanné ou pris en photo ?</summary>
+              <p>Oui. Les modèles d'OCR couplés à un LLM lisent un CV scanné ou photographié avec un niveau de précision élevé. La qualité de la photo joue : un CV pris au flash en angle de 45° peut poser problème, mais une photo correcte de face est traitée sans difficulté.</p>
+            </details>
+            <details>
+              <summary>Et si un excellent candidat a un CV mal structuré ?</summary>
+              <p>L'IA moderne juge sur le contenu sémantique, pas sur la mise en forme. Un excellent profil avec un CV sommaire sera détecté tant que les informations essentielles (expérience, compétences, formation) sont présentes.</p>
+            </details>
+            <details>
+              <summary>Comment éviter que l'IA discrimine ?</summary>
+              <p>Trois leviers : (1) ne pas inclure dans le scoring des champs sensibles (genre, âge, photo, origine) ; (2) tester le modèle sur l'historique de l'entreprise pour mesurer les écarts ; (3) garder l'humain dans la boucle de décision finale. Au Bénin, la loi 2017-20 encadre déjà cette protection.</p>
+            </details>
+            <details>
+              <summary>Combien coûte un tri CV automatique pour un cabinet de 5 personnes ?</summary>
+              <p>Setup entre 400 000 et 900 000 FCFA selon le périmètre, plus un abonnement mensuel de 100 000 à 200 000 FCFA. Pour un cabinet traitant 8-10 missions/mois, le payback se fait typiquement en 2 à 3 mois.</p>
+            </details>
+            <details>
+              <summary>Mes consultants vont-ils être remplacés ?</summary>
+              <p>Non. Le tri CV manuel est la tâche la moins valorisante du métier de consultant. L'automatiser libère vos consultants pour le vrai travail : qualifier les top profils, négocier, construire des carrières. C'est une promotion, pas un remplacement.</p>
+            </details>
+          </section>
+
+          <p><strong>En résumé.</strong> Le tri CV manuel n'a aucun avenir dans un cabinet RH ambitieux. Pas parce que l'IA est meilleure qu'un humain — elle ne l'est pas. Mais parce qu'elle libère les humains pour faire ce qu'ils font le mieux : connaître leurs clients, qualifier les top profils, construire des carrières. C'est ça, le vrai métier du recrutement. Le reste, on automatise.</p>
+
+          <div class="article__share">
+            <span class="article__share-label">Partager :</span>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://afriautomate.com/blog/tri-cv-automatique-recrutement/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.14 1.45-2.14 2.96v5.7h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v6.46z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://wa.me/?text=Tri%20CV%20automatique%20%E2%86%92%20https%3A%2F%2Fafriautomate.com%2Fblog%2Ftri-cv-automatique-recrutement%2F" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075"/></svg>
+              WhatsApp
+            </a>
+          </div>
+
+          <div class="article__author">
+            <img src="/assets/photos-equipe/fondateur.png" alt="Cosme A. DENON" />
+            <div class="article__author-content">
+              <h3>Cosme A. DENON</h3>
+              <p>Fondateur &amp; Directeur d'AfriAutomate. Basé à Cotonou, accompagne les PME africaines dans l'audit et le déploiement d'agents IA, d'automatisations WhatsApp et de workflows RH adaptés au marché francophone.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <section class="article__related">
+      <div class="article__related-inner">
+        <h2>À lire ensuite</h2>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <a href="/blog/roi-agent-ia-pme/">
+              <div class="blog-card__image"><div class="blog-card__image-placeholder">ROI<br>agent IA</div></div>
+              <div class="blog-card__body">
+                <span class="blog-card__category">ROI</span>
+                <h2 class="blog-card__title">Combien rapporte vraiment un agent IA à une PME ?</h2>
+                <p class="blog-card__excerpt">5 calculs simples, chiffres en FCFA.</p>
+              </div>
+            </a>
+          </article>
+          <article class="blog-card">
+            <a href="/blog/audit-ia-entreprise-2026/">
+              <div class="blog-card__image"><div class="blog-card__image-placeholder">Audit IA<br>en 4 étapes</div></div>
+              <div class="blog-card__body">
+                <span class="blog-card__category">Méthode</span>
+                <h2 class="blog-card__title">Audit IA d'entreprise : par où commencer en 2026 ?</h2>
+                <p class="blog-card__excerpt">La méthode pas-à-pas pour identifier vos priorités.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="/branding/lg_AfriAutomate.png" alt="Logo AfriAutomate" class="footer__logo" width="160" loading="lazy" />
+        <p class="footer__slogan">Moins d'effort. Plus de revenus.<br />Grâce à l'automatisation.</p>
+        <p class="footer__location">📍 Cotonou, Bénin · Afrique francophone</p>
+      </div>
+      <nav class="footer__col" aria-label="Navigation footer">
+        <h4 class="footer__title">Navigation</h4>
+        <ul>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#packs">Packs</a></li>
+          <li><a href="/#process">Méthode</a></li>
+          <li><a href="/#about">À propos</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="footer__col">
+        <h4 class="footer__title">Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/2290143102911" target="_blank" rel="noopener">WhatsApp : +229 01 43 10 29 11</a></li>
+          <li><a href="mailto:afriautomate@gmail.com">afriautomate@gmail.com</a></li>
+          <li><a href="https://calendly.com/afriautomate" target="_blank" rel="noopener">Prendre rendez-vous</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__title">Suivez-nous</h4>
+        <ul class="footer__social">
+          <li>
+            <a href="https://www.linkedin.com/company/afriautomate/" target="_blank" rel="noopener" aria-label="LinkedIn AfriAutomate">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.14 1.45-2.14 2.96v5.7h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v6.46z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 AfriAutomate — Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>

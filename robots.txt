@@ -1,0 +1,21 @@
+# ======================================================
+# robots.txt — AfriAutomate
+# https://afriautomate.com
+# ======================================================
+# Indexation autorisée pour tous les moteurs de recherche.
+# Le sitemap est annoncé en bas de ce fichier.
+# ======================================================
+
+User-agent: *
+Allow: /
+
+# Bloquer les artefacts de dev éventuels et les drafts internes
+Disallow: /content/
+Disallow: /references/
+Disallow: /.claude/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /node_modules/
+
+# Sitemap principal
+Sitemap: https://afriautomate.com/sitemap.xml

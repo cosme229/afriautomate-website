@@ -1,0 +1,54 @@
+# ======================================================
+# Netlify Custom Headers — AfriAutomate
+# https://docs.netlify.com/manage/routing/headers/
+# ======================================================
+# Objectif :
+#   1) Activer un cache navigateur sain pour les assets statiques.
+#   2) Renforcer la sécurité (HSTS, anti-clickjacking, MIME-sniffing,
+#      referrer policy, permissions API navigateur).
+#   3) Garder index.html en revalidation pour pousser les correctifs vite.
+# ======================================================
+
+# --- HTML : revalidation à chaque navigation ---
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# --- CSS / JS : cache 1 jour (le hashing viendra plus tard) ---
+/*.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# --- Images : cache long, immutables côté édition ---
+/branding/*
+  Cache-Control: public, max-age=2592000, immutable
+
+/assets/*
+  Cache-Control: public, max-age=2592000, immutable
+
+# --- Polices : cache long ---
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# --- Sitemap & robots : cache court (mise à jour fréquente possible) ---
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+  Content-Type: text/plain; charset=utf-8

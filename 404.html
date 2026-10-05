@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr-BJ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page 404 personnalisée — ne pas indexer ni suivre -->
+  <title>Page introuvable — AfriAutomate</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description" content="La page que vous cherchez n'existe pas ou a été déplacée. Retournez à l'accueil ou réservez votre audit IA gratuit." />
+  <meta name="theme-color" content="#0D1117" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/branding/lg_AfriAutomate.png" />
+
+  <!-- Police principale -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles inline — la 404 doit fonctionner même si style.css échoue -->
+  <style>
+    :root {
+      --bg: #0D1117;
+      --bg-alt: #161B22;
+      --text: #E6EDF3;
+      --text-muted: #9DA7B3;
+      --accent: #FF8A00;
+      --primary: #2563EB;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .header__logo img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 24px 64px;
+    }
+
+    .card {
+      max-width: 640px;
+      width: 100%;
+      background: var(--bg-alt);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 48px 32px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .code {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: clamp(72px, 18vw, 144px);
+      line-height: 1;
+      letter-spacing: -4px;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0 0 16px;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: clamp(22px, 4vw, 32px);
+      margin: 0 0 16px;
+      color: var(--text);
+    }
+
+    p {
+      color: var(--text-muted);
+      margin: 0 0 32px;
+      font-size: 16px;
+    }
+
+    .ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn--primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn--primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn--ghost {
+      background: transparent;
+      color: var(--text);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .btn--ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .links {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .links a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 8px;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    footer {
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="/" class="header__logo" aria-label="AfriAutomate — Accueil">
+      <img src="/branding/lg_AfriAutomate.png" alt="Logo AfriAutomate" />
+    </a>
+  </header>
+
+  <main>
+    <section class="card" role="alert">
+      <p class="code" aria-hidden="true">404</p>
+      <h1>Cette page a disparu dans le pipeline.</h1>
+      <p>
+        La page que vous cherchez n'existe pas ou a été déplacée.
+        Pas de panique — on vous remet sur les rails en un clic.
+      </p>
+
+      <div class="ctas">
+        <a href="/" class="btn btn--primary">← Retour à l'accueil</a>
+        <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--ghost">
+          Réserver mon audit IA gratuit
+        </a>
+      </div>
+
+      <nav class="links" aria-label="Liens utiles">
+        <a href="/#services">Services</a>
+        <a href="/#packs">Packs</a>
+        <a href="/#process">Méthode</a>
+        <a href="/#about">À propos</a>
+        <a href="/#faq">FAQ</a>
+      </nav>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 AfriAutomate · Cotonou, Bénin</p>
+  </footer>
+
+</body>
+</html>

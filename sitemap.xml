@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap XML — AfriAutomate
+  https://afriautomate.com/sitemap.xml
+
+  Pages couvertes :
+    - Home (/)
+    - 4 pages secteur (/rh-recrutement, /commerce, /cabinets, /sante)
+    - Blog index (/blog/)
+    - 5 articles de blog publiés ou programmés
+
+  À ajouter ultérieurement :
+    - /cotonou, /abidjan, /dakar (pages locales)
+    - /mentions-legales, /cgv, /politique-confidentialite (pages légales)
+    - chaque nouvel article de blog
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Accueil -->
+  <url>
+    <loc>https://afriautomate.com/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg</image:loc>
+      <image:title>AfriAutomate — Automatisation IA pour PME africaines</image:title>
+      <image:caption>Agence d'automatisation intelligente pour PME africaines, basée à Cotonou.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://afriautomate.com/branding/lg_AfriAutomate.png</image:loc>
+      <image:title>Logo AfriAutomate</image:title>
+    </image:image>
+  </url>
+
+  <!-- Pages secteurs -->
+  <url>
+    <loc>https://afriautomate.com/rh-recrutement/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://afriautomate.com/commerce/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://afriautomate.com/cabinets/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://afriautomate.com/sante/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog — index -->
+  <url>
+    <loc>https://afriautomate.com/blog/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Article #3 — Audit IA -->
+  <url>
+    <loc>https://afriautomate.com/blog/audit-ia-entreprise-2026/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article #1 — Automatiser WhatsApp -->
+  <url>
+    <loc>https://afriautomate.com/blog/automatiser-whatsapp-afrique-francophone/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article #4 — Tri CV automatique -->
+  <url>
+    <loc>https://afriautomate.com/blog/tri-cv-automatique-recrutement/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article #2 — ROI agent IA PME -->
+  <url>
+    <loc>https://afriautomate.com/blog/roi-agent-ia-pme/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article #5 — Make vs n8n vs Zapier -->
+  <url>
+    <loc>https://afriautomate.com/blog/make-n8n-zapier-pme-africaine/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+</urlset>

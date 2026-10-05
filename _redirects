@@ -1,0 +1,15 @@
+# ======================================================
+# Netlify Redirects — AfriAutomate
+# https://docs.netlify.com/manage/routing/redirects/
+# ======================================================
+# Objectif : canonicaliser le domaine et éviter le contenu dupliqué.
+# Le sous-domaine www est redirigé vers l'apex en 301 (permanent).
+# Toute URL inconnue tombe sur la 404 personnalisée.
+# ======================================================
+
+# 301 www → apex (canonical = https://afriautomate.com)
+https://www.afriautomate.com/*    https://afriautomate.com/:splat    301!
+
+# Fallback 404 (Netlify utilise déjà 404.html automatiquement,
+# mais on garde la déclaration explicite pour clarté).
+/*    /404.html    404
