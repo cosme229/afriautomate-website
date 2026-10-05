@@ -7,9 +7,11 @@
   <!-- ======================================================
        SEO & métadonnées
        ====================================================== -->
-  <title>AfriAutomate — Automatisation pour entreprises africaines</title>
-  <meta name="description" content="AfriAutomate est la première agence d'automatisation intelligente spécialisée PME africaines basée à Cotonou. Agents IA, WhatsApp 24/7, automatisation marketing et RH. Moins d'effort. Plus de revenus." />
+  <title>AfriAutomate — Agence d'automatisation IA à Cotonou, Bénin</title>
+  <meta name="description" content="Agence d'automatisation IA à Cotonou : agents IA sur WhatsApp, automatisation des ventes, du marketing et des RH pour les PME du Bénin et d'Afrique francophone." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <meta name="theme-color" content="#0D1117" />
+  <link rel="canonical" href="https://afriautomate.com/" />
 
   <!-- Google Search Console : preuve de propriété du site (ne pas retirer,
        sinon la validation est perdue). Doublée par le fichier
@@ -18,16 +20,87 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="AfriAutomate — Automatisation pour entreprises africaines" />
+  <meta property="og:site_name" content="AfriAutomate" />
+  <meta property="og:url" content="https://afriautomate.com/" />
+  <meta property="og:title" content="AfriAutomate — Agence d'automatisation IA à Cotonou, Bénin" />
   <meta property="og:description" content="Agents IA, WhatsApp 24/7, automatisation marketing et RH pour PME africaines. Moins d'effort. Plus de revenus." />
-  <meta property="og:image" content="assets/images-hero/hero-ai-automation.jpg" />
+  <meta property="og:image" content="https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg" />
   <meta property="og:locale" content="fr_FR" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AfriAutomate — Automatisation pour entreprises africaines" />
+  <meta name="twitter:title" content="AfriAutomate — Agence d'automatisation IA à Cotonou, Bénin" />
   <meta name="twitter:description" content="Agents IA, WhatsApp 24/7, automatisation marketing et RH pour PME africaines." />
-  <meta name="twitter:image" content="assets/images-hero/hero-ai-automation.jpg" />
+  <meta name="twitter:image" content="https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg" />
+
+  <!-- Données structurées : l'agence (coordonnées, zone desservie) et le site -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://afriautomate.com/#organisation",
+    "name": "AfriAutomate",
+    "url": "https://afriautomate.com/",
+    "logo": "https://afriautomate.com/branding/lg_AfriAutomate.png",
+    "image": "https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg",
+    "description": "Agence d'automatisation intelligente pour les PME africaines : agents IA, WhatsApp 24/7, automatisation des ventes, du marketing et des ressources humaines.",
+    "slogan": "Moins d'effort. Plus de revenus. Grâce à l'automatisation.",
+    "telephone": "+2290143102911",
+    "email": "afriautomate@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cotonou",
+      "addressCountry": "BJ"
+    },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Bénin"
+      },
+      {
+        "@type": "Country",
+        "name": "Côte d'Ivoire"
+      },
+      {
+        "@type": "Country",
+        "name": "Sénégal"
+      },
+      {
+        "@type": "Country",
+        "name": "Togo"
+      },
+      {
+        "@type": "Country",
+        "name": "Cameroun"
+      },
+      {
+        "@type": "Country",
+        "name": "Burkina Faso"
+      }
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Cosme A. DENON"
+    },
+    "knowsLanguage": "fr",
+    "sameAs": [
+      "https://www.linkedin.com/company/afriautomate/"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://afriautomate.com/#site",
+    "url": "https://afriautomate.com/",
+    "name": "AfriAutomate",
+    "inLanguage": "fr",
+    "publisher": {
+      "@id": "https://afriautomate.com/#organisation"
+    }
+  }
+  </script>
 
   <!-- Favicon : version 96×96 dédiée (la source reste branding/lg_AfriAutomate.png) -->
   <link rel="icon" type="image/png" sizes="96x96" href="assets/logo/favicon-afriautomate-96.png" />
@@ -420,6 +493,8 @@
                 <polyline points="12 5 19 12 12 19"/>
               </svg>
             </a>
+            <!-- Lien interne vers l'article secteur (SEO + lecture) -->
+            <a href="/cabinets/" class="agent__guide">Guide : automatiser un cabinet comptable</a>
           </article>
 
           <!-- AGENT 2 — Koffi · Coordinateur RH IA (ancre visée par /rh-recrutement/) -->
@@ -453,6 +528,8 @@
                 <polyline points="12 5 19 12 12 19"/>
               </svg>
             </a>
+            <!-- Lien interne vers l'article secteur (SEO + lecture) -->
+            <a href="/rh-recrutement/" class="agent__guide">Guide : automatiser le recrutement</a>
           </article>
 
           <!-- AGENT 3 — Serge · Commercial IA (ancre visée par /commerce/) -->
@@ -486,6 +563,8 @@
                 <polyline points="12 5 19 12 12 19"/>
               </svg>
             </a>
+            <!-- Lien interne vers l'article secteur (SEO + lecture) -->
+            <a href="/commerce/" class="agent__guide">Guide : automatiser un commerce avec WhatsApp</a>
           </article>
 
           <!-- AGENT 4 — Aïssatou · Support client IA (ancre visée par /sante/) -->
@@ -519,6 +598,8 @@
                 <polyline points="12 5 19 12 12 19"/>
               </svg>
             </a>
+            <!-- Lien interne vers l'article secteur (SEO + lecture) -->
+            <a href="/sante/" class="agent__guide">Guide : automatiser une clinique ou une pharmacie</a>
           </article>
 
         </div>
