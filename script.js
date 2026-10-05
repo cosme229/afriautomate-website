@@ -8,6 +8,7 @@
      - initRevealOnScroll() : animations d'entrée via IntersectionObserver
      - initHeaderShrink()   : header opaque au scroll
      - initActiveNavLink()  : lien de nav actif selon section visible
+     - initCostCalculator() : calculateur de coût sur 12 mois (guide des prix)
      - initCurrentYear()    : injecte l'année courante dans le footer si besoin
    ===================================================================== */
 
@@ -245,8 +246,12 @@
     const links = document.querySelectorAll('.header__link');
     if (!links.length || !('IntersectionObserver' in window)) return;
 
+    // Seules les ancres internes (#...) sont observées : sur les autres pages,
+    // les liens du header pointent vers "/#services" (sélecteur CSS invalide)
     const sections = Array.from(links)
-      .map((link) => document.querySelector(link.getAttribute('href')))
+      .map((link) => link.getAttribute('href'))
+      .filter((href) => href && href.startsWith('#') && href.length > 1)
+      .map((href) => document.querySelector(href))
       .filter(Boolean);
 
     const observer = new IntersectionObserver(
@@ -272,7 +277,110 @@
 
 
   /* -------------------------------------------------------------------
-     7. Initialisation au DOMContentLoaded
+     8. Calculateur de coût sur 12 mois
+     Page : combien-coute-agent-ia-local-benin.html (#aa-calc)
+     Compare une offre cloud (frais d'API facturés en $) à l'IA locale
+     AfriAutomate (mise en place + abonnement + hébergement, en FCFA).
+     Montants des packs : content/packs-offres.md (valeurs du <select>).
+     ------------------------------------------------------------------- */
+  function initCostCalculator() {
+    const calc = document.getElementById('aa-calc');
+    if (!calc) return;
+
+    const $ = (id) => document.getElementById(id);
+    // Valeur numérique positive d'un champ (0 si vide ou invalide)
+    const num = (id) => {
+      const v = parseFloat($(id).value);
+      return isFinite(v) && v >= 0 ? v : 0;
+    };
+    // 1234567 → "1 234 567 FCFA" (espaces insécables : pas de retour à la ligne)
+    const fmt = (n) =>
+      Math.round(n).toLocaleString('fr-FR').replace(/[\u202F\u00A0 ]/g, '\u00A0') + '\u00A0FCFA';
+
+    const pack = $('c-pack');
+
+    // Choix d'un pack → remplit mise en place + abonnement
+    const applyPack = () => {
+      if (pack.value === 'perso') return;
+      const [setup, monthly] = pack.value.split('|');
+      $('c-li').value = setup;
+      $('c-lm').value = monthly;
+    };
+
+    // Saisie manuelle → le sélecteur passe sur « Montants personnalisés »
+    const syncPack = () => {
+      const current = num('c-li') + '|' + num('c-lm');
+      const match = Array.from(pack.options).find((o) => o.value === current);
+      pack.value = match ? match.value : 'perso';
+    };
+
+    function update() {
+      // Prix $ par million de tokens : "entrée|sortie"
+      const [pIn, pOut] = $('c-mod').value.split('|').map(parseFloat);
+      // Coût API d'une conversation en $ (hypothèse : 80 % des tokens en entrée, 20 % en sortie)
+      const usdParConv = (num('c-tok') / 1e6) * (0.8 * pIn + 0.2 * pOut);
+      const apiUsd = usdParConv * num('c-conv');          // $ par mois
+      const apiF = apiUsd * num('c-usd');                 // FCFA par mois
+
+      const heb = parseFloat($('c-heb').value);
+      const cloudFixe = num('c-ci') + 12 * (num('c-cm') + num('c-ch'));   // hors API
+      const cloud = cloudFixe + 12 * apiF;
+      const local = num('c-li') + 12 * (num('c-lm') + heb);
+
+      $('r-cloud').textContent = fmt(cloud);
+      $('r-cloud-api').textContent =
+        'dont API : ' + fmt(apiF * 12) + ' sur 12 mois (' + apiUsd.toFixed(2).replace('.', ',') + '\u00A0$/mois)';
+      $('r-local').textContent = fmt(local);
+      $('r-local-detail').textContent =
+        (heb > 0 ? 'dont hébergement : ' + fmt(heb * 12) + ' sur 12 mois' : 'matériel sur site non inclus') +
+        ' · coût fixe, indépendant du volume';
+
+      // Seuil de rentabilité : volume mensuel à partir duquel l'IA locale
+      // coûte moins cher (les frais d'API cloud augmentent avec le volume)
+      const apiAnParConv = 12 * usdParConv * num('c-usd');   // FCFA sur 12 mois pour 1 conversation/mois
+      let seuil = '';
+      if (apiAnParConv > 0) {
+        const n = (local - cloudFixe) / apiAnParConv;
+        if (n <= 0) {
+          seuil = "Point d'équilibre : avec ces montants, l'IA locale est moins chère quel que soit votre volume.";
+        } else {
+          const pas = n < 1000 ? 10 : 100;
+          const arrondi = (Math.ceil(n / pas) * pas).toLocaleString('fr-FR').replace(/[\u202F\u00A0 ]/g, '\u00A0');
+          seuil = "Point d'équilibre : environ " + arrondi +
+            " conversations par mois. Au-delà, l'IA locale coûte moins cher.";
+        }
+      }
+      $('r-seuil').textContent = seuil;
+
+      const diff = cloud - local;
+      let verdict;
+      if (Math.abs(diff) < 0.05 * Math.max(cloud, local)) {
+        verdict = 'Les deux options se valent sur 12 mois : la différence se joue sur la conformité et la prévisibilité.';
+      } else if (diff > 0) {
+        verdict = "Avec ces hypothèses, l'IA locale revient " + fmt(diff) + ' moins cher sur 12 mois.';
+      } else {
+        verdict = "Avec ces hypothèses, l'offre cloud revient " + fmt(-diff) +
+          " moins cher sur 12 mois. L'IA locale se justifie alors par la conformité ou par la croissance du volume.";
+      }
+      $('r-verdict').textContent = verdict;
+    }
+
+    // Délégation : un seul écouteur pour tous les champs du calculateur
+    const onEdit = (e) => {
+      if (e.target === pack) applyPack();
+      else if (e.target.id === 'c-li' || e.target.id === 'c-lm') syncPack();
+      update();
+    };
+    calc.addEventListener('input', onEdit);
+    calc.addEventListener('change', onEdit);
+
+    applyPack();
+    update();
+  }
+
+
+  /* -------------------------------------------------------------------
+     9. Initialisation au DOMContentLoaded
      ------------------------------------------------------------------- */
   function init() {
     initBurger();
@@ -282,6 +390,7 @@
     initHeaderShrink();
     initActiveNavLink();
     initWhyAnimations();
+    initCostCalculator();
     console.info('%cAfriAutomate — site chargé ✓', 'color:#FF8A00;font-weight:bold');
   }
 

@@ -1938,6 +1938,7 @@ p { margin: 0 0 var(--sp-3); }
 .faq__answer[hidden] { display: none; }
 .faq__answer p { margin: 0; }
 .faq__answer strong { color: var(--c-text-dark); }
+.faq__answer a { text-decoration: underline; text-underline-offset: 2px; }
 
 .faq__contact {
   position: relative;
@@ -2274,4 +2275,299 @@ p { margin: 0 0 var(--sp-3); }
   }
   .reveal { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
+}
+
+
+/* =====================================================================
+   17. GUIDE DES PRIX — page « Combien coûte un agent IA local au Bénin ? »
+   Fichier : combien-coute-agent-ia-local-benin.html
+   Styles isolés sous .aa-cout (issus du livrable fourni), harmonisés avec
+   la charte : titres sombres #0D1117, liens et CTA bleu #2563EB, un seul
+   accent orange #FF8A00 (offres « sur devis » et encadré APDP).
+   ===================================================================== */
+.aa-cout {
+  --aa-titre:  var(--c-text-dark);
+  --aa-encre:  var(--c-text-dark);
+  --aa-doux:   var(--c-text-dark-muted);
+  --aa-ligne:  #DDE3EA;
+  --aa-fond:   var(--c-bg-light-2);
+  --aa-fond-2: var(--c-bg-light);
+  display: block;
+  background: var(--c-bg-light);
+  color: var(--aa-encre);
+}
+.aa-cout .aa-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--sp-5) 1.25rem var(--sp-6);
+}
+
+/* Typographie */
+.aa-cout h1 {
+  font-size: clamp(1.75rem, 4.6vw, 2.625rem);
+  line-height: 1.15;
+  margin: 0.2em 0 0.4em;
+  color: var(--aa-titre);
+}
+.aa-cout h2 {
+  font-size: clamp(1.375rem, 3vw, 1.75rem);
+  line-height: 1.25;
+  margin: 2.2em 0 0.6em;
+  color: var(--aa-titre);
+}
+.aa-cout h3 {
+  font-size: 1.1875rem;
+  margin: 1.4em 0 0.4em;
+  color: var(--aa-titre);
+}
+/* Ancres : compense le header sticky lors d'un accès direct par #id */
+.aa-cout [id] { scroll-margin-top: calc(var(--header-h) + 16px); }
+.aa-cout p { margin: 0 0 1em; }
+.aa-cout a:not(.btn) {
+  color: var(--c-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.aa-cout a:not(.btn):hover { color: var(--c-primary-hover); }
+
+/* Listes (le reset global retire les puces) */
+.aa-cout .aa-liste,
+.aa-cout .aa-offre ul,
+.aa-cout .aa-sources {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.aa-cout .aa-liste li { margin-bottom: 0.6em; }
+
+/* Fil d'Ariane */
+.aa-cout .aa-fil { font-size: var(--fs-small); color: var(--aa-doux); margin-bottom: 0.75rem; }
+.aa-cout .aa-meta { color: var(--aa-doux); font-size: var(--fs-small); margin-bottom: 0.5em; }
+.aa-cout .aa-chapo { font-size: 1.125rem; color: var(--aa-doux); }
+.aa-cout .aa-note { font-size: var(--fs-small); color: var(--aa-doux); }
+
+/* Encadré « réponse courte » */
+.aa-cout .aa-reponse {
+  background: var(--aa-fond);
+  border-left: 4px solid var(--c-primary);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  padding: 1.125rem 1.375rem;
+  margin: 1.5rem 0;
+}
+.aa-cout .aa-reponse p { margin: 0; }
+
+/* Sommaire */
+.aa-cout .aa-sommaire {
+  background: var(--aa-fond);
+  border: 1px solid var(--aa-ligne);
+  border-radius: var(--radius-sm);
+  padding: 0.875rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.9375rem;
+}
+.aa-cout .aa-sommaire ol { margin: 0.375rem 0 0; padding-left: 1.25rem; }
+
+/* Tableaux (défilement horizontal dans le cadre, jamais sur la page) */
+.aa-cout .aa-table {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+  background: var(--aa-fond);
+  border: 1px solid var(--aa-ligne);
+  border-radius: var(--radius-sm);
+}
+.aa-cout table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 0.9375rem; }
+.aa-cout th,
+.aa-cout td {
+  padding: 0.7rem 0.875rem;
+  border-bottom: 1px solid var(--aa-ligne);
+  text-align: left;
+  vertical-align: top;
+}
+.aa-cout thead th { background: var(--aa-fond-2); font-weight: 600; }
+.aa-cout tbody tr:last-child th,
+.aa-cout tbody tr:last-child td { border-bottom: none; }
+.aa-cout .ok  { color: #177245; font-weight: 600; }
+.aa-cout .ko  { color: #A23B2A; font-weight: 600; }
+.aa-cout .moy { color: #8A6212; font-weight: 600; }
+
+/* Grille des packs */
+.aa-cout .aa-grille tbody th { font-family: var(--ff-title); font-weight: 700; }
+.aa-cout .aa-grille small {
+  display: block;
+  font-family: var(--ff-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--aa-doux);
+}
+
+/* Encadré d'alerte (contexte APDP) */
+.aa-cout .aa-alerte {
+  background: #FFF6EB;
+  border: 1px solid #F5D9B0;
+  border-left: 4px solid var(--c-accent);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+.aa-cout .aa-alerte p { margin: 0; }
+
+/* Les 5 postes de coût */
+.aa-cout .aa-postes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.875rem;
+  margin: 1rem 0;
+}
+.aa-cout .aa-carte {
+  background: var(--aa-fond);
+  border: 1px solid var(--aa-ligne);
+  border-radius: var(--radius);
+  padding: 1.125rem;
+}
+.aa-cout .aa-carte h3 { margin-top: 0; font-size: 1.0625rem; }
+.aa-cout .aa-carte p { font-size: 0.9375rem; margin: 0; }
+
+/* Offres */
+.aa-cout .aa-offres {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.125rem 0;
+}
+.aa-cout .aa-offre {
+  display: flex;
+  flex-direction: column;
+  background: var(--aa-fond);
+  border: 1px solid var(--aa-ligne);
+  border-top: 4px solid var(--c-text-dark);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+.aa-cout .aa-offre.accent { border-top-color: var(--c-accent); }
+.aa-cout .aa-offre h3 { margin: 0 0 0.25rem; font-size: 1.125rem; }
+.aa-cout .aa-cible {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--aa-doux);
+  margin-bottom: 0.625rem;
+}
+.aa-cout .aa-offre ul { margin: 0.5rem 0 0.75rem; font-size: 0.9375rem; }
+.aa-cout .aa-prix {
+  margin: auto 0 0;
+  font-family: var(--ff-title);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--aa-titre);
+}
+.aa-cout .aa-prix small {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: var(--ff-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--aa-doux);
+}
+
+/* Calculateur */
+.aa-cout .aa-calc {
+  background: var(--aa-fond);
+  border: 1px solid var(--aa-ligne);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1.25rem;
+  margin: 1.125rem 0;
+}
+.aa-cout .aa-calc-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.aa-cout .aa-commun { margin-bottom: 1rem; }
+.aa-cout .aa-calc fieldset {
+  min-width: 0;               /* évite qu'un <select> long élargisse la page */
+  margin: 0;
+  padding: 0.875rem 1rem 1rem;
+  background: var(--aa-fond-2);
+  border: 1px solid var(--aa-ligne);
+  border-radius: var(--radius-sm);
+}
+.aa-cout .aa-calc legend { padding: 0 0.375rem; font-family: var(--ff-title); font-weight: 700; }
+.aa-cout .aa-calc label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  font-size: var(--fs-small);
+  color: var(--aa-doux);
+}
+.aa-cout .aa-calc input,
+.aa-cout .aa-calc select {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.6rem 0.7rem;
+  font-family: inherit;
+  font-size: 1rem;            /* 16px : pas de zoom automatique sur iOS */
+  color: var(--aa-encre);
+  background: var(--aa-fond);
+  border: 1px solid #C5CFDA;
+  border-radius: var(--radius-sm);
+}
+.aa-cout .aa-aide { margin: 0.75rem 0 0; font-size: 0.8125rem; color: var(--aa-doux); }
+.aa-cout .aa-fixe {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0.875rem 0 0;
+  font-size: var(--fs-small);
+  color: var(--aa-doux);
+}
+.aa-cout .aa-fixe strong { color: var(--aa-titre); }
+
+/* Résultats du calculateur (cartes sombres = dominante de la charte) */
+.aa-cout .aa-res { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.125rem; }
+.aa-cout .aa-res > div {
+  background: var(--c-bg-dark);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+}
+.aa-cout .aa-res .v {
+  display: block;
+  margin: 0.25rem 0;
+  font-family: var(--ff-title);
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #fff;
+}
+.aa-cout .aa-res .d { display: block; font-size: 0.8125rem; color: var(--c-text-muted); }
+.aa-cout .aa-verdict { margin: 1rem 0 0.35rem; font-weight: 600; color: var(--aa-titre); }
+.aa-cout .aa-seuil { margin: 0 0 1rem; font-size: 0.9375rem; color: var(--aa-doux); }
+
+/* FAQ (details/summary natif) */
+.aa-cout details { border-bottom: 1px solid var(--aa-ligne); padding: 0.75rem 0; }
+.aa-cout summary { cursor: pointer; font-weight: 600; color: var(--aa-titre); }
+.aa-cout details p { margin: 0.6em 0 0; }
+
+/* Bloc CTA final */
+.aa-cout .aa-cta {
+  background: var(--c-bg-dark);
+  color: var(--c-text);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.25rem;
+  margin: 2.5rem 0 0.6rem;
+  text-align: center;
+}
+.aa-cout .aa-cta h2 { color: #fff; margin: 0 0 0.4em; }
+.aa-cout .aa-cta p { color: #C9D2DE; }
+.aa-cout .aa-cta .btn { margin: 0.375rem; white-space: normal; }
+
+/* Sources */
+.aa-cout .aa-sources-titre { font-size: 1.125rem; }
+.aa-cout .aa-sources { font-size: 0.8125rem; color: var(--aa-doux); }
+.aa-cout .aa-sources li { margin-bottom: 0.25rem; }
+
+/* ≥ 768px — colonnes */
+@media (min-width: 768px) {
+  .aa-cout .aa-chapo { font-size: 1.1875rem; }
+  .aa-cout .aa-offres,
+  .aa-cout .aa-calc-grid,
+  .aa-cout .aa-res { grid-template-columns: 1fr 1fr; }
+  .aa-cout .aa-commun .aa-calc-grid { grid-template-columns: repeat(3, 1fr); }
+  .aa-cout .aa-calc { padding: 1.375rem; }
+  .aa-cout .aa-cta { padding: 1.75rem; }
 }
