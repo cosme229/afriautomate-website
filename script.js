@@ -9,11 +9,198 @@
      - initHeaderShrink()   : header opaque au scroll
      - initActiveNavLink()  : lien de nav actif selon section visible
      - initCostCalculator() : calculateur de coût sur 12 mois (guide des prix)
+     - initAnalytics()      : bandeau de consentement + Google Analytics 4
      - initCurrentYear()    : injecte l'année courante dans le footer si besoin
    ===================================================================== */
 
 (function () {
   'use strict';
+
+  /* -------------------------------------------------------------------
+     0. Mesure d'audience — Google Analytics 4, soumise au consentement
+     - Rien n'est chargé ni envoyé à Google tant que le visiteur n'a pas
+       cliqué sur « Accepter » (bandeau injecté par initAnalytics()).
+     - Le choix est mémorisé 6 mois (localStorage) et reste modifiable
+       via le bouton « Gérer les cookies » du pied de page.
+     - Actif uniquement sur le domaine de production : en local et sur
+       les aperçus Netlify, les événements s'affichent dans la console.
+     ------------------------------------------------------------------- */
+  const GA_ID = 'G-YE57TQV7SE';
+  const GA_HOSTS = ['afriautomate.com', 'www.afriautomate.com'];
+  const CONSENT_KEY = 'aa-consentement';
+  const CONSENT_DAYS = 183;                          // environ 6 mois
+  const isProd = GA_HOSTS.indexOf(window.location.hostname) !== -1;
+  let analyticsOn = false;                           // vrai après « Accepter »
+  let gaLoaded = false;                              // script gtag.js déjà injecté
+
+  // Envoie un événement à Google Analytics (ignoré sans consentement)
+  function track(name, params) {
+    if (!analyticsOn) return;
+    if (!isProd) {
+      console.info('[analytics] ' + name, params || {});
+      return;
+    }
+    if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+  }
+
+  // Texte court et propre d'un élément (libellé de bouton, question de FAQ…)
+  function labelOf(el, max) {
+    return el.textContent.replace(/\s+/g, ' ').trim().slice(0, max);
+  }
+
+  // Zone de la page où se trouve un élément (pour savoir quel bouton convertit)
+  function zoneOf(el) {
+    if (el.closest('.header')) return 'header';
+    if (el.closest('.footer')) return 'footer';
+    if (el.closest('.aa-cta')) return 'cta_guide';
+    const section = el.closest('section[id]');
+    if (section) return section.id;
+    return el.closest('.aa-cout') ? 'guide_prix' : 'page';
+  }
+
+  // Choix mémorisé : 'accepte', 'refuse' ou null (jamais demandé / expiré)
+  function readConsent() {
+    try {
+      const saved = JSON.parse(window.localStorage.getItem(CONSENT_KEY));
+      if (!saved || !saved.choix || !saved.date) return null;
+      const ageDays = (Date.now() - saved.date) / 86400000;
+      return ageDays < CONSENT_DAYS ? saved.choix : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveConsent(choix) {
+    try {
+      window.localStorage.setItem(CONSENT_KEY, JSON.stringify({ choix: choix, date: Date.now() }));
+    } catch (e) {
+      /* stockage indisponible (navigation privée) : le bandeau réapparaîtra */
+    }
+  }
+
+  // Démarre Google Analytics — appelé uniquement après consentement
+  function startAnalytics() {
+    if (analyticsOn) return;
+    analyticsOn = true;
+    if (!isProd) {
+      console.info('[analytics] consentement accordé — Google Analytics inactif hors production');
+      return;
+    }
+    window['ga-disable-' + GA_ID] = false;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+
+    if (gaLoaded) {
+      // Le visiteur avait retiré son accord puis l'a redonné sans recharger la page
+      window.gtag('consent', 'update', { analytics_storage: 'granted' });
+      return;
+    }
+    gaLoaded = true;
+
+    // Mesure d'audience uniquement : aucun signal publicitaire
+    window.gtag('consent', 'default', {
+      analytics_storage: 'granted',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
+
+    const tag = document.createElement('script');
+    tag.async = true;
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(tag);
+  }
+
+  // Arrête la mesure et efface les cookies Google Analytics (retrait du consentement)
+  function stopAnalytics() {
+    analyticsOn = false;
+    if (!isProd) return;
+    window['ga-disable-' + GA_ID] = true;
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', { analytics_storage: 'denied' });
+    }
+    const domain = window.location.hostname.replace(/^www\./, '');
+    document.cookie.split(';').forEach((cookie) => {
+      const name = cookie.split('=')[0].trim();
+      if (name.indexOf('_ga') !== 0) return;
+      document.cookie = name + '=; Max-Age=0; path=/; domain=.' + domain;
+      document.cookie = name + '=; Max-Age=0; path=/';
+    });
+  }
+
+  function initAnalytics() {
+    let banner = null;
+
+    const closeBanner = () => {
+      if (!banner) return;
+      banner.remove();
+      banner = null;
+    };
+
+    const choose = (choix) => {
+      saveConsent(choix);
+      closeBanner();
+      if (choix === 'accepte') startAnalytics();
+      else stopAnalytics();
+    };
+
+    // Bandeau : « Refuser » et « Accepter » au même niveau, un clic chacun
+    const openBanner = () => {
+      if (banner) return;
+      banner = document.createElement('div');
+      banner.className = 'cookies';
+      banner.setAttribute('role', 'region');
+      banner.setAttribute('aria-label', "Cookies et mesure d'audience");
+      banner.innerHTML =
+        '<div class="cookies__texte">' +
+          '<p class="cookies__titre">Mesure d\'audience : votre accord d\'abord</p>' +
+          '<p>Nous aimerions utiliser Google Analytics pour améliorer le site. Cela dépose des cookies ' +
+          'et envoie des données de navigation à Google, hors CEDEAO. Rien n\'est activé sans votre ' +
+          'accord. Vous pourrez changer d\'avis via « Gérer les cookies » en bas de page.</p>' +
+        '</div>' +
+        '<div class="cookies__actions">' +
+          '<button type="button" class="btn btn--ghost cookies__btn" data-cookies="refuse">Refuser</button>' +
+          '<button type="button" class="btn btn--primary cookies__btn" data-cookies="accepte">Accepter</button>' +
+        '</div>';
+      document.body.appendChild(banner);
+      banner.querySelectorAll('[data-cookies]').forEach((btn) => {
+        btn.addEventListener('click', () => choose(btn.getAttribute('data-cookies')));
+      });
+    };
+
+    // Au chargement : on applique le choix mémorisé, sinon on demande
+    const choix = readConsent();
+    if (choix === 'accepte') startAnalytics();
+    else if (choix === null) openBanner();
+
+    // Bouton « Gérer les cookies » (pied de page) : rouvre le bandeau
+    document.querySelectorAll('[data-cookies-open]').forEach((btn) => {
+      btn.addEventListener('click', openBanner);
+    });
+
+    // Clics sur les canaux de contact : Calendly, WhatsApp, email
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest ? e.target.closest('a[href]') : null;
+      if (!link) return;
+      const href = link.getAttribute('href');
+      let name = '';
+      if (href.indexOf('calendly.com') !== -1) name = 'calendly_click';
+      else if (href.indexOf('wa.me') !== -1) name = 'whatsapp_click';
+      else if (href.indexOf('mailto:') === 0) name = 'email_click';
+      if (!name) return;
+      track(name, { page_section: zoneOf(link), link_text: labelOf(link, 80) });
+    });
+
+    // Questions ouvertes dans la FAQ du guide des prix (<details>)
+    document.querySelectorAll('.aa-cout details').forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (item.open) track('faq_open', { question: labelOf(item.querySelector('summary'), 100) });
+      });
+    });
+  }
+
 
   /* -------------------------------------------------------------------
      1. Menu mobile (burger) — toggle aria-expanded
@@ -123,6 +310,8 @@
         if (!panel) return;
         btn.setAttribute('aria-expanded', String(!expanded));
         panel.hidden = expanded;
+        // Mesure d'audience : question ouverte (pas la fermeture)
+        if (!expanded) track('faq_open', { question: labelOf(btn, 100) });
       });
     });
   }
@@ -366,10 +555,16 @@
     }
 
     // Délégation : un seul écouteur pour tous les champs du calculateur
+    let calcTracked = false;
     const onEdit = (e) => {
       if (e.target === pack) applyPack();
       else if (e.target.id === 'c-li' || e.target.id === 'c-lm') syncPack();
       update();
+      // Mesure d'audience : première utilisation réelle du calculateur (une fois par visite)
+      if (e.isTrusted && analyticsOn && !calcTracked) {
+        calcTracked = true;
+        track('calculator_use', { pack: labelOf(pack.options[pack.selectedIndex], 60) });
+      }
     };
     calc.addEventListener('input', onEdit);
     calc.addEventListener('change', onEdit);
@@ -383,6 +578,7 @@
      9. Initialisation au DOMContentLoaded
      ------------------------------------------------------------------- */
   function init() {
+    initAnalytics();
     initBurger();
     initFAQ();
     initSmoothScroll();
