@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ======================================================
+       Article secteur — Commerce & distribution
+       URL publique : /commerce/
+       Mise en page : classes .aa-cout (style.css, sections 17 et 19)
+       Mesure d'audience et bandeau de consentement : script.js
+       ====================================================== -->
+  <title>Automatiser un commerce : WhatsApp, relances, stock | AfriAutomate</title>
+  <meta name="description" content="Agent WhatsApp 24/7, relances d'impayés, alertes de stock, fidélisation : ce qu'un commerce peut automatiser, pourquoi, et comment le faire." />
+  <meta name="theme-color" content="#0D1117" />
+  <link rel="canonical" href="https://afriautomate.com/commerce/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="AfriAutomate" />
+  <meta property="og:title" content="Comment automatiser un commerce : ventes WhatsApp, relances, stock et fidélité" />
+  <meta property="og:description" content="Agent WhatsApp 24/7, relances d'impayés, alertes de stock, fidélisation : ce qu'un commerce peut automatiser, pourquoi, et comment le faire." />
+  <meta property="og:url" content="https://afriautomate.com/commerce/" />
+  <meta property="og:image" content="https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Comment automatiser un commerce : ventes WhatsApp, relances, stock et fidélité" />
+  <meta name="twitter:description" content="Agent WhatsApp 24/7, relances d'impayés, alertes de stock, fidélisation : ce qu'un commerce peut automatiser, pourquoi, et comment le faire." />
+  <meta name="twitter:image" content="https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg" />
+
+  <!-- Favicon : version 96×96 dédiée -->
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/logo/favicon-afriautomate-96.png" />
+
+  <!-- Données structurées : Article, fil d'Ariane, FAQ (reprend la FAQ visible) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Comment automatiser un commerce : ventes WhatsApp, relances, stock et fidélité",
+    "description": "Agent WhatsApp 24/7, relances d'impayés, alertes de stock, fidélisation : ce qu'un commerce peut automatiser, pourquoi, et comment le faire.",
+    "image": "https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg",
+    "datePublished": "2026-10-05",
+    "dateModified": "2026-10-05",
+    "inLanguage": "fr",
+    "author": {
+      "@type": "Organization",
+      "name": "AfriAutomate",
+      "url": "https://afriautomate.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AfriAutomate",
+      "url": "https://afriautomate.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://afriautomate.com/branding/lg_AfriAutomate.png"
+      }
+    },
+    "mainEntityOfPage": "https://afriautomate.com/commerce/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://afriautomate.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Comment automatiser un commerce : ventes WhatsApp, relances, stock et fidélité",
+        "item": "https://afriautomate.com/commerce/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "L'IA ne va-t-elle pas dire n'importe quoi à mes clients ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. L'agent est cadré par des règles précises définies avec vous : ce qu'il peut dire, ce qu'il doit transférer à un humain, ce qu'il ne doit jamais aborder. Chaque scénario est testé avant la mise en production."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Puis-je garder la main sur les cas complexes ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. L'agent traite les demandes courantes et vous transmet les autres (réclamation, négociation, situation inhabituelle) avec un résumé de la conversation. Vous décidez quand reprendre la main."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mon stock est sur un cahier : est-ce un problème ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non, on commence par là. Un tableur comme Google Sheets, Airtable ou Notion suffit pour démarrer. Nous structurons le fichier avec vous, puis nous branchons les alertes dessus."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Les messages WhatsApp sont-ils payants ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les réponses à un client qui vous écrit sont gratuites. Les messages envoyés à votre initiative, comme une relance ou une offre, passent par des modèles validés par Meta, et certains sont payants. Nous chiffrons ce coût avec vous avant de lancer quoi que ce soit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps avant que ce soit opérationnel ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Après l'audit, qui dure 1 à 2 semaines, la construction et le déploiement prennent 5 à 7 jours. Vos premières automatisations tournent en production en moins d'un mois."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Polices Google Fonts (Montserrat + Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       HEADER STICKY (identique à l'accueil, liens absolus)
+       ====================================================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="AfriAutomate — Accueil">
+        <img src="/assets/logo/logo-afriautomate-160.png" alt="Logo AfriAutomate" width="38" height="38" />
+      </a>
+
+      <nav class="header__nav" id="nav" aria-label="Navigation principale">
+        <ul class="header__list">
+          <li><a href="/#services" class="header__link">Services</a></li>
+          <li><a href="/#agents" class="header__link">Agents IA</a></li>
+          <li><a href="/#process" class="header__link">Méthode</a></li>
+          <li><a href="/#about" class="header__link">À propos</a></li>
+          <li><a href="/#faq" class="header__link">FAQ</a></li>
+        </ul>
+        <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary header__cta">
+          Prendre rendez-vous
+        </a>
+      </nav>
+
+      <button type="button" class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======================================================
+       ARTICLE — problème › solution › pourquoi › bénéfices ›
+       comment automatiser › offre (« Réserver une démo »)
+       Chiffres : uniquement les projections documentées dans content/
+       ====================================================== -->
+  <main class="aa-cout">
+  <article class="aa-wrap">
+
+    <nav class="aa-fil" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> <span aria-hidden="true">›</span> <span aria-current="page">Guide Commerce &amp; distribution</span>
+    </nav>
+    <p class="aa-meta">Guide secteur · Mis à jour le 5 octobre 2026 · Lecture : 7 min</p>
+    <h1>Comment automatiser un commerce : ventes WhatsApp, relances, stock et fidélité</h1>
+    <p class="aa-chapo">Réponses aux clients sur WhatsApp, relances d'impayés, alertes de stock, fidélisation : ce qu'il faut automatiser, pourquoi, et comment le mettre en place étape par étape.</p>
+
+    <div class="aa-reponse">
+      <p><strong>En bref.</strong> Une boutique, un e-commerce ou un distributeur peut automatiser quatre choses : les réponses aux clients sur WhatsApp, les relances d'impayés, la surveillance du stock et la fidélisation. Vous gardez la main sur les cas sensibles. Notre estimation : une réponse immédiate, là où un client attend en moyenne 3&nbsp;heures sans automatisation. <a href="#offre">Voir notre offre</a>.</p>
+    </div>
+
+    <nav class="aa-sommaire" aria-label="Sommaire">
+      <strong>Dans ce guide</strong>
+      <ol>
+        <li><a href="#probleme">Le problème</a></li>
+        <li><a href="#solution">La solution</a></li>
+        <li><a href="#pourquoi">Pourquoi automatiser</a></li>
+        <li><a href="#benefices">Les bénéfices</a></li>
+        <li><a href="#comment">Comment automatiser, étape par étape</a></li>
+        <li><a href="#offre">Notre offre</a></li>
+        <li><a href="#faq">Questions fréquentes</a></li>
+      </ol>
+    </nav>
+
+    <!-- ========== 1. Le problème ========== -->
+    <h2 id="probleme">1. Le problème</h2>
+    <p>En Afrique francophone, un commerce qui marche vit sur WhatsApp. Mais répondre à toute heure, relancer, compter le stock et soigner ses meilleurs clients, c'est un métier à plein temps, et vous en avez déjà un. Quatre difficultés reviennent partout&nbsp;:</p>
+    <div class="aa-postes">
+      <div class="aa-carte"><h3>Des ventes perdues hors horaires</h3><p>Vos clients écrivent le soir, le week-end, pendant que vous êtes en boutique. Un message resté sans réponse, c'est souvent une vente qui part chez un concurrent.</p></div>
+      <div class="aa-carte"><h3>Des impayés qui dorment</h3><p>Relancer soi-même est gênant et prend du temps. Alors les factures traînent, et votre trésorerie avec.</p></div>
+      <div class="aa-carte"><h3>Un stock piloté à vue</h3><p>Vous commandez par habitude. Vous découvrez la rupture quand le client est devant vous, ou vous payez pour du stock qui ne tourne pas.</p></div>
+      <div class="aa-carte"><h3>Des clients fidèles oubliés</h3><p>Un client qui revient coûte moins cher à convaincre qu'un nouveau. Mais sans système, personne ne pense à le relancer.</p></div>
+    </div>
+
+    <!-- ========== 2. La solution ========== -->
+    <h2 id="solution">2. La solution</h2>
+    <p>La solution : confier à des agents IA et à des workflows les tâches qui se répètent, et garder pour vous la négociation, le conseil et les cas délicats. Quatre automatisations couvrent l'essentiel&nbsp;:</p>
+    <div class="aa-table" role="region" aria-label="Avant et après l'automatisation" tabindex="0">
+      <table>
+        <thead><tr><th scope="col">Tâche</th><th scope="col">Aujourd'hui</th><th scope="col">Avec l'automatisation</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Messages clients</th><td class="ko">Réponse quand vous avez le temps</td><td class="ok">Un agent WhatsApp répond tout de suite, 24&nbsp;h/24, et vous passe les cas sensibles</td></tr>
+          <tr><th scope="row">Impayés</th><td class="ko">Relances faites de mémoire, souvent trop tard</td><td class="ok">Rappels automatiques par WhatsApp ou SMS, courtois et réguliers</td></tr>
+          <tr><th scope="row">Stock</th><td class="ko">Rupture constatée au comptoir</td><td class="ok">Alerte dès qu'un produit passe sous son seuil, avec une suggestion de commande</td></tr>
+          <tr><th scope="row">Fidélité</th><td class="ko">Aucun suivi des clients réguliers</td><td class="ok">Messages déclenchés selon l'historique d'achats</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Chaque semaine, un rapport des ventes par produit vous montre ce qui part vite et ce qui dort.</p>
+
+    <!-- ========== 3. Pourquoi automatiser ========== -->
+    <h2 id="pourquoi">3. Pourquoi automatiser</h2>
+    <p>Vous pouvez continuer à tout faire à la main. Quatre raisons de ne pas le faire&nbsp;:</p>
+    <ul class="aa-liste">
+      <li><strong>Vos clients n'attendent pas.</strong> Sur WhatsApp, celui qui répond le premier gagne souvent la vente.</li>
+      <li><strong>Votre temps est limité.</strong> Vous avez lancé ce commerce pour le diriger, pas pour passer vos soirées à répondre aux mêmes questions.</li>
+      <li><strong>La régularité paie.</strong> Une relance envoyée au bon moment, à chaque fois, récupère plus d'argent qu'un rappel fait quand on y pense.</li>
+      <li><strong>L'information existe déjà.</strong> Vos ventes et votre stock la contiennent ; il manque seulement un système pour la lire.</li>
+    </ul>
+
+    <!-- ========== 4. Les bénéfices ========== -->
+    <h2 id="benefices">4. Les bénéfices</h2>
+    <div class="aa-postes">
+      <div class="aa-carte"><h3>Zéro vente perdue hors horaires</h3><p>L'agent répond la nuit et le week-end. Notre estimation : une réponse immédiate, contre 3&nbsp;heures d'attente en moyenne sans automatisation.</p></div>
+      <div class="aa-carte"><h3>Une trésorerie plus saine</h3><p>Les relances partent seules, au bon moment. Notre estimation pour les relances automatiques : un taux de réponse multiplié par 2 à 3.</p></div>
+      <div class="aa-carte"><h3>Moins de ruptures</h3><p>Vous êtes prévenu avant que le produit manque, pas après.</p></div>
+      <div class="aa-carte"><h3>Des clients qui reviennent</h3><p>Remerciements, offres et relances partent au bon moment, sans que vous ayez à y penser.</p></div>
+      <div class="aa-carte"><h3>Vos soirées retrouvées</h3><p>Les questions répétitives ne passent plus par vous.</p></div>
+    </div>
+    <p class="aa-note">Transparence : AfriAutomate est en phase de lancement. Les chiffres cités sont nos projections, pas encore des résultats clients. Nous les mesurons chez vous dès le déploiement.</p>
+
+    <!-- ========== 5. Comment automatiser ========== -->
+    <h2 id="comment">5. Comment automatiser, étape par étape</h2>
+    <p>Pour chacune des quatre automatisations, voici ce qui la déclenche, ce que fait le système et ce qui reste entre vos mains. Les outils cités sont ceux que nous utilisons : WhatsApp Business, n8n pour relier les étapes, un modèle d'IA, et un tableur ou un CRM léger.</p>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 1</span>
+      <h3 id="flux-1">Agent WhatsApp de vente et de support, 24 h/24</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> un client vous écrit sur WhatsApp, à n'importe quelle heure.</p>
+      <ol class="aa-flux__etapes">
+        <li>Le message arrive dans le workflow par WhatsApp Business API.</li>
+        <li>L'agent IA comprend la demande (prix, disponibilité, horaires, localisation, suivi de commande) et répond à partir de vos informations : catalogue, tarifs, conditions.</li>
+        <li>Il qualifie le besoin et enregistre le contact (nom, numéro, demande) dans votre tableur ou votre CRM.</li>
+        <li>Si la demande sort du cadre (réclamation, négociation, cas inhabituel), il vous passe la main avec un résumé de la conversation.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>Les règles de réponse, la négociation et les réclamations.</dd></div>
+        <div><dt>Outils</dt><dd>WhatsApp Business API, agent conversationnel IA, n8n, Google Sheets, HubSpot, Airtable ou Notion.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 2</span>
+      <h3 id="flux-2">Relances automatiques des impayés</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> une facture dépasse son échéance dans votre tableau de suivi.</p>
+      <ol class="aa-flux__etapes">
+        <li>Chaque jour, le workflow repère les factures arrivées à échéance.</li>
+        <li>Il envoie un premier rappel courtois par WhatsApp ou SMS, personnalisé avec le nom, le montant et la référence.</li>
+        <li>Sans réponse, la séquence continue : 3 à 5 messages espacés, sur un ton de plus en plus ferme.</li>
+        <li>Dès que le paiement est enregistré, la séquence s'arrête.</li>
+        <li>À la fin de la séquence, le dossier vous est remonté pour que vous décidiez de la suite.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>Le ton des messages, les délais entre deux relances et les cas à traiter en personne.</dd></div>
+        <div><dt>Outils</dt><dd>Tableau de suivi des factures, n8n, WhatsApp Business API ou SMS.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 3</span>
+      <h3 id="flux-3">Alertes de stock et rapport des ventes</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> une vente est enregistrée dans votre fichier de stock.</p>
+      <ol class="aa-flux__etapes">
+        <li>Les ventes sont saisies dans un fichier de stock : Google Sheets, Airtable ou Notion suffisent pour démarrer.</li>
+        <li>Le workflow recalcule le stock et le compare au seuil que vous avez fixé pour chaque produit.</li>
+        <li>Sous le seuil, vous recevez une alerte WhatsApp avec une suggestion de commande fournisseur.</li>
+        <li>Chaque semaine, un rapport des ventes par produit vous est envoyé.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>Les seuils par produit et la décision de commander.</dd></div>
+        <div><dt>Outils</dt><dd>Fichier de stock, n8n, WhatsApp Business API.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 4</span>
+      <h3 id="flux-4">Fidélisation déclenchée automatiquement</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> un achat est enregistré, ou un client régulier n'a plus acheté depuis longtemps.</p>
+      <ol class="aa-flux__etapes">
+        <li>L'historique d'achats de chaque client est centralisé dans votre tableur ou votre CRM.</li>
+        <li>Le système repère les situations que vous avez définies : nouveau client, client régulier, client qui ne revient plus.</li>
+        <li>Il déclenche le message prévu : remerciement, offre de fidélité ou relance.</li>
+        <li>Les réponses reviennent sur WhatsApp, où l'agent ou vous-même prenez le relais.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>Les règles de fidélité et le contenu des offres.</dd></div>
+        <div><dt>Outils</dt><dd>CRM ou tableur, n8n, WhatsApp Business API.</dd></div>
+      </dl>
+    </div>
+
+    <p class="aa-note">Bon à savoir : les réponses à un client qui vous écrit sont gratuites sur WhatsApp. Les messages envoyés à votre initiative (relance, offre) passent par des modèles validés par Meta, dont certains sont payants. Le détail est dans notre <a href="/combien-coute-agent-ia-local-benin#postes">guide des prix</a>.</p>
+
+    <h3>La mise en place, en 3 phases</h3>
+    <div class="aa-postes">
+      <div class="aa-carte"><h4>① Audit IA &amp; diagnostic</h4><p><strong>1 à 2 semaines.</strong> Nous interrogeons votre équipe, cartographions votre cycle de vente et repérons les tâches qui vous coûtent le plus de temps et d'argent.</p></div>
+      <div class="aa-carte"><h4>② Construction &amp; déploiement</h4><p><strong>5 à 7 jours.</strong> Nous construisons les automatisations validées, les relions à vos outils, les testons sur des cas réels et formons votre équipe.</p></div>
+      <div class="aa-carte"><h4>③ Maintenance &amp; évolution</h4><p><strong>Chaque mois ou chaque trimestre.</strong> Nous surveillons, ajustons et ajoutons de nouveaux workflows au fil de vos besoins.</p></div>
+    </div>
+
+    <!-- ========== 6. Notre offre (contenu repris de la section Agents IA de l'accueil) ========== -->
+    <h2 id="offre">6. Notre offre</h2>
+    <p>Vous n'avez pas à construire tout cela vous-même. Nous le déployons pour vous, avec un agent IA déjà pensé pour votre métier.</p>
+    <div class="aa-offre-bloc">
+      <p class="aa-offre-bloc__kicker">Agent IA · Commerce &amp; distribution</p>
+      <h3>Serge et Aïssatou, vos agents de vente et de support</h3>
+      <p>Serge qualifie vos prospects et relance ceux qui hésitent. Aïssatou répond à vos clients à toute heure, sur WhatsApp ou par email, et sait quand passer la main à un humain.</p>
+      <ul class="aa-offre-bloc__liste">
+        <li>Qualifie les demandes entrantes avec les bonnes questions au bon moment</li>
+        <li>Relance les prospects froids avec des messages personnalisés selon leur profil</li>
+        <li>Répond instantanément aux questions fréquentes 24h/24</li>
+        <li>Gère les demandes de suivi de commande ou de réservation</li>
+        <li>Escalade vers vos équipes les situations qui le nécessitent vraiment</li>
+        <li>Met à jour votre CRM à chaque interaction, sans saisie manuelle</li>
+      </ul>
+      <div class="aa-offre-bloc__actions">
+        <a class="btn btn--primary btn--lg" href="https://calendly.com/afriautomate" target="_blank" rel="noopener">Réserver une démo</a>
+        <a class="btn btn--ghost btn--lg" href="/#agents">Voir les agents sur le site</a>
+      </div>
+      <p class="aa-offre-bloc__note">30 minutes · Sans engagement · Recommandation honnête</p>
+    </div>
+
+    <!-- ========== 7. FAQ ========== -->
+    <h2 id="faq">7. Questions fréquentes</h2>
+    <details><summary>L'IA ne va-t-elle pas dire n'importe quoi à mes clients&nbsp;?</summary><p>Non. L'agent est cadré par des règles précises définies avec vous : ce qu'il peut dire, ce qu'il doit transférer à un humain, ce qu'il ne doit jamais aborder. Chaque scénario est testé avant la mise en production.</p></details>
+    <details><summary>Puis-je garder la main sur les cas complexes&nbsp;?</summary><p>Oui. L'agent traite les demandes courantes et vous transmet les autres (réclamation, négociation, situation inhabituelle) avec un résumé de la conversation. Vous décidez quand reprendre la main.</p></details>
+    <details><summary>Mon stock est sur un cahier : est-ce un problème&nbsp;?</summary><p>Non, on commence par là. Un tableur comme Google Sheets, Airtable ou Notion suffit pour démarrer. Nous structurons le fichier avec vous, puis nous branchons les alertes dessus.</p></details>
+    <details><summary>Les messages WhatsApp sont-ils payants&nbsp;?</summary><p>Les réponses à un client qui vous écrit sont gratuites. Les messages envoyés à votre initiative, comme une relance ou une offre, passent par des modèles validés par Meta, et certains sont payants. Nous chiffrons ce coût avec vous avant de lancer quoi que ce soit.</p></details>
+    <details><summary>Combien de temps avant que ce soit opérationnel&nbsp;?</summary><p>Après l'audit, qui dure 1 à 2 semaines, la construction et le déploiement prennent 5 à 7 jours. Vos premières automatisations tournent en production en moins d'un mois.</p></details>
+
+    <!-- ========== Lire aussi (maillage interne) ========== -->
+    <h2 class="aa-sources-titre">Lire aussi</h2>
+    <ul class="aa-liste">
+      <li><a href="/rh-recrutement/">Comment automatiser le recrutement dans un cabinet RH</a></li>
+      <li><a href="/cabinets/">Comment automatiser un cabinet comptable : pièces, saisie, échéances et rapports</a></li>
+      <li><a href="/sante/">Comment automatiser une clinique ou une pharmacie : rendez-vous, rappels, stock et suivi</a></li>
+      <li><a href="/combien-coute-agent-ia-local-benin">Combien coûte un agent IA local au Bénin&nbsp;?</a></li>
+    </ul>
+
+  </article>
+  </main>
+
+  <!-- ======================================================
+       FOOTER (repris de l'accueil, liens absolus)
+       Titres en h2 : la page se termine par des h2, on évite
+       un saut de niveau h2 → h4.
+       ====================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <img src="/assets/logo/logo-afriautomate-160.png" alt="Logo AfriAutomate" class="footer__logo" width="40" height="40" loading="lazy" />
+        <p class="footer__slogan">Moins d'effort. Plus de revenus.<br />Grâce à l'automatisation.</p>
+        <p class="footer__location">📍 Cotonou, Bénin · Afrique francophone</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Navigation footer">
+        <h2 class="footer__title">Navigation</h2>
+        <ul>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#agents">Agents IA</a></li>
+          <li><a href="/#temoignages">Témoignages</a></li>
+          <li><a href="/#process">Méthode</a></li>
+          <li><a href="/#about">À propos</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Guides">
+        <h2 class="footer__title">Guides</h2>
+        <ul>
+          <li><a href="/rh-recrutement/">Automatiser le recrutement</a></li>
+          <li><a href="/commerce/" aria-current="page">Automatiser un commerce</a></li>
+          <li><a href="/cabinets/">Automatiser un cabinet comptable</a></li>
+          <li><a href="/sante/">Automatiser une clinique ou une pharmacie</a></li>
+          <li><a href="/combien-coute-agent-ia-local-benin">Combien coûte un agent IA local ?</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Contact</h2>
+        <ul>
+          <li><a href="https://wa.me/2290143102911" target="_blank" rel="noopener">WhatsApp : +229 01 43 10 29 11</a></li>
+          <li><a href="mailto:afriautomate@gmail.com">afriautomate@gmail.com</a></li>
+          <li><a href="https://calendly.com/afriautomate" target="_blank" rel="noopener">Prendre rendez-vous</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Suivez-nous</h2>
+        <ul class="footer__social">
+          <li>
+            <a href="https://www.linkedin.com/company/afriautomate/" target="_blank" rel="noopener" aria-label="LinkedIn AfriAutomate">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.14 1.45-2.14 2.96v5.7h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v6.46z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 AfriAutomate — Tous droits réservés.</p>
+        <ul class="footer__legal">
+          <!-- Rouvre le bandeau de consentement (script.js › initAnalytics) -->
+          <li><button type="button" class="footer__cookies" data-cookies-open>Gérer les cookies</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>

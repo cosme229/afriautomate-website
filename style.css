@@ -2622,3 +2622,154 @@ p { margin: 0 0 var(--sp-3); }
   .cookies__actions { margin-top: 0; flex-shrink: 0; }
   .cookies__btn { flex: none; }
 }
+
+
+/* =====================================================================
+   19. ARTICLES SECTEUR — /rh-recrutement/, /commerce/, /cabinets/, /sante/
+   Ces pages réutilisent la mise en page d'article de la section 17
+   (classe .aa-cout : typographie, cartes, tableaux, FAQ) et y ajoutent
+   deux blocs : le flux d'automatisation (« comment automatiser ») et le
+   bloc d'offre avec le bouton « Réserver une démo ».
+   ===================================================================== */
+
+/* Groupe insécable (ex. « J-1 », « H-2 ») */
+.aa-cout .aa-nb { white-space: nowrap; }
+
+/* Titre h4 dans une carte (phases de mise en place, sous un h3) */
+.aa-cout .aa-carte h4 { margin: 0 0 0.4rem; font-size: 1.0625rem; color: var(--aa-titre); }
+
+/* Première colonne des tableaux « avant / après » */
+.aa-cout tbody th { font-weight: 600; color: var(--aa-titre); }
+
+/* --- Flux d'automatisation : déclencheur → étapes numérotées → humain / outils --- */
+.aa-cout .aa-flux {
+  background: var(--aa-fond);
+  border: 1px solid var(--aa-ligne);
+  border-left: 4px solid var(--c-primary);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin: 1.25rem 0;
+}
+.aa-cout .aa-flux__num {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-primary);
+}
+.aa-cout .aa-flux h3 { margin: 0 0 0.75rem; }
+.aa-cout .aa-flux__declencheur {
+  background: var(--aa-fond-2);
+  border-radius: var(--radius-sm);
+  padding: 0.625rem 0.875rem;
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+}
+.aa-cout .aa-flux__etapes {
+  list-style: none;
+  counter-reset: etape;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+.aa-cout .aa-flux__etapes li {
+  counter-increment: etape;
+  position: relative;
+  min-height: 1.875rem;
+  padding: 0.15rem 0 0.875rem 2.75rem;
+  font-size: 0.9375rem;
+}
+/* Pastille numérotée */
+.aa-cout .aa-flux__etapes li::before {
+  content: counter(etape);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  background: var(--c-primary);
+  color: #fff;
+  font-family: var(--ff-title);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+/* Trait vertical qui relie une étape à la suivante */
+.aa-cout .aa-flux__etapes li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: calc(0.9375rem - 1px);
+  top: 1.875rem;
+  bottom: 0;
+  width: 2px;
+  background: var(--aa-ligne);
+}
+.aa-cout .aa-flux__meta {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--aa-ligne);
+  font-size: 0.875rem;
+}
+.aa-cout .aa-flux__meta dt { font-weight: 600; color: var(--aa-titre); }
+.aa-cout .aa-flux__meta dd { margin: 0; color: var(--aa-doux); }
+
+/* --- Bloc d'offre (fond sombre) : agent IA + « Réserver une démo » --- */
+.aa-cout .aa-offre-bloc {
+  background: var(--c-bg-dark);
+  color: var(--c-text);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.25rem;
+  margin: 1.25rem 0;
+}
+.aa-cout .aa-offre-bloc .aa-offre-bloc__kicker {
+  margin-bottom: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-accent);
+}
+.aa-cout .aa-offre-bloc h3 { margin: 0 0 0.5rem; font-size: 1.375rem; color: #fff; }
+.aa-cout .aa-offre-bloc p { color: #C9D2DE; }
+.aa-cout .aa-offre-bloc__liste {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem 0 1.25rem;
+  padding: 0;
+  font-size: 0.9375rem;
+}
+.aa-cout .aa-offre-bloc__liste li { position: relative; padding-left: 1.5rem; color: var(--c-text); }
+.aa-cout .aa-offre-bloc__liste li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--c-accent);
+  font-weight: 700;
+}
+.aa-cout .aa-offre-bloc__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.aa-cout .aa-offre-bloc__actions .btn { white-space: normal; }
+.aa-cout .aa-offre-bloc .aa-offre-bloc__note { margin: 1rem 0 0; font-size: 0.8125rem; color: var(--c-text-muted); }
+
+/* Cartes agents de l'accueil : ancres #agent-xxx visées depuis les articles */
+.agent { scroll-margin-top: calc(var(--header-h) + 16px); }
+
+@media (min-width: 768px) {
+  .aa-cout .aa-flux__meta { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .aa-cout .aa-offre-bloc { padding: 2rem; }
+  .aa-cout .aa-offre-bloc__liste { grid-template-columns: 1fr 1fr; column-gap: 1.5rem; }
+}
+
+/* Pied de page à 5 colonnes (ajout de la colonne « Guides ») */
+@media (min-width: 768px) {
+  .footer__inner { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .footer__inner { grid-template-columns: 1.5fr 0.9fr 1.5fr 1.4fr 0.9fr; }
+}

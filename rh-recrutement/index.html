@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ======================================================
+       Article secteur — RH & recrutement
+       URL publique : /rh-recrutement/
+       Mise en page : classes .aa-cout (style.css, sections 17 et 19)
+       Mesure d'audience et bandeau de consentement : script.js
+       ====================================================== -->
+  <title>Automatiser le recrutement : CV, entretiens, onboarding | AfriAutomate</title>
+  <meta name="description" content="Tri des CV, préqualification WhatsApp, entretiens, onboarding : ce qu'un cabinet RH peut automatiser, pourquoi, et comment le faire étape par étape." />
+  <meta name="theme-color" content="#0D1117" />
+  <link rel="canonical" href="https://afriautomate.com/rh-recrutement/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="AfriAutomate" />
+  <meta property="og:title" content="Comment automatiser le recrutement dans un cabinet RH" />
+  <meta property="og:description" content="Tri des CV, préqualification WhatsApp, entretiens, onboarding : ce qu'un cabinet RH peut automatiser, pourquoi, et comment le faire étape par étape." />
+  <meta property="og:url" content="https://afriautomate.com/rh-recrutement/" />
+  <meta property="og:image" content="https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Comment automatiser le recrutement dans un cabinet RH" />
+  <meta name="twitter:description" content="Tri des CV, préqualification WhatsApp, entretiens, onboarding : ce qu'un cabinet RH peut automatiser, pourquoi, et comment le faire étape par étape." />
+  <meta name="twitter:image" content="https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg" />
+
+  <!-- Favicon : version 96×96 dédiée -->
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/logo/favicon-afriautomate-96.png" />
+
+  <!-- Données structurées : Article, fil d'Ariane, FAQ (reprend la FAQ visible) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Comment automatiser le recrutement dans un cabinet RH",
+    "description": "Tri des CV, préqualification WhatsApp, entretiens, onboarding : ce qu'un cabinet RH peut automatiser, pourquoi, et comment le faire étape par étape.",
+    "image": "https://afriautomate.com/assets/images-hero/hero-ai-automation.jpg",
+    "datePublished": "2026-10-05",
+    "dateModified": "2026-10-05",
+    "inLanguage": "fr",
+    "author": {
+      "@type": "Organization",
+      "name": "AfriAutomate",
+      "url": "https://afriautomate.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AfriAutomate",
+      "url": "https://afriautomate.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://afriautomate.com/branding/lg_AfriAutomate.png"
+      }
+    },
+    "mainEntityOfPage": "https://afriautomate.com/rh-recrutement/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://afriautomate.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Comment automatiser le recrutement dans un cabinet RH",
+        "item": "https://afriautomate.com/rh-recrutement/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Nos consultants seront-ils remplacés ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. L'automatisation prend la lecture mécanique des CV et les tâches administratives. L'évaluation finale, la relation avec le candidat et le conseil au client restent le travail de vos consultants."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment éviter que l'IA écarte de bons profils ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les critères de tri sont définis avec vous, et chaque score est accompagné d'une explication. Nous testons le tri sur des cas réels avant la mise en production, et la décision finale revient toujours à un consultant."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Les candidats savent-ils qu'ils parlent à une IA ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, c'est la règle que nous recommandons. L'agent est configuré pour se présenter comme un assistant automatisé dès le premier message, et pour passer la main à un consultant quand le candidat le demande ou que la question sort de son cadre."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que deviennent les données des candidats ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Elles restent votre propriété. Elles sont stockées sur des services professionnels (chiffrement, sauvegardes), nous signons un accord de confidentialité sur demande et nous ne les utilisons jamais pour un autre client. Un CV contient des données personnelles : au Bénin, leur traitement relève du Code du numérique, et nous faisons le point avec vous pendant l'audit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps avant que ce soit opérationnel ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Après l'audit, qui dure 1 à 2 semaines, la construction et le déploiement prennent 5 à 7 jours. Vos premières automatisations tournent en production en moins d'un mois."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Polices Google Fonts (Montserrat + Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       HEADER STICKY (identique à l'accueil, liens absolus)
+       ====================================================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="AfriAutomate — Accueil">
+        <img src="/assets/logo/logo-afriautomate-160.png" alt="Logo AfriAutomate" width="38" height="38" />
+      </a>
+
+      <nav class="header__nav" id="nav" aria-label="Navigation principale">
+        <ul class="header__list">
+          <li><a href="/#services" class="header__link">Services</a></li>
+          <li><a href="/#agents" class="header__link">Agents IA</a></li>
+          <li><a href="/#process" class="header__link">Méthode</a></li>
+          <li><a href="/#about" class="header__link">À propos</a></li>
+          <li><a href="/#faq" class="header__link">FAQ</a></li>
+        </ul>
+        <a href="https://calendly.com/afriautomate" target="_blank" rel="noopener" class="btn btn--primary header__cta">
+          Prendre rendez-vous
+        </a>
+      </nav>
+
+      <button type="button" class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======================================================
+       ARTICLE — problème › solution › pourquoi › bénéfices ›
+       comment automatiser › offre (« Réserver une démo »)
+       Chiffres : uniquement les projections documentées dans content/
+       ====================================================== -->
+  <main class="aa-cout">
+  <article class="aa-wrap">
+
+    <nav class="aa-fil" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> <span aria-hidden="true">›</span> <span aria-current="page">Guide RH &amp; recrutement</span>
+    </nav>
+    <p class="aa-meta">Guide secteur · Mis à jour le 5 octobre 2026 · Lecture : 7 min</p>
+    <h1>Comment automatiser le recrutement dans un cabinet RH</h1>
+    <p class="aa-chapo">Tri des CV, préqualification sur WhatsApp, planification des entretiens, onboarding : ce qu'il faut automatiser, pourquoi, et comment le mettre en place étape par étape.</p>
+
+    <div class="aa-reponse">
+      <p><strong>En bref.</strong> Quatre tâches du recrutement se prêtent à l'automatisation : le tri des CV, la préqualification des candidats, la planification des entretiens et l'onboarding. L'IA prend la partie répétitive ; vos consultants gardent la décision et la relation. Notre estimation : 60 à 70&nbsp;% du temps consultant passé au tri peut être libéré. <a href="#offre">Voir notre offre</a>.</p>
+    </div>
+
+    <nav class="aa-sommaire" aria-label="Sommaire">
+      <strong>Dans ce guide</strong>
+      <ol>
+        <li><a href="#probleme">Le problème</a></li>
+        <li><a href="#solution">La solution</a></li>
+        <li><a href="#pourquoi">Pourquoi automatiser</a></li>
+        <li><a href="#benefices">Les bénéfices</a></li>
+        <li><a href="#comment">Comment automatiser, étape par étape</a></li>
+        <li><a href="#offre">Notre offre</a></li>
+        <li><a href="#faq">Questions fréquentes</a></li>
+      </ol>
+    </nav>
+
+    <!-- ========== 1. Le problème ========== -->
+    <h2 id="probleme">1. Le problème</h2>
+    <p>Chaque mission attire des dizaines, parfois des centaines de candidatures. Elles arrivent par email, par WhatsApp, en PDF ou en Word, et tout repose sur vos consultants. Quatre difficultés reviennent dans presque tous les cabinets&nbsp;:</p>
+    <div class="aa-postes">
+      <div class="aa-carte"><h3>Le tri absorbe vos consultants</h3><p>Lire des CV un par un est un travail mécanique. Pendant ce temps, vos meilleurs profils ne font ni conseil ni développement commercial.</p></div>
+      <div class="aa-carte"><h3>L'attention baisse au fil de la pile</h3><p>Le dernier CV de la journée n'est pas lu avec la même attention que le premier. De bons profils passent à la trappe.</p></div>
+      <div class="aa-carte"><h3>Des candidats restent sans réponse</h3><p>Faute de temps, beaucoup de candidatures ne reçoivent aucun retour. Chaque candidat ignoré abîme l'image du cabinet, et celle de vos clients.</p></div>
+      <div class="aa-carte"><h3>La planification tourne au ping-pong</h3><p>« Vous êtes disponible quand&nbsp;? » Trouver un créneau demande plusieurs échanges, et l'intégration des recrues repose sur la mémoire de chacun.</p></div>
+    </div>
+
+    <!-- ========== 2. La solution ========== -->
+    <h2 id="solution">2. La solution</h2>
+    <p>La solution n'est pas de remplacer vos consultants. C'est de leur retirer la partie répétitive du métier, pour qu'ils se concentrent sur ce qu'une machine ne fait pas : évaluer une personne, conseiller un client, négocier. Quatre automatisations couvrent l'essentiel du cycle de recrutement&nbsp;:</p>
+    <div class="aa-table" role="region" aria-label="Avant et après l'automatisation" tabindex="0">
+      <table>
+        <thead><tr><th scope="col">Tâche</th><th scope="col">Aujourd'hui</th><th scope="col">Avec l'automatisation</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Tri des CV</th><td class="ko">Lecture un par un, critères appliqués de mémoire</td><td class="ok">Chaque CV est lu, noté selon vos critères et classé ; le consultant part d'une liste triée</td></tr>
+          <tr><th scope="row">Préqualification</th><td class="ko">Appels et messages pour vérifier disponibilité et prétentions</td><td class="ok">Un agent WhatsApp pose vos questions et enregistre les réponses, à toute heure</td></tr>
+          <tr><th scope="row">Entretiens</th><td class="ko">Allers-retours pour trouver un créneau</td><td class="ok">Convocations, choix du créneau et confirmations envoyés automatiquement</td></tr>
+          <tr><th scope="row">Onboarding</th><td class="ko">Documents et étapes suivis de tête</td><td class="ok">Dossier d'intégration, formations et points d'étape programmés</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Un tableau de bord réunit le tout : vous voyez où en est chaque recrutement sans avoir à le demander.</p>
+
+    <!-- ========== 3. Pourquoi automatiser ========== -->
+    <h2 id="pourquoi">3. Pourquoi automatiser</h2>
+    <p>Le tri manuel a toujours existé. Quatre raisons poussent à changer maintenant&nbsp;:</p>
+    <ul class="aa-liste">
+      <li><strong>La concurrence s'équipe.</strong> Un consultant indépendant bien outillé peut aujourd'hui traiter autant de missions qu'un cabinet entier. La différence, c'est l'automatisation.</li>
+      <li><strong>La valeur d'un consultant est dans le conseil.</strong> Chaque heure passée à lire des CV est une heure qui n'est pas consacrée à un client.</li>
+      <li><strong>La régularité compte.</strong> L'IA applique les mêmes critères au premier et au dernier CV. Elle ne se fatigue pas et n'oublie pas de répondre à un candidat.</li>
+      <li><strong>Les candidats attendent une réponse rapide.</strong> Un cabinet qui répond à tous, et vite, se distingue.</li>
+    </ul>
+
+    <!-- ========== 4. Les bénéfices ========== -->
+    <h2 id="benefices">4. Les bénéfices</h2>
+    <div class="aa-postes">
+      <div class="aa-carte"><h3>Du temps consultant libéré</h3><p>Notre estimation : 60 à 70&nbsp;% du temps consacré au tri des CV, rendu au conseil et à la relation client.</p></div>
+      <div class="aa-carte"><h3>Plus de missions, même équipe</h3><p>L'objectif que nous visons : jusqu'à 3 fois plus de missions traitées sans embaucher.</p></div>
+      <div class="aa-carte"><h3>Aucun candidat sans réponse</h3><p>Chaque candidature reçoit un retour personnalisé, que le profil soit retenu ou non.</p></div>
+      <div class="aa-carte"><h3>Des entretiens planifiés sans effort</h3><p>Convocations et confirmations partent seules, dans l'agenda de vos consultants.</p></div>
+      <div class="aa-carte"><h3>Une image modernisée</h3><p>Vos clients et vos candidats voient un cabinet réactif et organisé.</p></div>
+    </div>
+    <p class="aa-note">Transparence : AfriAutomate est en phase de lancement. Les chiffres cités sont nos projections, pas encore des résultats clients. Nous les mesurons chez vous dès le déploiement.</p>
+
+    <!-- ========== 5. Comment automatiser ========== -->
+    <h2 id="comment">5. Comment automatiser, étape par étape</h2>
+    <p>Pour chacune des quatre automatisations, voici ce qui la déclenche, ce que fait le système et ce qui reste entre vos mains. Les outils cités sont ceux que nous utilisons : WhatsApp Business, n8n pour relier les étapes, un modèle d'IA, et le tableur ou le CRM que vous avez déjà.</p>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 1</span>
+      <h3 id="flux-1">Tri et scoring des CV</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> une candidature arrive sur votre boîte email dédiée, votre formulaire ou votre WhatsApp.</p>
+      <ol class="aa-flux__etapes">
+        <li>Le workflow récupère le CV, en PDF ou en Word, et le rattache à la mission concernée.</li>
+        <li>L'IA lit le document et en extrait les informations utiles : expérience, formation, compétences, localisation.</li>
+        <li>Elle compare le profil aux critères de la mission, que vous avez définis et pondérés, puis attribue un score accompagné d'une explication.</li>
+        <li>Le candidat est ajouté au tableau de suivi (Google Sheets, Airtable ou Notion), classé par score.</li>
+        <li>Le consultant ouvre une liste déjà triée et décide qui contacter.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>Le choix des critères, leur pondération et la décision finale sur chaque candidat.</dd></div>
+        <div><dt>Outils</dt><dd>Email ou formulaire, n8n, modèle d'IA, Google Sheets, Airtable ou Notion.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 2</span>
+      <h3 id="flux-2">Préqualification des candidats sur WhatsApp</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> un candidat dépasse le score que vous avez fixé, ou écrit de lui-même au cabinet.</p>
+      <ol class="aa-flux__etapes">
+        <li>L'agent se présente comme un assistant automatisé et pose vos questions de préqualification : disponibilité, préavis, mobilité, prétentions salariales.</li>
+        <li>Il comprend les réponses en langage naturel et relance si une information manque.</li>
+        <li>Les réponses sont enregistrées dans la fiche du candidat, à côté de son score.</li>
+        <li>Si le candidat pose une question hors cadre ou demande à parler à quelqu'un, la conversation est transmise au consultant.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>La liste des questions, et tous les échanges qui sortent du cadre.</dd></div>
+        <div><dt>Outils</dt><dd>WhatsApp Business API, agent conversationnel IA, n8n, tableau de suivi.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 3</span>
+      <h3 id="flux-3">Planification des entretiens</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> le consultant marque un candidat « à rencontrer » dans le tableau de suivi.</p>
+      <ol class="aa-flux__etapes">
+        <li>Le candidat reçoit une convocation avec les créneaux libres de l'agenda du consultant.</li>
+        <li>Il choisit son créneau ; l'entretien est inscrit dans l'agenda.</li>
+        <li>Une confirmation part aux deux parties, avec la date, l'heure et le lieu ou le lien de visioconférence.</li>
+        <li>Un rappel est envoyé avant l'entretien.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>L'entretien lui-même, et la décision de reporter ou d'annuler.</dd></div>
+        <div><dt>Outils</dt><dd>Agenda partagé, WhatsApp ou email, n8n.</dd></div>
+      </dl>
+    </div>
+
+    <div class="aa-flux">
+      <span class="aa-flux__num">Automatisation 4</span>
+      <h3 id="flux-4">Onboarding des recrues</h3>
+      <p class="aa-flux__declencheur"><strong>Ce qui la déclenche :</strong> un candidat est déclaré recruté.</p>
+      <ol class="aa-flux__etapes">
+        <li>Le système crée son dossier d'intégration et lui envoie la liste des documents à fournir.</li>
+        <li>Il relance la recrue tant qu'une pièce manque.</li>
+        <li>Les formations et les points d'étape sont programmés aux dates que vous avez prévues.</li>
+        <li>Le responsable est prévenu à chaque étape franchie, et à chaque retard.</li>
+      </ol>
+      <dl class="aa-flux__meta">
+        <div><dt>Ce qui reste humain</dt><dd>L'accueil, la formation et le suivi de la personne.</dd></div>
+        <div><dt>Outils</dt><dd>n8n, email ou WhatsApp, espace de documents, agenda.</dd></div>
+      </dl>
+    </div>
+
+    <h3>La mise en place, en 3 phases</h3>
+    <div class="aa-postes">
+      <div class="aa-carte"><h4>① Audit IA &amp; diagnostic</h4><p><strong>1 à 2 semaines.</strong> Nous interrogeons vos équipes, cartographions votre processus de recrutement et fixons avec vous les critères de tri.</p></div>
+      <div class="aa-carte"><h4>② Construction &amp; déploiement</h4><p><strong>5 à 7 jours.</strong> Nous construisons les automatisations validées, les relions à vos outils, les testons sur des cas réels et formons votre équipe.</p></div>
+      <div class="aa-carte"><h4>③ Maintenance &amp; évolution</h4><p><strong>Chaque mois ou chaque trimestre.</strong> Nous surveillons, ajustons et ajoutons de nouveaux workflows au fil de vos besoins.</p></div>
+    </div>
+
+    <!-- ========== 6. Notre offre (contenu repris de la section Agents IA de l'accueil) ========== -->
+    <h2 id="offre">6. Notre offre</h2>
+    <p>Vous n'avez pas à construire tout cela vous-même. Nous le déployons pour vous, avec un agent IA déjà pensé pour votre métier.</p>
+    <div class="aa-offre-bloc">
+      <p class="aa-offre-bloc__kicker">Agent IA · RH &amp; recrutement</p>
+      <h3>Koffi, votre coordinateur RH IA</h3>
+      <p>Koffi trie les candidatures, planifie les entretiens et accueille les nouvelles recrues, sans que vos consultants passent leurs journées sur des tâches administratives.</p>
+      <ul class="aa-offre-bloc__liste">
+        <li>Analyse et classe les CV selon les critères de chaque mission</li>
+        <li>Envoie les convocations et confirmations d'entretiens automatiquement</li>
+        <li>Prépare les dossiers d'onboarding pour chaque nouvelle recrue</li>
+        <li>Répond aux questions RH courantes des employés par chat</li>
+        <li>Collecte les retours d'équipe via sondages automatisés</li>
+      </ul>
+      <div class="aa-offre-bloc__actions">
+        <a class="btn btn--primary btn--lg" href="https://calendly.com/afriautomate" target="_blank" rel="noopener">Réserver une démo</a>
+        <a class="btn btn--ghost btn--lg" href="/#agent-koffi">Voir l'offre sur le site</a>
+      </div>
+      <p class="aa-offre-bloc__note">30 minutes · Sans engagement · Recommandation honnête</p>
+    </div>
+
+    <!-- ========== 7. FAQ ========== -->
+    <h2 id="faq">7. Questions fréquentes</h2>
+    <details><summary>Nos consultants seront-ils remplacés&nbsp;?</summary><p>Non. L'automatisation prend la lecture mécanique des CV et les tâches administratives. L'évaluation finale, la relation avec le candidat et le conseil au client restent le travail de vos consultants.</p></details>
+    <details><summary>Comment éviter que l'IA écarte de bons profils&nbsp;?</summary><p>Les critères de tri sont définis avec vous, et chaque score est accompagné d'une explication. Nous testons le tri sur des cas réels avant la mise en production, et la décision finale revient toujours à un consultant.</p></details>
+    <details><summary>Les candidats savent-ils qu'ils parlent à une IA&nbsp;?</summary><p>Oui, c'est la règle que nous recommandons. L'agent est configuré pour se présenter comme un assistant automatisé dès le premier message, et pour passer la main à un consultant quand le candidat le demande ou que la question sort de son cadre.</p></details>
+    <details><summary>Que deviennent les données des candidats&nbsp;?</summary><p>Elles restent votre propriété. Elles sont stockées sur des services professionnels (chiffrement, sauvegardes), nous signons un accord de confidentialité sur demande et nous ne les utilisons jamais pour un autre client. Un CV contient des données personnelles : au Bénin, leur traitement relève du Code du numérique, et nous faisons le point avec vous pendant l'audit.</p></details>
+    <details><summary>Combien de temps avant que ce soit opérationnel&nbsp;?</summary><p>Après l'audit, qui dure 1 à 2 semaines, la construction et le déploiement prennent 5 à 7 jours. Vos premières automatisations tournent en production en moins d'un mois.</p></details>
+
+    <!-- ========== Lire aussi (maillage interne) ========== -->
+    <h2 class="aa-sources-titre">Lire aussi</h2>
+    <ul class="aa-liste">
+      <li><a href="/commerce/">Comment automatiser un commerce : ventes WhatsApp, relances, stock et fidélité</a></li>
+      <li><a href="/cabinets/">Comment automatiser un cabinet comptable : pièces, saisie, échéances et rapports</a></li>
+      <li><a href="/sante/">Comment automatiser une clinique ou une pharmacie : rendez-vous, rappels, stock et suivi</a></li>
+      <li><a href="/combien-coute-agent-ia-local-benin">Combien coûte un agent IA local au Bénin&nbsp;?</a></li>
+    </ul>
+
+  </article>
+  </main>
+
+  <!-- ======================================================
+       FOOTER (repris de l'accueil, liens absolus)
+       Titres en h2 : la page se termine par des h2, on évite
+       un saut de niveau h2 → h4.
+       ====================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <img src="/assets/logo/logo-afriautomate-160.png" alt="Logo AfriAutomate" class="footer__logo" width="40" height="40" loading="lazy" />
+        <p class="footer__slogan">Moins d'effort. Plus de revenus.<br />Grâce à l'automatisation.</p>
+        <p class="footer__location">📍 Cotonou, Bénin · Afrique francophone</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Navigation footer">
+        <h2 class="footer__title">Navigation</h2>
+        <ul>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#agents">Agents IA</a></li>
+          <li><a href="/#temoignages">Témoignages</a></li>
+          <li><a href="/#process">Méthode</a></li>
+          <li><a href="/#about">À propos</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Guides">
+        <h2 class="footer__title">Guides</h2>
+        <ul>
+          <li><a href="/rh-recrutement/" aria-current="page">Automatiser le recrutement</a></li>
+          <li><a href="/commerce/">Automatiser un commerce</a></li>
+          <li><a href="/cabinets/">Automatiser un cabinet comptable</a></li>
+          <li><a href="/sante/">Automatiser une clinique ou une pharmacie</a></li>
+          <li><a href="/combien-coute-agent-ia-local-benin">Combien coûte un agent IA local ?</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Contact</h2>
+        <ul>
+          <li><a href="https://wa.me/2290143102911" target="_blank" rel="noopener">WhatsApp : +229 01 43 10 29 11</a></li>
+          <li><a href="mailto:afriautomate@gmail.com">afriautomate@gmail.com</a></li>
+          <li><a href="https://calendly.com/afriautomate" target="_blank" rel="noopener">Prendre rendez-vous</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Suivez-nous</h2>
+        <ul class="footer__social">
+          <li>
+            <a href="https://www.linkedin.com/company/afriautomate/" target="_blank" rel="noopener" aria-label="LinkedIn AfriAutomate">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.14 1.45-2.14 2.96v5.7h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v6.46z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 AfriAutomate — Tous droits réservés.</p>
+        <ul class="footer__legal">
+          <!-- Rouvre le bandeau de consentement (script.js › initAnalytics) -->
+          <li><button type="button" class="footer__cookies" data-cookies-open>Gérer les cookies</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
